@@ -1,0 +1,20 @@
+head:
+  title: BitShares Play
+  keyword: Keywords
+  description: description
+
+nav:
+  about: About
+  faq: FAQ
+  team: White Paper
+  contact: Contact Us
+
+hero:
+  line1: When Gaming Meets
+  line2: BitShares Play
+
+countdown:
+  days: Days
+  hours: Hours
+  minutes: Minutes
+  seconds: Seconds
