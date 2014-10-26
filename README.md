@@ -1,9 +1,9 @@
 BitShares Play
 ===============================
 
-[http://bitshares-play.info](http://bitshares-play.info)
+[http://playshare.io](http://playshare.io)
 
-The repo is for building of bitshares-play.info.  It's not designed to be used by third party.  It's only a part of our internal development process.
+The repo is for building of playshare.io.  It's not designed to be used by third party.  It's only a part of our internal development process.
 
 Dependency
 -----------
