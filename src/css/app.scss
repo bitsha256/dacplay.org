@@ -1,17 +1,33 @@
+$lgray: #f9f9f9;
+$lblue: #0083E5;
+$lyellow: #FFF000;
+$lgreen: #009940;
+$lpink: #E30883;
+
 html, body {
   background: white;
 }
-body {padding-top: 70px;}
+body { padding-top: 70px; }
 
-.navbar-brand {
-  font-weight:bold;
+h1 { text-align:center; }
+section.row { margin: 3em auto; }
+.navbar-brand {  }
+.jumbotron { text-align:center; }
+
+.team {
+  img.portrait { width: 100%; max-width: 200px; }
+}
+.footer {
+  padding:4em 1em 6em 1em; text-align:center; color:white;
+//  background-color: $lgray;
+  &.navbar { margin-bottom: 0; }
 }
 
 /* Image style */
-#scrollUp {
+#scrollTopBtn {
   bottom: 20px;
   right: 20px;
-  height: 38px;  /* Height of image */
-  width: 38px; /* Width of image */
-  background: url(../img/top.png) no-repeat;
+//  height: 38px;  /* Height of image */
+//  width: 38px; /* Width of image */
+//  background: url(../img/top.png) no-repeat;
 }

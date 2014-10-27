@@ -79,62 +79,96 @@
 
     <!-- feature starts -->
     <div id="about" class="container">
-      <div class="row">
+      <section class="row feature">
+        <% delay = 1 %>
         <% dd('about.feature').each do |feature| %>
-          <div class="col-lg-4">
-            <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" style="width: 140px; height: 140px;">
-            <h2><%= feature['title'] %></h2>
-            <p><%= feature['intro'] %></p>
-            <p><a class="btn btn-default" href="#" role="button"><%= dd('button.view_detail') %></a></p>
-          </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4 triggerAnimation animated" data-animate="fadeInUp" data-delay="<%= delay * 0.1 %>">
+          <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" style="width: 140px; height: 140px;">
+          <h2><%= feature['title'] %></h2>
+          <p><%= feature['intro'] %></p>
+          <p><a class="btn btn-primary" href="#" role="button"><%= dd('button.view_detail') %></a></p>
+        </div><!-- /.col-lg-4 -->
+        <% delay += 1 %>
         <% end %>
-      </div><!-- /.row -->
+      </section>
     </div>
     <!-- feature ends -->
 
     <!-- whitepaper starts -->
-    <section id="whitepaper">
-      <div class="container">
-        <h1><%= dd('whitepaper.title') %></h1>
-      </div>
-    </section>
+    <div id="whitepaper" class="container">
+      <section class="row whitepaper">
+        <h1 class="triggerAnimation animated" data-animate="fadeInUp"><%= dd('whitepaper.title') %></h1>
+      </section>
+    </div>
     <!--whitepaper ends -->
 
 
 
     <!-- faq starts -->
-    <section id="faq">
-      <div class="container">
-        <h1><%= dd('faq.title') %></h1>
-        <% dd('faq.qas').each do |qa| %>
-          <h2><%= qa["q"] %></h2>
-          <p><%= qa["a"] %></p>
-        <% end %>
+    <div id="faq" class="container">
+      <section class="row faq">
+        <h1 class="triggerAnimation animated" data-animate="fadeInUp"><%= dd('faq.title') %></h1>
 
-      </div>
-    </section>
+        <div class="panel-group" id="accordion">
+          <% qa_idx = 1 %>
+          <% dd('faq.qas').each do |qa| %>
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="#q_<%= qa_idx %>">
+                  <%= qa["q"] %>
+                </a>
+              </h4>
+            </div>
+            <div id="q_<%= qa_idx %>" class="panel-collapse collapse">
+              <div class="panel-body">
+                <%= qa["a"] %>
+              </div>
+            </div>
+          </div>
+          <% qa_idx += 1 %>
+          <% end %>
+
+        </div>
+      </section>
+    </div>
     <!--faq ends -->
 
 
 
     <!-- team starts -->
-    <section id="team">
-      <div class="container">
-        <h1><%= dd('team.title') %></h1>
+    <div id="team" class="container">
+      <section class="row team">
+        <h1 class="triggerAnimation animated" data-animate="fadeInUp"><%= dd('team.title') %></h1>
+        <% delay = 1 %>
         <% dd('team.members').each do |team| %>
-          <h2><%= team["name"] %></h2>
-          <p><%= team["bio"] %></p>
+        <div class="col-xs-3 text-center triggerAnimation animated"  data-animate="fadeInUp" data-delay="<%= delay * 0.1 %>">
+          <img src="img/team/<%= team["image"] %>" class="portrait img-circle" alt="<%= team["name"] %>">
+          <h3><%= team["name"] %></h3>
+          <p><%= team["role"] %></p>
+        </div>
+        <% delay += 1 %>
         <% end %>
-      </div>
-    </section>
+      </section>
+    </div>
     <!--team ends -->
 
-
-    <section id="contact">
-      <div class="container">
+    <!-- contact starts -->
+    <div id="contact" class="container">
+      <section class="row triggerAnimation animated" data-animate="fadeInUp">
         <h1><%= dd('contact.title') %></h1>
-      </div>
-    </section>
+      </section>
+    </div>
+    <!-- contact ends -->
+
+    <!-- footer start -->
+    <footer class="footer navbar">
+      <h3>PlayShare.io</h3>
+      <p>Powered by BitSuperLab</p>
+    </footer>
+    <!-- footer ends -->
+
+    <a id="scrollTopBtn" href="javascript:void(0);" class="btn btn-primary btn-fab btn-raised mdi-maps-local-airport"></a>
 
     <% if lang == 'zh-CN' %>
       <script src="//lib.sinaapp.com/js/jquery/1.10.2/jquery-1.10.2.min.js"></script>

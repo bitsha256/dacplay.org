@@ -85,7 +85,7 @@ module.exports = function(grunt) {
       // },
       coffee: {
         files: 'src/js/app.coffee',
-        tasks: ['coffee']
+        tasks: ['coffee','uglify']
       },
       js: {
         files: 'src/js/app.js',
