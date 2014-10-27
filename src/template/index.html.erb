@@ -30,17 +30,19 @@
     <% else %>
       <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
     <% end %>
-    <link href="css/ripples.min.css" rel="stylesheet">
-    <link href="css/material-wfont.min.css" rel="stylesheet">
-    <link href="css/app.css" rel="stylesheet">
+    <link href="css/vendor.min.css" rel="stylesheet">
+    <link href="css/app.min.css" rel="stylesheet">
   </head>
 
-  <body>
+  <body id="home">
     <!-- global nav -->
-    <header class="navbar navbar-static-top global-nav" role="banner">
+    <header class="navbar navbar-fixed-top global-nav" role="banner">
       <div class="container">
         <div class="navbar-header">
-          <a href="/" class="img-logo"><img src="img/logo.png" alt="logo"></a>
+          <!--
+          <a href="home" class="navbar-brand"><img src="img/logo.svg" alt="playshare.io-logo"><%= dd('head.title') %></a>
+          -->
+          <a href="home" class="navbar-brand"><%= dd('head.title') %></a>
           <span id="sub_title" class="navbar-sub-title"></span>
         </div>
         <!-- .navbar-header ends -->
@@ -52,13 +54,13 @@
             <span class="icon-bar"></span>
           </button>
           <div class="navbar-collapse collapse bs-navbar-collapse">
-            <ul class="nav navbar-nav navbar-right">
-              <li data-pjax-main class="active"><a href="/"><%= dd('head.home') %></a></li>
-              <li><a href="#"><%= dd('head.about') %></a></li>
-              <li><a href="#"><%= dd('head.whitepaper') %></a></li>
-              <li><a href="#"><%= dd('head.faq') %></a></li>
-              <li><a href="#"><%= dd('head.team') %></a></li>
-              <li><a href="#"><%= dd('head.contact') %></a></li>
+            <ul class="nav navbar-nav navbar-right page-nav">
+              <li class="active"><a href="#home"><%= dd('nav.home') %></a></li>
+              <li><a href="#about"><%= dd('nav.about') %></a></li>
+              <li><a href="#whitepaper"><%= dd('nav.whitepaper') %></a></li>
+              <li><a href="#faq"><%= dd('nav.faq') %></a></li>
+              <li><a href="#team"><%= dd('nav.team') %></a></li>
+              <li><a href="#contact"><%= dd('nav.contact') %></a></li>
             </ul>
           </div>
         </nav>
@@ -67,7 +69,7 @@
     </header>
 
     <!-- hero starts -->
-    <section class="jumbotron">
+    <section class="jumbotron container">
         <h1><%= dd('hero.line1') %></h1>
         <p><%= dd('hero.line2') %></p>
         <p><a class="btn btn-primary btn-lg" role="button">Learn more</a></p>
@@ -76,7 +78,7 @@
 
 
     <!-- feature starts -->
-    <div class="container">
+    <div id="about" class="container">
       <div class="row">
         <% dd('about.feature').each do |feature| %>
           <div class="col-lg-4">
@@ -90,25 +92,49 @@
     </div>
     <!-- feature ends -->
 
+    <!-- whitepaper starts -->
+    <section id="whitepaper">
+      <div class="container">
+        <h1><%= dd('whitepaper.title') %></h1>
+      </div>
+    </section>
+    <!--whitepaper ends -->
+
+
+
+    <!-- faq starts -->
+    <section id="faq">
+      <div class="container">
+        <h1><%= dd('faq.title') %></h1>
+        <% dd('faq.qas').each do |qa| %>
+          <h2><%= qa["q"] %></h2>
+          <p><%= qa["a"] %></p>
+        <% end %>
+
+      </div>
+    </section>
+    <!--faq ends -->
+
+
 
     <!-- team starts -->
-    <section>
-    <% dd('team').each do |team| %>
-      <h2><%= team["name"] %></h2>
-      <p><%= team["bio"] %></p>
-    <% end %>
+    <section id="team">
+      <div class="container">
+        <h1><%= dd('team.title') %></h1>
+        <% dd('team.members').each do |team| %>
+          <h2><%= team["name"] %></h2>
+          <p><%= team["bio"] %></p>
+        <% end %>
+      </div>
     </section>
     <!--team ends -->
 
 
-    <!-- team starts -->
-    <section>
-    <% dd('faq').each do |qa| %>
-      <h2><%= qa["q"] %></h2>
-      <p><%= qa["a"] %></p>
-    <% end %>
+    <section id="contact">
+      <div class="container">
+        <h1><%= dd('contact.title') %></h1>
+      </div>
     </section>
-    <!--team ends -->
 
     <% if lang == 'zh-CN' %>
       <script src="//lib.sinaapp.com/js/jquery/1.10.2/jquery-1.10.2.min.js"></script>
@@ -117,9 +143,8 @@
       <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
       <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
     <% end %>
-    <script src="js/ripples.min.js"></script>
-    <script src="js/material.min.js"></script>
-    <script src="js/app.js"></script>
+   <script src="js/vendor.min.js"></script>
+    <script src="js/app.min.js"></script>
 
     <!-- ga starts -->
     <%= render :partial => "ga" %>

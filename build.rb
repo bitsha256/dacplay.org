@@ -2,8 +2,8 @@
 require 'erb'
 require 'yaml'
 
-LANG_PATH     = './lang'
-TEMPLATE_PATH = './template'
+LANG_PATH     = 'src/lang'
+TEMPLATE_PATH = 'src/template'
 
 default_lang  = 'en'
 
@@ -72,15 +72,11 @@ Dir.glob("#{LANG_PATH}/*.yml") do |dict_file|
   # loop templates, exclude partial templates
   Dir.glob("#{TEMPLATE_PATH}/[^_]*.html.erb") do |template|
     page = ERB.new( File.read( template ) ).result( binding )
-    output_file = "../#{File.basename(template).split('.').first}-#{lang}.html"
+    output_file = "./#{File.basename(template).split('.').first}-#{lang}.html"
 
     Pager.write output_file, page
   end
 end
 
-# js compile and minify
-# TODO: js minify
-`coffee -bc -o ../js ./js/app.coffee; `
-
-# css compile and minify
-`sass -t compressed --scss --sourcemap=none ./css/app.scss ../css/app.css`
+# grunt
+`grunt default`

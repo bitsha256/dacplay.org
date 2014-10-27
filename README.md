@@ -12,9 +12,9 @@ Install npm node package manager
 
     curl -L https://npmjs.org/install.sh | sh
 
-Install nodejs, coffee-script
+Install nodejs, coffee-script and other dependencies
 
-    npm install node coffee-script
+    npm install
 
 Ruby 1.9.3 or above (you can use rvm to install ruby)
 
@@ -42,5 +42,5 @@ Javascript and stylesheet files in js and css folder under root folder are gener
 
 Build task will generate static html files, minify javascript and stylesheet files.  To invoke build task, run
 
-    cd src; ./build.rb
+    ./build.rb
 

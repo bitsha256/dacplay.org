@@ -1,34 +1,27 @@
-cleanSource = (html) ->
-  lines = html.split('\n')
-  lines.shift()
-  lines.splice(-1, 1)
 
-  indentSize = lines[0].length - lines[0].trim().length
-  re = new RegExp " {" + indentSize + "}"
+(->
+  # navigation
+  $('.page-nav a').each (idx, elem) ->
+    $(elem).click (evt) ->
+      href = $(this).attr 'href'
+      return if !href.match /^#/
 
-  lines = lines.map (line) ->
-    line = line.substring indentSize if line.match re
-    return line
+      evt.preventDefault
+      y = $(href).offset().top - 77
 
-  lines = lines.join("\n");
-  return lines;
+      $("html, body").animate scrollTop: y, 1000, jQuery.easing['easeInOutQuad']
 
-
-$button = $("<div id='source-button' class='btn btn-primary btn-xs'>&lt; &gt;</div>").click ->
-  index = $('.bs-component').index $(this).parent()
-  $.get window.location.href, (data) ->
-    html = $(data).find('.bs-component').eq(index).html();
-    html = clearnSource html
-    $('#source-modal pre').text html
-    $('#source-modal').modal()
-
-$('.bs-component [data-toggle="popover"]').popover();
-$('.bs-component [data-toggle="tooltip"]').tooltip();
-
-$(".bs-component").hover ->
-  $(this).append $button
-, -> $button.hide()
+  # scrollup
+  $.scrollUp
+    scrollName: 'scrollUp', # Element ID
+    topDistance: '77', # Distance from top before showing element (px)
+    topSpeed: 300, # Speed back to top (ms)
+    easingType: 'easeInOutQuad',
+    animation: 'fade', # Fade, slide, none
+    animationInSpeed: 200, # Animation in speed (ms)
+    animationOutSpeed: 200, # Animation out speed (ms)
+    scrollText: '', # Text for element
+    activeOverlay: false  # Set CSS color to display scrollUp active point, e.g '#00FFFF'
 
 
-$(".icons-material .icon").each ->
-  $(this).after("<br><br><code>" + $(this).attr("class").replace("icon ", "") + "</code>")
+).call this;
