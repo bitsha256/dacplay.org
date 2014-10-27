@@ -19,7 +19,7 @@ module.exports = function(grunt) {
       },
       vendor: {
         src: ['jquery.easing.min.js', 'jquery.scrollUp.min.js',
-              'material.min.js', 'ripple.min.js'].map(function(f){ return 'src/js/vendor/' + f; }),
+              'material.min.js', 'ripple.min.js', 'waypoints.min.js'].map(function(f){ return 'src/js/vendor/' + f; }),
         dest: 'js/vendor.min.js'
       },
       ie: {
@@ -36,7 +36,7 @@ module.exports = function(grunt) {
         files: {
           'js/app.js': ['src/js/app.coffee']
         }
-      },
+      }
     },
     uglify: {
       options: {
@@ -66,26 +66,38 @@ module.exports = function(grunt) {
           style: 'compressed'
         },
         files: {                         // Dictionary of files
-          'css/app.css': 'src/css/app.scss'       // 'destination': 'source'
+          'css/app.min.css': 'src/css/app.scss'       // 'destination': 'source'
         }
       }
     },
     cssmin: {
       minify: {
         files: {
-          'css/app.min.css': ['src/css/app.scss'],
+          // 'css/app.min.css': ['css/app.scss'],
           'css/vendor.min.css': ['src/css/vendor/*.min.css']
         }
       }
     },
     watch: {
-      gruntfile: {
-        files: '<%= jshint.gruntfile.src %>',
-        tasks: ['jshint:gruntfile']
+      // grunthint: {
+      //   files: '<%= jshint.gruntfile.src %>',
+      //   tasks: ['jshint:gruntfile']
+      // },
+      coffee: {
+        files: 'src/js/app.coffee',
+        tasks: ['coffee']
       },
-      lib_test: {
-        files: '<%= jshint.lib_test.src %>',
-        tasks: ['jshint:lib_test', 'nodeunit']
+      js: {
+        files: 'src/js/app.js',
+        tasks: ['uglify']
+      },
+      sass: {
+        files: 'src/css/app.scss',
+        tasks: ['sass']
+      },
+      css: {
+        files: 'src/css/vendor/*.min.css',
+        tasks: ['css']
       }
     }
   });
