@@ -13,7 +13,7 @@ vendor_prop_set = function(elem, prop, val) {
 };
 
 setup_page_nav_links = function(idx, elem) {
-  vendor_prop_set(this, 'animation-delay', idx * 0.1 + 's');
+  vendor_prop_set(this, 'animation-delay', 1 + idx * 0.1 + 's');
   return $(elem).addClass('animated fadeInDown').click(function(evt) {
     var href, y;
     href = $(this).attr('href');

@@ -8,7 +8,7 @@ vendor_prop_set = (elem, prop, val) ->
     $(elem).css(prop, val)
 
 setup_page_nav_links = (idx, elem) ->
-  vendor_prop_set(this, 'animation-delay', idx * 0.1 + 's')
+  vendor_prop_set(this, 'animation-delay', 1+idx * 0.1 + 's')
   $(elem).addClass 'animated fadeInDown'
   .click (evt) ->
     href = $(this).attr 'href'
