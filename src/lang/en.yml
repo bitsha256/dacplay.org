@@ -1,7 +1,7 @@
 head:
   title: BitShares Play
   keyword: Keywords
-  description: description
+  description: BitShares Play is an experiment to demonstrate and validate how a decentralized, autonomous game assets platform might be implemented. The platform features multiple provable games of chance, as well as the ability to integrate various third party games and their asset systems. Shares of PLAY(PLS) combined with all of the assets of both built­in and third party games form a free marketplace and exchange. Systems like this are also known as Decentralized Autonomous Companies (DAC).
   browser_warn: You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.
 
 nav:
@@ -13,7 +13,7 @@ nav:
   contact: Contact Us
 
 hero:
-  line1: When Gaming Meets
+  line1: When Game Meets
   line2: BitShares Play
 
 about:
@@ -21,15 +21,15 @@ about:
   tagline: Here comes about tagline
   content: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
   feature:
-    - title: Feature 1
+    - title: Decentralized Marketplace for Game Assets
       intro: Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.
-    - title: Feature 2
+    - title: Blockchain based game platfrom
       intro: Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.
-    - title: Feature 3
+    - title: Peer to peer game assets exchange
       intro: Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.
 
 team:
-  - name: Hackfisher
+  - name: HackFisher
     bio: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
   - name: Clar
     bio: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
