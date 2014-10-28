@@ -20,13 +20,23 @@ setup_page_nav_links = (idx, elem) ->
     $("html, body").animate scrollTop: y, 1000, jQuery.easing['easeInOutQuad']
 
 setup_check_point = ->
-  $('.page-nav li').removeClass('active')
-  console.log $(this).parentsUntil('section').attr('id')
-  $('.page-nav a[href=#' + $(this).parentsUntil('section').attr('id') + ']')
-    .parent().addClass('active')
   $(this).css('opacity', '').addClass("animated").addClass($(this).data('animate'))
   if $(this).data('delay')
     vendor_prop_set(this, 'animation-delay', $(this).data('delay')+'s')
+
+subscribe_to_list = ->
+  if $('#inputEmail').val() == '' || !($('#inputEmail').val().match /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/)
+    $('#inputEmail').focus().parentsUntil('.form-group').parent().addClass('has-error')
+    return false
+  else
+    $('#inputEmail').parentsUntil('.form-group').removeClass('has-error')
+
+  action_url = 'http://bitshares-play.us9.list-manage.com/subscribe/post?u=c483312cc24bc3fbae29fadcf&amp;id='
+  list_en = action_url + '3ea6699589'
+  list_cn = action_url + 'ebfabcbaec'
+
+  $('#mailing_list').attr('action', if $('#langPrefCN').prop('checked') then list_cn else list_en )
+  return true
 
 (->
   # navigation
@@ -35,6 +45,14 @@ setup_check_point = ->
   # waypoints
   $('.animated').css('opacity', '0');
   $('.triggerAnimation').waypoint setup_check_point, offset: '80%', triggerOnce: true
+
+  # mailing list form
+  $('#mailing_list').submit subscribe_to_list
+  # radio btn bug fix
+  lang_pref_selector = '#mailing_list input[name=langpref]'
+  $(lang_pref_selector ).on 'click', (evt) ->
+    $(lang_pref_selector).prop 'checked', false
+    $(this).prop 'checked', true
 
   # scrollup
   $.scrollUp

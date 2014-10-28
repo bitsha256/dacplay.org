@@ -1,4 +1,4 @@
-var setup_check_point, setup_page_nav_links, vendor_prop_set;
+var setup_check_point, setup_page_nav_links, subscribe_to_list, vendor_prop_set;
 
 vendor_prop_set = function(elem, prop, val) {
   var vendor, _i, _len, _ref, _results;
@@ -29,21 +29,40 @@ setup_page_nav_links = function(idx, elem) {
 };
 
 setup_check_point = function() {
-  $('.page-nav li').removeClass('active');
-  console.log($(this).parentsUntil('section').attr('id'));
-  $('.page-nav a[href=#' + $(this).parentsUntil('section').attr('id') + ']').parent().addClass('active');
   $(this).css('opacity', '').addClass("animated").addClass($(this).data('animate'));
   if ($(this).data('delay')) {
     return vendor_prop_set(this, 'animation-delay', $(this).data('delay') + 's');
   }
 };
 
+subscribe_to_list = function() {
+  var action_url, list_cn, list_en;
+  if ($('#inputEmail').val() === '' || !($('#inputEmail').val().match(/^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/))) {
+    $('#inputEmail').focus().parentsUntil('.form-group').parent().addClass('has-error');
+    return false;
+  } else {
+    $('#inputEmail').parentsUntil('.form-group').removeClass('has-error');
+  }
+  action_url = 'http://bitshares-play.us9.list-manage.com/subscribe/post?u=c483312cc24bc3fbae29fadcf&amp;id=';
+  list_en = action_url + '3ea6699589';
+  list_cn = action_url + 'ebfabcbaec';
+  $('#mailing_list').attr('action', $('#langPrefCN').prop('checked') ? list_cn : list_en);
+  return true;
+};
+
 (function() {
+  var lang_pref_selector;
   $('.page-nav a').each(setup_page_nav_links);
   $('.animated').css('opacity', '0');
   $('.triggerAnimation').waypoint(setup_check_point, {
     offset: '80%',
     triggerOnce: true
+  });
+  $('#mailing_list').submit(subscribe_to_list);
+  lang_pref_selector = '#mailing_list input[name=langpref]';
+  $(lang_pref_selector).on('click', function(evt) {
+    $(lang_pref_selector).prop('checked', false);
+    return $(this).prop('checked', true);
   });
   return $.scrollUp({
     scrollName: 'scrollUp',

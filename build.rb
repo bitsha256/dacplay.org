@@ -20,7 +20,7 @@ class Wrapper
   # @param lang_file [String]: language pack file
   # @param lang_default [String|nil]: if provided, default language pack will be loaded and provide default value for missing entry in lang_file
   def initialize(lang_file, lang_default = nil)
-    @lang = lang_file.split('.').first
+    @lang = lang_file.split('.').first.split('/').last
     @default_dict = {}
     @default_dict = YAML.load(File.read(lang_default, safe: true)) unless lang_default.nil?
 

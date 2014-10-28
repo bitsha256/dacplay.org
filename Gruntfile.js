@@ -19,7 +19,8 @@ module.exports = function(grunt) {
       },
       vendor: {
         src: ['jquery.easing.min.js', 'jquery.scrollUp.min.js',
-              'material.min.js', 'ripple.min.js', 'waypoints.min.js'].map(function(f){ return 'src/js/vendor/' + f; }),
+              'material.min.js', 'ripple.min.js', 'waypoints.min.js'
+              ].map(function(f){ return 'src/js/vendor/' + f; }),
         dest: 'js/vendor.min.js'
       },
       ie: {
