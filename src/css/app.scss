@@ -8,16 +8,19 @@ html, body {
   background: white;
 }
 body { padding-top:70px; position:relative; }
-
 h1 { text-align:center; }
 section.row { margin: 3em auto; }
+
 .navbar-brand {  }
 .jumbotron { text-align:center; }
 
-.feature {
+#about {
   .feature-item { text-align: center; }
 }
-.team {
+#whitepaper {
+  background-color: $lyellow;
+}
+#team {
   img.portrait { width: 100%; max-width: 200px; }
 }
 #contact {

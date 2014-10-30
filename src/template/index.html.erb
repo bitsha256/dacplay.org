@@ -78,125 +78,135 @@
 
 
     <!-- feature starts -->
-    <div id="about" class="container">
-      <section class="row feature">
-        <h1><%= dd('about.title') %></h1>
-        <% delay = 1 %>
-        <% dd('about.feature').each do |feature| %>
-        <div class="col-lg-4 triggerAnimation animated feature-item" data-animate="fadeInUp" data-delay="<%= delay * 0.1 %>">
-          <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" style="width: 140px; height: 140px;">
-          <h2><%= feature['title'] %></h2>
-          <p><%= feature['intro'] %></p>
-          <p><a class="btn btn-primary" href="#" role="button"><%= dd('button.view_detail') %></a></p>
-        </div><!-- /.col-lg-4 -->
-        <% delay += 1 %>
-        <% end %>
-      </section>
+    <div id="about">
+      <div class="container">
+        <section class="row feature">
+          <h1><%= dd('about.title') %></h1>
+          <% delay = 1 %>
+          <% dd('about.feature').each do |feature| %>
+          <div class="col-lg-4 triggerAnimation animated feature-item" data-animate="fadeInUp" data-delay="<%= delay * 0.1 %>">
+            <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" style="width: 140px; height: 140px;">
+            <h2><%= feature['title'] %></h2>
+            <p><%= feature['intro'] %></p>
+            <p><a class="btn btn-primary" href="#" role="button"><%= dd('button.view_detail') %></a></p>
+          </div><!-- /.col-lg-4 -->
+          <% delay += 1 %>
+          <% end %>
+        </section>
+      </div>
     </div>
     <!-- feature ends -->
 
     <!-- whitepaper starts -->
-    <div id="whitepaper" class="container">
-      <section class="row whitepaper">
-        <h1 class="triggerAnimation animated" data-animate="fadeInUp"><%= dd('whitepaper.title') %></h1>
-      </section>
+    <div id="whitepaper">
+      <div class="container">
+        <section class="row whitepaper">
+          <h1 class="triggerAnimation animated" data-animate="fadeInUp"><%= dd('whitepaper.title') %></h1>
+        </section>
+      </div>
     </div>
     <!--whitepaper ends -->
 
 
 
     <!-- faq starts -->
-    <div id="faq" class="container">
-      <section class="row faq">
-        <h1 class="triggerAnimation animated" data-animate="fadeInUp"><%= dd('faq.title') %></h1>
+    <div id="faq">
+      <div class="container">
+        <section class="row faq">
+          <h1 class="triggerAnimation animated" data-animate="fadeInUp"><%= dd('faq.title') %></h1>
 
-        <div class="panel-group" id="accordion">
-          <% qa_idx = 1 %>
-          <% dd('faq.qas').each do |qa| %>
-          <div class="panel panel-default">
-            <div class="panel-heading">
-              <h4 class="panel-title">
-                <a data-toggle="collapse" data-parent="#accordion" href="#q_<%= qa_idx %>">
-                  <%= qa["q"] %>
-                </a>
-              </h4>
-            </div>
-            <div id="q_<%= qa_idx %>" class="panel-collapse collapse">
-              <div class="panel-body">
-                <%= qa["a"] %>
+          <div class="panel-group" id="accordion">
+            <% qa_idx = 1 %>
+            <% dd('faq.qas').each do |qa| %>
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h4 class="panel-title">
+                  <a data-toggle="collapse" data-parent="#accordion" href="#q_<%= qa_idx %>">
+                    <%= qa["q"] %>
+                  </a>
+                </h4>
+              </div>
+              <div id="q_<%= qa_idx %>" class="panel-collapse collapse">
+                <div class="panel-body">
+                  <%= qa["a"] %>
+                </div>
               </div>
             </div>
-          </div>
-          <% qa_idx += 1 %>
-          <% end %>
+            <% qa_idx += 1 %>
+            <% end %>
 
-        </div>
-      </section>
+          </div>
+        </section>
+      </div>
     </div>
     <!--faq ends -->
 
 
 
     <!-- team starts -->
-    <div id="team" class="container">
-      <section class="row team">
-        <h1 class="triggerAnimation animated" data-animate="fadeInUp"><%= dd('team.title') %></h1>
-        <% delay = 1 %>
-        <% dd('team.members').each do |team| %>
-        <div class="col-xs-3 text-center triggerAnimation animated"  data-animate="fadeInUp" data-delay="<%= delay * 0.1 %>">
-          <img src="img/team/<%= team["image"] %>" class="portrait img-circle" alt="<%= team["name"] %>">
-          <h3><%= team["name"] %></h3>
-          <p><%= team["role"] %></p>
-        </div>
-        <% delay += 1 %>
-        <% end %>
-      </section>
+    <div id="team">
+      <div class="container">
+        <section class="row team">
+          <h1 class="triggerAnimation animated" data-animate="fadeInUp"><%= dd('team.title') %></h1>
+          <% delay = 1 %>
+          <% dd('team.members').each do |team| %>
+          <div class="col-xs-3 text-center triggerAnimation animated"  data-animate="fadeInUp" data-delay="<%= delay * 0.1 %>">
+            <img src="img/team/<%= team["image"] %>" class="portrait img-circle" alt="<%= team["name"] %>">
+            <h3><%= team["name"] %></h3>
+            <p><%= team["role"] %></p>
+          </div>
+          <% delay += 1 %>
+          <% end %>
+        </section>
+      </div>
     </div>
     <!--team ends -->
 
     <!-- contact starts -->
-    <div id="contact" class="container">
-      <section class="triggerAnimation animated" data-animate="fadeInUp">
-        <h1><%= dd('contact.title') %></h1>
-        <h4><%= dd('contact.subtitle') %></h4>
+    <div id="contact">
+      <div class="container">
+        <section class="triggerAnimation animated" data-animate="fadeInUp">
+          <h1><%= dd('contact.title') %></h1>
+          <h4><%= dd('contact.subtitle') %></h4>
 
-        <div class="row">
-          <form id="mailing_list" class="form-horizontal col-lg-6" action="" method="post" target="_blank">
-            <div class="form-group">
-              <label for="inputEmail" class="col-lg-2 control-label">Email</label>
-              <div class="col-lg-10">
-                <input type="email" class="form-control" id="inputEmail" name="EMAIL" placeholder="subscribe to receive updates">
-              </div>
-            </div>
-            <div class="form-group">
-              <label class="col-lg-2 control-label">Language</label>
-              <div class="col-lg-10">
-                <div class="radio radio-primary">
-                  <label>
-                    <input type="radio" name="langpref" id="langPrefEN" value="en" checked="checked">
-                    English
-                  </label>
-                </div>
-                <div class="radio radio-primary">
-                  <label>
-                    <input type="radio" name="langpref" id="langPrefCN" value="zh-CN">
-                    Chinese
-                  </label>
+          <div class="row">
+            <form id="mailing_list" class="form-horizontal col-lg-6" action="" method="post" target="_blank">
+              <div class="form-group">
+                <label for="inputEmail" class="col-lg-2 control-label">Email</label>
+                <div class="col-lg-10">
+                  <input type="email" class="form-control" id="inputEmail" name="EMAIL" placeholder="subscribe to receive updates">
                 </div>
               </div>
-            </div>
-            <div class="form-group">
-              <div class="col-lg-10 col-lg-offset-2">
-                <button type="submit" class="btn btn-primary">Subscribe</button>
+              <div class="form-group">
+                <label class="col-lg-2 control-label">Language</label>
+                <div class="col-lg-10">
+                  <div class="radio radio-primary">
+                    <label>
+                      <input type="radio" name="langpref" id="langPrefEN" value="en" checked="checked">
+                      English
+                    </label>
+                  </div>
+                  <div class="radio radio-primary">
+                    <label>
+                      <input type="radio" name="langpref" id="langPrefCN" value="zh-CN">
+                      Chinese
+                    </label>
+                  </div>
+                </div>
               </div>
-            </div>
-          </form>
+              <div class="form-group">
+                <div class="col-lg-10 col-lg-offset-2">
+                  <button type="submit" class="btn btn-primary">Subscribe</button>
+                </div>
+              </div>
+            </form>
 
-          <div class="col-lg-6 text-center">
-            <p>You can always drop us a line at bitsuperlab[at]gmail.com.</p>
+            <div class="col-lg-6 text-center">
+              <p>You can always drop us a line at bitsuperlab[at]gmail.com.</p>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </div>
     </div>
     <!-- contact ends -->
 
