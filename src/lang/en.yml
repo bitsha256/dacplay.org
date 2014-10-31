@@ -1,7 +1,7 @@
 head:
   title: PlayShare.io
   keyword: DAC, BitShares, Crypto, Game, Bitcoin
-  description: BitShares Play is an experiment to demonstrate and validate how a decentralized, autonomous game assets platform might be implemented. The platform features multiple provable games of chance, as well as the ability to integrate various third party games and their asset systems. Shares of PLAY(PLS) combined with all of the assets of both built­in and third party games form a free marketplace and exchange. Systems like this are also known as Decentralized Autonomous Companies (DAC).
+  description: BitShares Play is an experiment to demonstrate and validate how a decentralized, autonomous game assets platform might be implemented. The platform features multiple provable games of chance, as well as the ability to integrate various third party games and their asset systems. Shares of PLAY(PLS) combined with all of the assets of both built-in and third party games form a free marketplace and exchange. Systems like this are also known as Decentralized Autonomous Companies (DAC).
   browser_warn: You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.
 
 nav:
@@ -19,7 +19,7 @@ hero:
 about:
   title: Feature
   tagline: Here comes about tagline
-  content: BitShares Play is an experiment to demonstrate and validate how a decentralized, autonomous game assets platform might be implemented. The platform features multiple provable games of chance, as well as the ability to integrate various third party games and their asset systems. Shares of PLAY(PLS) combined with all of the assets of both built­in and third party games form a free marketplace and exchange. Systems like this are also known as Decentralized Autonomous Companies (DAC).
+  content: BitShares Play is an experiment to demonstrate and validate how a decentralized, autonomous game assets platform might be implemented. The platform features multiple provable games of chance, as well as the ability to integrate various third party games and their asset systems. Shares of PLAY(PLS) combined with all of the assets of both built in and third party games form a free marketplace and exchange. Systems like this are also known as Decentralized Autonomous Companies (DAC).
   feature:
     - title: Decentralized marketplace between crypto world and the game assets world
       intro: Traditional game providers will be able to sell their game coins and game assets to people though BitShares Play, which can be consider as the door opened to the crypto world and than the entire world.
@@ -38,9 +38,9 @@ team:
       role: Rearch Center
       image: anonymous-mask.jpg
       bio: BitSuperLab is a research group focusing on crypto currencies and DACs. BitSuperLab is supporting BitShares Play by contributing to the development and developing tools.
-    - name: HackFisher
+    - name: Denny Wang
       role: Lead Developer
-      image: anonymous-mask.jpg
+      image: denny.png
       bio: The author of the BitShares White Paper, BitShares Play Lead Developer.
     - name: Clar
       role: C++ Developer
@@ -63,7 +63,7 @@ faq:
     - q: The difference between game coins in BitShares Play and BitAssets in BTSX?
       a: CHIPS are different from BitShares X market issued assets like BitUSD and user issued assets. There is an exchange model between PLS and chips, and no market, which is part the BitShares Play consensus, Every chip asset is created with some PLS collateral recorded by the system, and a total supply. After creation, the PLS amount will be frozen as collateral in the system’s balance.
     - q: What's the consensus algorithm used in BitShares Play?
-      a: BitShares Play is using DPOS. The advantage of DPOS is that it allows for faster block confirmation and also allows for scalability to the level of VISA's 10,000 payment transactions per second. Meanwhile the system is still decentralized in that there is neither a single point of failure nor a single point of control. Delegates have the rather simple job of signing new blocks and can be fired on command if they do not perform their duties. Consensus on a whole is reached by stakeholders, whereas in traditional Proof­Of­Work schemes only hashing participants contribute to the network consensus, leaving shareholders who don’t mine unrepresented.
+      a: BitShares Play is using DPOS. The advantage of DPOS is that it allows for faster block confirmation and also allows for scalability to the level of VISA's 10,000 payment transactions per second. Meanwhile the system is still decentralized in that there is neither a single point of failure nor a single point of control. Delegates have the rather simple job of signing new blocks and can be fired on command if they do not perform their duties. Consensus on a whole is reached by stakeholders, whereas in traditional Proof Of Work schemes only hashing participants contribute to the network consensus, leaving shareholders who don’t mine unrepresented.
     - q: What's the Random Number Generation(RNG) algorithm in BitShares Play?
       a: BitShares Play is using a provable distributed RNG algorithm from DPOS. “Distributed” means that the random number of one block is generated by the previous 101 delegates’ revealed secret, so as long as at least one of them are honest, the resulting random number is truly random. “Provable” means that they need to publish the hash of their secrets to the blockchain in the next round. The revealed secret’s hash must be the hash they published last time. They can not cheat by revealing selective favourable secret because the hash of the secret must be included in previous produced block.
     - q: What's the meaning of decentralized market place and platform?
