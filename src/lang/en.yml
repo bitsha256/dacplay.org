@@ -41,19 +41,23 @@ team:
     - name: Denny Wang
       role: Lead Developer
       image: Denny.jpg
-      bio: The author of the BitShares White Paper, BitShares Play Lead Developer.
+      bio: The author of the BitShares Play White Paper, BitShares Play Lead Developer.
     - name: Clar
       role: C++ Developer
       image: BitSuperLab.png
       bio: C++ Developer
+    - name: Boombastic
+      role: Web Developer
+      image: BitSuperLab.png
+      bio: The creator of agsexplorer.com
     - name: Lora
       role: Designer
       image: Lora.jpg
       bio: Designer
-    - name: Boombastic
-      role: Web Developer
+    - name: Cass
+      role: Designer
       image: BitSuperLab.png
-      bio: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      bio: Designer
 
 faq:
   title: FAQ

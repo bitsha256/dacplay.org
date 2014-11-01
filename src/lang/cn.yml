@@ -1,9 +1,10 @@
 head:
-  title: PlayShare.io
-  keyword: Keywords
+  title: BitShares Play
+  keyword: 比特股, Bitcoin, BitShares, DAC, Game
   description: BitShares Play 是一个去中心化的游戏资产平台，用户不但可以在上面的商店中购买游戏币和游戏资产，而且可以进行游戏资产二手交易。此外还提供多种的On-chain趣味性小游戏。
 
 nav:
+  home: 主页
   about: 关于
   faq: FAQ
   team: White Paper
@@ -16,64 +17,68 @@ hero:
 about:
   title: 关于
   tagline: Here comes about tagline
-  content: BitShares Play is an experiment to demonstrate and validate how a decentralized, autonomous game assets platform might be implemented. The platform features multiple provable games of chance, as well as the ability to integrate various third party games and their asset systems. Shares of PLAY(PLS) combined with all of the assets of both built­in and third party games form a free marketplace and exchange. Systems like this are also known as Decentralized Autonomous Companies (DAC).
+  content: 比特股Play（后面统称PLAY）作为一个实验产品，它将展示和验证如何实现建立一个去中心化和自治的游戏资产平台。此平台拥有多种可证公平的猜测或概率类游戏为产品特征，以及拥有整合各种第三方游戏和资产系统的能力。PLAY的数字股份（PLS），并结合了内置的、第三方游戏的资产，建立出一个自由的市场和兑换平台。这类系统也被称之为去中心化自治公司（DAC）.
   feature:
-    - title: Decentralized marketplace between crypto world and the game assets world
-      intro: Traditional game providers will be able to sell their game coins and game assets to people though BitShares Play, which can be consider as the door opened to the crypto world and than the entire world.
-    - title: Blockchain based game platfrom
-      intro: Provable fair game and truly random number generation is always be a problem for games, the algorithm from BitShares DPOS, we first can use this service based on blockchain in games.
-    - title: Peer to peer game assets exchange
-      intro: BitShares Play is not only a marketplace for selling goods like game coins and assets, people can also trade with each other with game coins peer to peer using exchange we provide.
+    - title: 去中心化的游戏币商城，连接数字货币世界和游戏币世界
+      intro: 传统的游戏公司将可以通过BitShares Play来销售他们的游戏币商品给玩家, 这样游戏世界通向数字货币世界以至整个世界的大门被打开.
+    - title: 基于区块链技术的游戏平台
+      intro: 游戏里面的随机数的可证公平性一直是一个问题，使用来自于DPOS共识算法的随机数产生过程，第一次使得我们可以在游戏中使用这种随机数产生服务.
+    - title: 点对点的游戏资产二手交易平台
+      intro: BitShares Play不仅仅是一个销售游戏币和游戏装备的网上商城，人们还可以使用我们提供的交易平台相互交易二手游戏币和游戏装备。
 
 team:
   title: Team
   members:
     - name: BitSuperLab
-      role: Rearch Center
+      role: 研究中心
       image: BitSuperLab.png
-      bio: BitSuperLab is a research group focusing on crypto currencies and DACs. BitSuperLab is supporting BitShares Play by contributing to the development and developing tools.
+      bio: BitSuperLab 是一个研究开发团队，主要从事加密货币和去中心化自组织系统的研究，相信去除中介人角色是互联网未来发展的方向。BitSuperLab 通过参与开发研究和开发工具来支持BitShares Play.
     - name: Denny Wang
       role: Lead Developer
       image: Denny.jpg
-      bio: The author of the BitShares White Paper, BitShares Play Lead Developer.
+      bio: BitShares Play白皮书作者, BitShares Play Lead Developer.
     - name: Clar
       role: C++ Developer
       image: BitSuperLab.png
       bio: C++ Developer
-    - name: Lora
-      role: Designer
-      image: Lora.jpg
-      bio: 设计
     - name: Boombastic
       role: Web Developer
       image: BitSuperLab.png
-      bio: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      bio: ageexplorer.com 作者
+    - name: Lora
+      role: Designer
+      image: Lora.jpg
+      bio: 设计师
+    - name: Cass
+      role: Designer
+      image: BitSuperLab.png
+      bio: 设计师
 
 faq:
   title: FAQ
   qas:
-    - q: What's the token of this System?
-      a: PLAY shares (PLS) are the tokens of the system. PLS are designed first to be the shares of the BitShares Play System, and thus the unit in which dividends are paid to PLS holders and delegates of PLAY are paid for their contributions to the system. Secondly, PLS are the token with which users purchase game assets to play games. PLS provides an opportunity to expand the model of token distribution, and may explore models in which a game rewards winners with the tokens of the game system itself.
-    - q: The difference between game coins in BitShares Play and BitAssets in BTSX?
-      a: CHIPS are different from BitShares X market issued assets like BitUSD and user issued assets. There is an exchange model between PLS and chips, and no market, which is part the BitShares Play consensus, Every chip asset is created with some PLS collateral recorded by the system, and a total supply. After creation, the PLS amount will be frozen as collateral in the system’s balance.
-    - q: What's the consensus algorithm used in BitShares Play?
-      a: BitShares Play is using DPOS. The advantage of DPOS is that it allows for faster block confirmation and also allows for scalability to the level of VISA's 10,000 payment transactions per second. Meanwhile the system is still decentralized in that there is neither a single point of failure nor a single point of control. Delegates have the rather simple job of signing new blocks and can be fired on command if they do not perform their duties. Consensus on a whole is reached by stakeholders, whereas in traditional Proof­Of­Work schemes only hashing participants contribute to the network consensus, leaving shareholders who don’t mine unrepresented.
-    - q: What's the Random Number Generation(RNG) algorithm in BitShares Play?
-      a: BitShares Play is using a provable distributed RNG algorithm from DPOS. “Distributed” means that the random number of one block is generated by the previous 101 delegates’ revealed secret, so as long as at least one of them are honest, the resulting random number is truly random. “Provable” means that they need to publish the hash of their secrets to the blockchain in the next round. The revealed secret’s hash must be the hash they published last time. They can not cheat by revealing selective favourable secret because the hash of the secret must be included in previous produced block.
-    - q: What's the meaning of decentralized market place and platform?  
-      a: There are two kinds of game coins in BitShares Play, one is the built-in on-chain games which need to meet the requirement of inner exchange model, the other one are coins sold by traditional game providers on BitShares Play. After the coins are sold, they can be deposit to the games for shopping, the left can be sold in the inner exhchange. For the second coins, the price for sell is decided and can be updated by the game providers.  
-    - q: When will BitShares Play's snapshot occur?
-      a: The snapshot of BitShares Play will occur soon, please stay tuned!
-    - q: Is BitShares Play still focusing on gambling?
-      a: No, BitShares Play is no longer focus on gambling like Lotto, It is going to be built as a  game assets platform.
+    - q: 什么是BitShares Play这个系统的主代币?
+      a: PLAY股份（PLS）是系统内的代币。PLS主要是用来作为PLAY系统的虚拟股份，同时也是作为分红的依据单位支付利息给PLS持有者，以及可以用来支付给运行系统的托管人(Delegate)。其次，PLS是作为用户购买游戏币去玩游戏所使用的代币。PLS提供了一种改进代币分配方式的新形式，并可能探索出一种用代币奖励游戏赢家的新模式
+    - q: BitShares Play中的游戏币和BTSX中的比特资产有什么区别?
+      a: 在系统中还有其他类型的代币，比如各种游戏币，包括了用户发布的资产和有PLS背书的游戏币资产等。PLS背书的资产（游戏币）在系统内比较特殊，游戏币被创建或销毁，是系统根据市场当前价格的增加或收回PLS保证金决定的，表现为玩家用PLS兑换成游戏币或者用游戏币兑换成PLS。详细一些来说，价格是由当前PLS保证金占总游戏币供应量的比率决定的。这意味着游戏币的供应量会根据用户对于游戏中的需求而有所变化。随着游戏变得能够获利和越来越流行时，那么就有让越多的PLS为游戏中增加的游戏币做抵押金背书。与此同时，游戏币不会凭空生成，因为每一个单位的游戏币都是有PLS背书的。当游戏币销毁时，这些PLS将会被返回给系统。初始抵押金和供应量是游戏开发者设定的，同样价格亦是。当价格被设定，游戏创建者就再也不能修改。游戏币的价格是根据当前所有的PLS抵押金总量和游戏币的总量计算出来的，同时基于区块链的透明的游戏规则可以对游戏所拥有的抵押金和游戏币进行分配
+    - q: BitShares Play的共识算法是什么?
+      a: BitShares Play使用的是DPOS算法. DPOS的优势在于更快的区块确认和可扩展到VISA级别的每秒10000次支付或转账频率。同时，系统依然是去中心化的，既不会被某个个体破坏也不会被某个个体控制。受托人们的工作很简单，就是签署区块，如果他们没有履行义务，那么可以被随时开除。这样，股份持有者们可以共同达成全面共识。而鉴于在传统POW体系下，只有挖矿者才能制定网络中的共识，所以不挖矿的股份持有者并不能参与共识的制定。
+    - q: 能否介绍一下BitShares Play中得随机数产生算法?
+      a: BitShares Play使用了来自于DPOS的一种分布式可证明的随机数产生算法. “分布式”意味着一个区块的随机数事由前一轮101位受讬人所提供的密钥产生, 只要至少其中一位是诚实的, 结果就会是真正的随机. “可证明”表示他们需要在下一个回合发布密钥的哈希值到区块链. 根据密钥所得出的哈希值必须和之前发布的哈希值相同. 由于两者必须一致, 因此受托人不可能通过公开不诚实的密钥来作弊.
+    - q: 去中心化的商城和二手交易市场是什么意思?
+      a: BitShares Play将游戏资产分为两种，一种是PLAY内部兑换资产(价格按照抵押PLS和游戏币总量比例，双向兑换)，另外一种是商家游戏币资产(兑换价格由商家确定，就跟淘宝小店一样，单向兑换)
+    - q: BitShares Play的快照什么时候发生?
+      a: BitShares Play的快照近期会宣布，请保持关注.
+    - q: BitShares Play 是否还会支持开发博彩类游戏?
+      a: 不会, BitShares Play已经不再支持开发类似乐透的博彩类游戏, 而是专注于打造游戏资产平台，即游戏币商城和二手交易市场.
     
 contact:
   title: Want to keep up with the fast-envolving project?
   subtitle: Subscribe to our mailing list to receive an update when new items arrive!
 
 button:
-  view_detail: View details &raquo;
-  learn_more: Learn More
+  view_detail: 查看细节 &raquo;
+  learn_more: 了解更多
 
 countdown:
   days: Days
