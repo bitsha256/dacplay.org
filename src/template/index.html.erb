@@ -180,21 +180,21 @@
                 </div>
                 <div class="radio radio-primary">
                   <label>
-                    <input type="radio" name="langpref" id="langPrefCN" value="cn">
-                    Chinese
+                    <input type="radio" name="langpref" id="langPrefCN" value="zh-CN">
+                    中文
                   </label>
                 </div>
               </div>
             </div>
             <div class="form-group">
               <div class="col-lg-10 col-lg-offset-2">
-                <button type="submit" class="btn btn-primary">Subscribe</button>
+                <button type="submit" class="btn btn-primary"><%= dd('subscribe.title') %></button>
               </div>
             </div>
           </form>
 
           <div class="col-lg-6 text-center">
-            <p>You can always drop us a line at bitsuperlab[at]gmail.com.</p>
+            <p><%= dd('subscribe.mail') %></p>
           </div>
         </div>
       </section>
@@ -203,7 +203,7 @@
 
     <!-- footer start -->
     <footer class="footer navbar">
-      <h3>BitShares Play DAC</h3>
+      <h3>BitShares Play</h3>
       <p>Powered by <a href="http://bitshares.org" target="_blank">BitShares</a></p>
     </footer>
     <!-- footer ends -->

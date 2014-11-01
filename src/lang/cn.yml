@@ -17,7 +17,7 @@ hero:
   more: 了解更多
 
 about:
-  title: 我们是
+  title: 描绘未来
   tagline: Decentralize All Things, No Middle Man!
   content: 比特股Play（后面统称PLAY）作为一个实验产品，它将展示和验证如何实现建立一个去中心化和自治的游戏资产平台。此平台拥有多种可证公平的猜测或概率类游戏为产品特征，以及拥有整合各种第三方游戏和资产系统的能力。PLAY的数字股份（PLS），并结合了内置的、第三方游戏的资产，建立出一个自由的市场和兑换平台。这类系统也被称之为去中心化自治公司（DAC）.
   feature:
@@ -34,7 +34,7 @@ whitepaper:
   link: http://www.bitsuperlab.com/pdf/BitSharesPlayWhitePaper_CN.pdf
 
 team:
-  title: Team
+  title: 团队
   members:
     - name: BitSuperLab
       role: 研究中心
@@ -81,11 +81,15 @@ faq:
     
 contact:
   title: 想要了解这个快速发展的项目的最新更新吗?
-  subtitle: 订阅邮件列表来接受来自我们最新的讯息
+  subtitle: 订阅邮件列表以接受来自我们最新的讯息
 
 button:
   view_detail: 查看细节 &raquo;
   learn_more: 了解更多
+  
+subscribe:
+  title: 订阅
+  mail: 发送邮件至 contact[at]bitsuperlab.com
 
 countdown:
   days: Days

@@ -18,7 +18,7 @@
       more: LEARN MORE
 
     about:
-      title: We are
+      title: Draw The Future
       tagline: Decentralize All Things, No Middle Man!
       content: BitShares Play is an experiment to demonstrate and validate how a decentralized, autonomous game assets platform might be implemented. The platform features multiple provable games of chance, as well as the ability to integrate various third party games and their asset systems. Shares of PLAY(PLS) combined with all of the assets of both built in and third party games form a free marketplace and exchange. Systems like this are also known as Decentralized Autonomous Companies (DAC).
       feature:
@@ -88,6 +88,10 @@
     button:
       view_detail: View details &raquo;
       learn_more: Learn More
+    
+    subscribe:
+      title: Subscribe
+      mail: You can always drop us a line at contact[at]bitsuperlab.com
 
     countdown:
       days: Days
