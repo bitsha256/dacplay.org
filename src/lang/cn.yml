@@ -5,7 +5,7 @@ head:
 
 nav:
   home: 主页
-  about: 我们是
+  about: 关于
   faq: FAQ
   team: 团队
   whitepaper: White Paper
@@ -16,8 +16,8 @@ hero:
   line2: BitShares Play
 
 about:
-  title: 关于
-  tagline: Here comes about tagline
+  title: 我们是
+  tagline: Decentralize All Things, No Middle Man!
   content: 比特股Play（后面统称PLAY）作为一个实验产品，它将展示和验证如何实现建立一个去中心化和自治的游戏资产平台。此平台拥有多种可证公平的猜测或概率类游戏为产品特征，以及拥有整合各种第三方游戏和资产系统的能力。PLAY的数字股份（PLS），并结合了内置的、第三方游戏的资产，建立出一个自由的市场和兑换平台。这类系统也被称之为去中心化自治公司（DAC）.
   feature:
     - title: 去中心化的游戏币商城，连接数字货币世界和游戏币世界
