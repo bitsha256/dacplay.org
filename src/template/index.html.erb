@@ -10,11 +10,11 @@
     <meta name="description" content="<%= dd("head.description") %>">
 
     <!-- Fav and touch icons -->
-    <link rel="shortcut icon" href="img/ico/favicon.ico">
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="img/ico/apple-touch-icon-144-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/ico/apple-touch-icon-114-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/ico/apple-touch-icon-72-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" href="img/ico/apple-touch-icon-57-precomposed.png">
+    <link rel="shortcut icon" href="../img/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../img/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../img/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../img/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="../img/ico/apple-touch-icon-57-precomposed.png">
 
     <!--[if lt IE 7]>
       <p class="chromeframe"><%= dd("head.browser_warn") %></p>
@@ -30,8 +30,8 @@
     <% else %>
       <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
     <% end %>
-    <link href="css/vendor.min.css" rel="stylesheet">
-    <link href="css/app.min.css" rel="stylesheet">
+    <link href="../css/vendor.min.css" rel="stylesheet">
+    <link href="../css/app.min.css" rel="stylesheet">
   </head>
 
   <body id="home" data-spy="scroll" data-target="#page-nav-scrollnav">
@@ -40,7 +40,7 @@
       <div class="container">
         <div class="navbar-header">
           <!--
-          <a href="home" class="navbar-brand"><img src="img/logo.svg" alt="playshare.io-logo"><%= dd('head.title') %></a>
+          <a href="home" class="navbar-brand"><img src="../img/logo.svg" alt="playshare.io-logo"><%= dd('head.title') %></a>
           -->
           <a href="home" class="navbar-brand"><%= dd('head.title') %></a>
           <span id="sub_title" class="navbar-sub-title"></span>
@@ -144,7 +144,7 @@
         <% delay = 1 %>
         <% dd('team.members').each do |team| %>
         <div class="col-xs-3 text-center triggerAnimation animated"  data-animate="fadeInUp" data-delay="<%= delay * 0.1 %>">
-          <img src="img/team/<%= team["image"] %>" class="portrait img-circle" alt="<%= team["name"] %>">
+          <img src="../img/team/<%= team["image"] %>" class="portrait img-circle" alt="<%= team["name"] %>">
           <h3><%= team["name"] %></h3>
           <p><%= team["role"] %></p>
         </div>
@@ -209,15 +209,15 @@
 
     <a id="scrollTopBtn" href="javascript:void(0);" class="btn btn-primary btn-fab btn-raised mdi-maps-local-airport"></a>
 
-    <% if lang == 'zh-CN' %>
+    <% if lang == 'cn' %>
       <script src="//lib.sinaapp.com/js/jquery/1.10.2/jquery-1.10.2.min.js"></script>
       <script src="//cdn.staticfile.org/twitter-bootstrap/3.2.0/js/bootstrap.min.js"></script>
     <% else %>
       <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
       <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
     <% end %>
-    <script src="js/vendor.min.js"></script>
-    <script src="js/app.min.js"></script>
+    <script src="../js/vendor.min.js"></script>
+    <script src="../js/app.min.js"></script>
 
     <!-- ga starts -->
     <%= render :partial => "ga" %>
