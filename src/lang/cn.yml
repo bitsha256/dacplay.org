@@ -1,6 +1,6 @@
 head:
   title: BitShares Play
-  keyword: 比特股, Bitcoin, BitShares, DAC, Game
+  keyword: 比特股, Bitcoin, BitShares, DAC, Game, 商城，二手交易，游戏币
   description: BitShares Play 是一个去中心化的游戏资产平台，用户不但可以在上面的商店中购买游戏币和游戏资产，而且可以进行游戏资产二手交易。此外还提供多种的On-chain趣味性小游戏。
 
 nav:
@@ -8,12 +8,13 @@ nav:
   about: 关于
   faq: FAQ
   team: 团队
-  whitepaper: White Paper
+  whitepaper: 白皮书
   contact: 联系我们
 
 hero:
   line1: 当游戏遇到
   line2: BitShares Play
+  more: 了解更多
 
 about:
   title: 我们是
@@ -40,25 +41,25 @@ team:
       image: BitSuperLab.png
       bio: BitSuperLab 是一个研究开发团队，主要从事加密货币和去中心化自组织系统的研究，相信去除中介人角色是互联网未来发展的方向。BitSuperLab 通过参与开发研究和开发工具来支持BitShares Play.
     - name: Denny Wang
-      role: Lead Developer
+      role: 项目负责人
       image: Denny.jpg
-      bio: BitShares Play白皮书作者, BitShares Play Lead Developer.
+      bio: 开源项目积极参与者和支持者。对比特币区块链技术及二代币的新发展产生浓厚兴趣并进行研究，并参与比特股社区建设，曾参与BitShares X项目的核心开发，BitShares Play白皮书的作者
     - name: Clar
-      role: C++ Developer
+      role: C++ 开发
       image: BitSuperLab.png
-      bio: C++ Developer
+      bio:  资深C++工程师。虽然clar并不常在论坛露面，但他一直关注着社区的成长，并曾为BitShares开发工作贡献过力量
     - name: Boombastic
-      role: Web Developer
+      role: Web开发工程师
       image: BitSuperLab.png
       bio: ageexplorer.com 作者
     - name: Lora
-      role: Designer
+      role: 设计师
       image: Lora.jpg
-      bio: 设计师
+      bio: 网名“大师姐”, 曾在500强公司担任设计总监, 游戏行业多年经验
     - name: Cass
-      role: Designer
+      role: 设计师
       image: BitSuperLab.png
-      bio: 设计师
+      bio: 比特股资深设计师
 
 faq:
   title: FAQ
@@ -79,8 +80,8 @@ faq:
       a: 不会, BitShares Play已经不再支持开发类似乐透的博彩类游戏, 而是专注于打造游戏资产平台，即游戏币商城和二手交易市场.
     
 contact:
-  title: Want to keep up with the fast-envolving project?
-  subtitle: Subscribe to our mailing list to receive an update when new items arrive!
+  title: 想要了解这个快速发展的项目的最新更新吗?
+  subtitle: 订阅邮件列表来接受来自我们最新的讯息
 
 button:
   view_detail: 查看细节 &raquo;
