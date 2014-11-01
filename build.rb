@@ -73,7 +73,7 @@ Dir.glob("#{LANG_PATH}/*.yml") do |dict_file|
   # loop templates, exclude partial templates
   Dir.glob("#{TEMPLATE_PATH}/[^_]*.html.erb") do |template|
     page = ERB.new( File.read( template ) ).result( binding )
-    output_file = "./#{File.basename(template).split('.').first}-#{lang}.html"
+    output_file = "./#{lang}/#{File.basename(template).split('.').first}.html"
 
     Pager.write output_file, page
   end
