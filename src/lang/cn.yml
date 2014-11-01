@@ -5,9 +5,10 @@ head:
 
 nav:
   home: 主页
-  about: 关于
+  about: 我们是
   faq: FAQ
-  team: White Paper
+  team: 团队
+  whitepaper: White Paper
   contact: 联系我们
 
 hero:
@@ -25,6 +26,11 @@ about:
       intro: 游戏里面的随机数的可证公平性一直是一个问题，使用来自于DPOS共识算法的随机数产生过程，第一次使得我们可以在游戏中使用这种随机数产生服务.
     - title: 点对点的游戏资产二手交易平台
       intro: BitShares Play不仅仅是一个销售游戏币和游戏装备的网上商城，人们还可以使用我们提供的交易平台相互交易二手游戏币和游戏装备。
+      
+whitepaper:
+  title: BitShares Play 白皮书
+  read: 阅读内容 &raquo;
+  link: http://www.bitsuperlab.com/pdf/BitSharesPlayWhitePaper_CN.pdf
 
 team:
   title: Team

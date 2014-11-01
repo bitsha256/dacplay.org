@@ -6,7 +6,7 @@ head:
 
 nav:
   home: Home
-  about: Feature
+  about: We Are
   faq: FAQ
   team: Team
   whitepaper: White Paper
@@ -29,7 +29,9 @@ about:
       intro: BitShares Play is not only a marketplace for selling goods like game coins and assets, people can also trade with each other with game coins peer to peer using exchange we provide.
 
 whitepaper:
-  title: White Paper
+  title: BitShares Play White Paper
+  read: Read Content  &raquo;
+  link: http://www.bitsuperlab.com/pdf/BitSharesPlayWhitePaper.pdf
 
 team:
   title: Team
