@@ -20,12 +20,16 @@ setup_page_nav_links = function(idx, elem) {
     if (!href.match(/^#/)) {
       return;
     }
+      
     evt.preventDefault;
-    y = $(href).offset().top - 77;
+      
+    y = $(href).offset().top;
     return $("html, body").animate({
       scrollTop: y
-    }, 1000, jQuery.easing['easeInOutQuad']);
+    }, 500, jQuery.easing['easeInOutQuad']);
+      
   });
+  
 };
 
 setup_check_point = function() {
