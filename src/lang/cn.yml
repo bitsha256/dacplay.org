@@ -60,6 +60,14 @@ team:
       role: 设计师
       image: BitSuperLab.png
       bio: 比特股资深设计师
+    - name: Qijun
+      role: Evangelist
+      image: Qijun.jpg
+      bio: Evangelist
+    - name: HeyD
+      role: Evangelist
+      image: BitSuperLab.png
+      bio: Evangelist
 
 faq:
   title: FAQ

@@ -61,6 +61,14 @@
           role: Designer
           image: BitSuperLab.png
           bio: Designer
+        - name: Qijun
+          role: Evangelist
+          image: Qijun.jpg
+          bio: Evangelist
+        - name: HeyD
+          role: Evangelist
+          image: BitSuperLab.png
+          bio: Evangelist
 
     faq:
       title: FAQ
