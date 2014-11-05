@@ -1,86 +1,126 @@
 head:
-  title: PlayShare.io
-  keyword: Keywords
-  description: BitShares Play is an experiment to demonstrate and validate how a decentralized, autonomous game assets platform might be implemented. The platform features multiple provable games of chance, as well as the ability to integrate various third party games and their asset systems. Shares of PLAY(PLS) combined with all of the assets of both built­in and third party games form a free marketplace and exchange. Systems like this are also known as Decentralized Autonomous Companies (DAC).
+  title: BitShares PLAY Foundation
+  keyword: DAC, BitShares, Crypto, Game, Bitcoin, MarketPlace
+  description: BitShares PLAY is an experiment to demonstrate and validate how a decentralized, autonomous game assets platform might be implemented. The platform features multiple provable games of chance, as well as the ability to integrate various third party games and their asset systems. Shares of PLAY(PLS) combined with all of the assets of both built-in and third party games form a free marketplace and exchange. Systems like this are also known as Decentralized Autonomous Companies (DAC).
   browser_warn: You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.
 
 nav:
   home: Home
-  about: Feature
+  about: About
   faq: FAQ
   team: Team
   whitepaper: White Paper
   contact: Contact
 
 hero:
-  line1: When Game Meets
-  line2: BitShares Play
+  line1: Snapshot taken at mid-night Nov 5th, 2014 (UTC)<br />Pre-Sale will be announced shortly
+  more: LEARN ABOUT ALLOCATION DETAIL
 
 about:
-  title: Feature
-  tagline: Here comes about tagline
-  content: BitShares Play is an experiment to demonstrate and validate how a decentralized, autonomous game assets platform might be implemented. The platform features multiple provable games of chance, as well as the ability to integrate various third party games and their asset systems. Shares of PLAY(PLS) combined with all of the assets of both built­in and third party games form a free marketplace and exchange. Systems like this are also known as Decentralized Autonomous Companies (DAC).
+  title: Draw The Future
+  subtitle: Decentralize All Things, No Middle Man!
+  content: BitShares PLAY is an experiment to demonstrate and validate how a decentralized, autonomous game assets platform might be implemented. The platform features multiple provable games of chance, as well as the ability to integrate various third party games and their asset systems. Shares of PLAY(PLS) combined with all of the assets of both built in and third party games form a free marketplace and exchange. Systems like this are also known as Decentralized Autonomous Companies (DAC).
   feature:
     - title: Decentralized marketplace between crypto world and the game assets world
-      intro: Traditional game providers will be able to sell their game coins and game assets to people though BitShares Play, which can be consider as the door opened to the crypto world and than the entire world.
+      intro: Traditional game providers will be able to sell their game coins and game assets to people though BitShares PLAY, which can be consider as the door opened to the crypto world and than the entire world.
+      icon: mdi-action-shopping-cart
     - title: Blockchain based game platfrom
       intro: Provable fair game and truly random number generation is always be a problem for games, the algorithm from BitShares DPOS, we first can use this service based on blockchain in games.
+      icon: mdi-hardware-gamepad
     - title: Peer to peer game assets exchange
-      intro: BitShares Play is not only a marketplace for selling goods like game coins and assets, people can also trade with each other with game coins peer to peer using exchange we provide.
+      intro: BitShares PLAY is not only a marketplace for selling goods like game coins and assets, people can also trade with each other with game coins peer to peer using exchange we provide.
+      icon: mdi-social-group
 
 whitepaper:
-  title: White Paper
+  title: BitShares PLAY White Paper
+  read: Read Content  &raquo;
+  link: http://www.bitsuperlab.com/pdf/BitSharesPlayWhitePaper.pdf
 
 team:
   title: Team
+  subtitle: This is team subtitle
   members:
     - name: BitSuperLab
       role: Rearch Center
-      image: anonymous-mask.jpg
-      bio: BitSuperLab is a research group focusing on crypto currencies and DACs. BitSuperLab is supporting BitShares Play by contributing to the development and developing tools.
-    - name: HackFisher
-      role: Lead Developer
-      image: anonymous-mask.jpg
-      bio: The author of the BitShares White Paper, BitShares Play Lead Developer.
+      image: BitSuperLab.png
+      bio: BitSuperLab is a research group focusing on crypto currencies and DACs. BitSuperLab is supporting BitShares PLAY by contributing to the development and developing tools.
+    - name: Denny Wang
+      role: Project Leader
+      image: Denny.jpg
+      bio: Author of the BitShares PLAY White Paper, BitShares PLAY Lead Developer.
     - name: Clar
       role: C++ Developer
-      image: anonymous-mask.jpg
+      image: BitSuperLab.png
       bio: C++ Developer
-    - name: Lora
-      role: Designer
-      image: anonymous-mask.jpg
-      bio: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
     - name: Boombastic
       role: Web Developer
-      image: anonymous-mask.jpg
-      bio: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      image: Boombastic.jpg
+      bio: The creator of agsexplorer.com
+    - name: Lora
+      role: Designer
+      image: Lora.jpg
+      bio: Designer
+    - name: Cass
+      role: Designer
+      image: BitSuperLab.png
+      bio: Designer
+    - name: Qijun
+      role: Evangelist
+      image: Qijun.jpg
+      bio: Evangelist
+    - name: HeyD
+      role: Evangelist
+      image: BitSuperLab.png
+      bio: Evangelist
 
 faq:
   title: FAQ
+  subtitle:
   qas:
     - q: What's the token of this System?
-      a: PLAY shares (PLS) are the tokens of the system. PLS are designed first to be the shares of the BitShares Play System, and thus the unit in which dividends are paid to PLS holders and delegates of PLAY are paid for their contributions to the system. Secondly, PLS are the token with which users purchase game assets to play games. PLS provides an opportunity to expand the model of token distribution, and may explore models in which a game rewards winners with the tokens of the game system itself.
-    - q: The difference between game coins in BitShares Play and BitAssets in BTSX?
-      a: CHIPS are different from BitShares X market issued assets like BitUSD and user issued assets. There is an exchange model between PLS and chips, and no market, which is part the BitShares Play consensus, Every chip asset is created with some PLS collateral recorded by the system, and a total supply. After creation, the PLS amount will be frozen as collateral in the system’s balance.
-    - q: What's the consensus algorithm used in BitShares Play?
-      a: BitShares Play is using DPOS. The advantage of DPOS is that it allows for faster block confirmation and also allows for scalability to the level of VISA's 10,000 payment transactions per second. Meanwhile the system is still decentralized in that there is neither a single point of failure nor a single point of control. Delegates have the rather simple job of signing new blocks and can be fired on command if they do not perform their duties. Consensus on a whole is reached by stakeholders, whereas in traditional Proof­Of­Work schemes only hashing participants contribute to the network consensus, leaving shareholders who don’t mine unrepresented.
-    - q: What's the Random Number Generation(RNG) algorithm in BitShares Play?
-      a: BitShares Play is using a provable distributed RNG algorithm from DPOS. “Distributed” means that the random number of one block is generated by the previous 101 delegates’ revealed secret, so as long as at least one of them are honest, the resulting random number is truly random. “Provable” means that they need to publish the hash of their secrets to the blockchain in the next round. The revealed secret’s hash must be the hash they published last time. They can not cheat by revealing selective favourable secret because the hash of the secret must be included in previous produced block.
+      a: playshares (PLS) are the tokens of the system. PLS are designed first to be the shares of the BitShares PLAY System, and thus the unit in which dividends are paid to PLS holders and delegates of PLAY are paid for their contributions to the system. Secondly, PLS are the token with which users purchase game assets to play games. PLS provides an opportunity to expand the model of token distribution, and may explore models in which a game rewards winners with the tokens of the game system itself.
+    - q: The difference between game coins in BitShares PLAY and BitAssets in BTSX?
+      a: CHIPS are different from BitShares X market issued assets like BitUSD and user issued assets. There is an exchange model between PLS and chips, and no market, which is part the BitShares PLAY consensus, Every chip asset is created with some PLS collateral recorded by the system, and a total supply. After creation, the PLS amount will be frozen as collateral in the system’s balance.
+    - q: What's the consensus algorithm used in BitShares PLAY?
+      a: BitShares PLAY is using DPOS. The advantage of DPOS is that it allows for faster block confirmation and also allows for scalability to the level of VISA's 10,000 payment transactions per second. Meanwhile the system is still decentralized in that there is neither a single point of failure nor a single point of control. Delegates have the rather simple job of signing new blocks and can be fired on command if they do not perform their duties. Consensus on a whole is reached by stakeholders, whereas in traditional Proof Of Work schemes only hashing participants contribute to the network consensus, leaving shareholders who don’t mine unrepresented.
+    - q: What's the Random Number Generation(RNG) algorithm in BitShares PLAY?
+      a: BitShares PLAY is using a provable distributed RNG algorithm from DPOS. “Distributed” means that the random number of one block is generated by the previous 101 delegates’ revealed secret, so as long as at least one of them are honest, the resulting random number is truly random. “Provable” means that they need to publish the hash of their secrets to the blockchain in the next round. The revealed secret’s hash must be the hash they published last time. They can not cheat by revealing selective favourable secret because the hash of the secret must be included in previous produced block.
     - q: What's the meaning of decentralized market place and platform?
-      a: There are two kinds of game coins in BitShares Play, one is the built-in on-chain games which need to meet the requirement of inner exchange model, the other one are coins sold by traditional game providers on BitShares Play. After the coins are sold, they can be deposit to the games for shopping, the left can be sold in the inner exhchange. For the second coins, the price for sell is decided and can be updated by the game providers.
-    - q: When will BitShares Play's snapshot occur?
-      a: The snapshot of BitShares Play will occur soon, please stay tuned!
-    - q: Is BitShares Play still focusing on gambling?
-      a: No, BitShares Play is no longer focus on gambling like Lotto, It is going to be built as a  game assets platform.
+      a: There are two kinds of game coins in BitShares PLAY, one is the built-in on-chain games which need to meet the requirement of inner exchange model, the other one are coins sold by traditional game providers on BitShares PLAY. After the coins are sold, they can be deposit to the games for shopping, the left can be sold in the inner exhchange. For the second coins, the price for sell is decided and can be updated by the game providers.
+    - q: When will BitShares PLAY's pre-sale occur?
+      a: The Pre-Sale plan of playshare (PLS) will be announced soon, please stay tuned!
+    - q: Is BitShares PLAY still focusing on gambling?
+      a: No, BitShares PLAY is no longer focus on gambling like Lotto, It is going to be built as a  game assets platform.
 
 contact:
-  title: Want to keep up with the fast-envolving project?
+  title: Want to keep up with the fast-evolving project?
   subtitle: Subscribe to our mailing list to receive an update when new items arrive!
 
+snapshot:
+  title: Snapshot & Allocation
+  subtitle: Snapshot taken at mid-night Nov 5th, 2014 (UTC)<br />Pre-Sale will be announced shortly
+  description: Bitshares PLAY is positioned to be a self-marketable and self-profitable DAC that would be able to blend into existing network systems to be a sustainable platform that encourages game assets and value-adding services. PLS is the main token of the system, the inital total supply of PLS will be 2 billion, with 100% as maximum delegate pay.
+  allocation:
+    - holder: BTS 持有人
+      description: The block to take the snapshot on BTS undecided, BTS being the SuperDAC after the merger. The number of the block will be published after BTS being launched.
+    - holder: AGS 持有人
+      description: From 5th November 2014 snapshot, no action required other than import of private keys.
+    - holder: PTS 持有人
+      description: The block to take the snapshot on PTS is on November 5, 2014. This is also the anniversary snapshot for both BTS and PLAY.
+    - holder: Crowd Saling
+      description: It will be an AGS-like pre-sale, raise through Bitcoin. The start time and details will be announced later, please stay tuned.
+    - holder: Development and Marketing
+      description: Long-term development, including a part to cover costs in pre-launch period.
+    - holder: Reserved Funds
+      description: Reserved fund is for specific purposes including Faucet, Business Development, Game Incubation, long-term ecosystem building. Reserved Fund will be locked on initial launch, and will be linear unlocked monthly after launch in 1 year.
 
 button:
   view_detail: View details &raquo;
   learn_more: Learn More
+
+subscribe:
+  title: Subscribe
+  mail: You can always drop us a line at contact[at]bitsuperlab.com
 
 countdown:
   days: Days

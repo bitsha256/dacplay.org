@@ -53,6 +53,10 @@ subscribe_to_list = function() {
 (function() {
   var lang_pref_selector;
   $('.page-nav a').each(setup_page_nav_links);
+  $('.feature-item').mouseover(function() {
+    $('.feature-item').removeClass('well');
+    return $(this).toggleClass('well');
+  });
   $('.animated').css('opacity', '0');
   $('.triggerAnimation').waypoint(setup_check_point, {
     offset: '80%',

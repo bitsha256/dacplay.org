@@ -24,6 +24,10 @@ Dependent gems can be installed through bundle
 
     bundle install
 
+Install dependency grunt
+
+    sudo npm install -g grunt-cli
+
 Modify Files
 ---------------
 

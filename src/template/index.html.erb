@@ -10,12 +10,12 @@
     <meta name="description" content="<%= dd("head.description") %>">
 
     <!-- Fav and touch icons -->
-    <link rel="shortcut icon" href="img/ico/favicon.ico">
-    <link rel="apple-touch-icon" href="img/ic/Icon-60@2x.png" />
-    <link rel="apple-touch-icon" sizes="180x180" href="img/ico/Icon-60@3x.png" />
-    <link rel="apple-touch-icon" sizes="76x76" href="img/ico/Icon-76.png" />
-    <link rel="apple-touch-icon" sizes="152x152" href="img/ico/Icon-76@2x.png" />
-    <link rel="apple-touch-icon" sizes="58x58" href="img/ico/Icon-Small@2x.png" />
+    <link rel="shortcut icon" href="../img/ico/favicon.ico">
+    <link rel="apple-touch-icon" href="../img/ico/Icon-60@2x.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../img/ico/Icon-60@3x.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="../img/ico/Icon-76.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="../img/ico/Icon-76@2x.png" />
+    <link rel="apple-touch-icon" sizes="58x58" href="../img/ico/Icon-Small@2x.png" />
     <!--[if lt IE 7]>
       <p class="chromeframe"><%= dd("head.browser_warn") %></p>
       <![endif]-->
@@ -25,13 +25,13 @@
       <script src="/js/respond.min.js"></script>
     <![endif]-->
 
-    <% if lang == 'zh-CN' %>
+    <% if lang == 'cn' %>
       <link href="//cdn.staticfile.org/twitter-bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
     <% else %>
       <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
     <% end %>
-    <link href="css/vendor.min.css" rel="stylesheet">
-    <link href="css/app.min.css" rel="stylesheet">
+    <link href="../css/vendor.min.css" rel="stylesheet">
+    <link href="../css/app.min.css" rel="stylesheet">
   </head>
 
   <body id="home" data-spy="scroll" data-target="#page-nav-scrollnav">
@@ -39,10 +39,7 @@
     <header class="navbar navbar-fixed-top global-nav" role="banner">
       <div class="container">
         <div class="navbar-header">
-          <!--
-          <a href="home" class="navbar-brand"><img src="img/logo.svg" alt="playshare.io-logo"><%= dd('head.title') %></a>
-          -->
-          <a href="home" class="navbar-brand"><%= dd('head.title') %></a>
+          <a href="/" class="navbar-brand"><%= dd('head.title') %></a>
           <span id="sub_title" class="navbar-sub-title"></span>
         </div>
         <!-- .navbar-header ends -->
@@ -55,12 +52,12 @@
           </button>
           <div id="page-nav-scrollnav" class="navbar-collapse collapse bs-navbar-collapse">
             <ul class="nav navbar-nav navbar-right page-nav">
-              <li class="active"><a href="#home"><%= dd('nav.home') %></a></li>
               <li><a href="#about"><%= dd('nav.about') %></a></li>
               <li><a href="#whitepaper"><%= dd('nav.whitepaper') %></a></li>
               <li><a href="#faq"><%= dd('nav.faq') %></a></li>
-              <li><a href="#team"><%= dd('nav.team') %></a></li>
+              <li><a href="#snapshot"><%= dd('nav.snapshot') %></a></li>
               <li><a href="#contact"><%= dd('nav.contact') %></a></li>
+              <li><a href="//playshare.io" target="_blank">PlayShare.io</a></li>
             </ul>
           </div>
         </nav>
@@ -70,9 +67,9 @@
 
     <!-- hero starts -->
     <section class="jumbotron container">
-        <h1><%= dd('hero.line1') %></h1>
-        <p><%= dd('hero.line2') %></p>
-        <p><a class="btn btn-primary btn-lg" role="button">Learn more</a></p>
+        <h1 class="logo">BitShares Play</h1>
+        <p><%= dd('hero.line1') %></p>
+        <p><a class="btn btn-primary btn-lg" role="button" href="#snapshot"><%= dd('hero.more') %></a></p>
     </section>
     <!--hero ends -->
 
@@ -82,13 +79,14 @@
       <div class="container">
         <section class="row feature">
           <h1><%= dd('about.title') %></h1>
+          <p class="lead"><%= dd('about.subtitle') %></p>
           <% delay = 1 %>
           <% dd('about.feature').each do |feature| %>
           <div class="col-lg-4 triggerAnimation animated feature-item" data-animate="fadeInUp" data-delay="<%= delay * 0.1 %>">
-            <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" style="width: 140px; height: 140px;">
-            <h2><%= feature['title'] %></h2>
-            <p><%= feature['intro'] %></p>
-            <p><a class="btn btn-primary" href="#" role="button"><%= dd('button.view_detail') %></a></p>
+            <i class="<%= feature['icon'] %> feature-icon img-circle"></i>
+            <h3><%= feature['title'] %></h3>
+            <p class="text-left"><%= feature['intro'] %></p>
+            <p><a class="btn btn-primary" href="#whitepaper" role="button"><%= dd('button.view_detail') %></a></p>
           </div><!-- /.col-lg-4 -->
           <% delay += 1 %>
           <% end %>
@@ -102,6 +100,7 @@
       <div class="container">
         <section class="row whitepaper">
           <h1 class="triggerAnimation animated" data-animate="fadeInUp"><%= dd('whitepaper.title') %></h1>
+          <p class="whitepaper-item"><a class="btn btn-primary" href="<%= dd('whitepaper.link') %>" role="button" target="_blank"><%= dd('whitepaper.read') %></a></p>
         </section>
       </div>
     </div>
@@ -114,6 +113,7 @@
       <div class="container">
         <section class="row faq">
           <h1 class="triggerAnimation animated" data-animate="fadeInUp"><%= dd('faq.title') %></h1>
+          <p class="lead triggerAnimation animated" data-animate="fadeInUp"><%= dd('faq.subtitle') %></p>
 
           <div class="panel-group" id="accordion">
             <% qa_idx = 1 %>
@@ -142,17 +142,45 @@
     <!--faq ends -->
 
 
+    <!-- snapshot -->
+    <div id="snapshot">
+      <div class="container">
+        <section class="row snapshot">
+          <h1 class="triggerAnimation animated" data-animate="fadeInUp"><%= dd('snapshot.title') %></h1>
+          <p class="lead triggerAnimation animated" data-animate="fadeInUp"><%= dd('snapshot.subtitle') %></p>
+          <% delay = 1 %>
+          <% dd('snapshot.allocation').each do |loc| %>
+            <div class="col-md-4 triggerAnimation animated" data-animate="fadeInUp" data-delay="<%= delay * 0.2 %>">
+              <div class="well">
+                <div class="modal-header"><h4 class="modal-title"><%= loc['holder'] %></h4></div>
+                <div class="modal-body"><p><%= loc['description'] %></p></div>
+              </div>
+            </div>
 
+            <% if delay % 3 == 0 %>
+              <div class="clearfix"></div>
+            <% end %>
+
+          <% delay += 1 %>
+          <% end %>
+        </section>
+      </div>
+    </div>
+    <!-- snapshot ends -->
+
+
+<% if false %>
     <!-- team starts -->
     <div id="team">
       <div class="container">
         <section class="row team">
           <h1 class="triggerAnimation animated" data-animate="fadeInUp"><%= dd('team.title') %></h1>
+          <p class="lead"><%= dd('team.subtitle') %></p>
           <% delay = 1 %>
           <% dd('team.members').each do |team| %>
           <div class="col-xs-3 text-center triggerAnimation animated"  data-animate="fadeInUp" data-delay="<%= delay * 0.1 %>">
-            <img src="img/team/<%= team["image"] %>" class="portrait img-circle" alt="<%= team["name"] %>">
-            <h3><%= team["name"] %></h3>
+            <img src="../img/team/<%= team["image"] %>" class="portrait img-circle" alt="<%= team["name"] %>">
+            <h4><%= team["name"] %></h4>
             <p><%= team["role"] %></p>
           </div>
           <% delay += 1 %>
@@ -161,13 +189,14 @@
       </div>
     </div>
     <!--team ends -->
+<% end %>
 
     <!-- contact starts -->
     <div id="contact">
       <div class="container">
         <section class="triggerAnimation animated" data-animate="fadeInUp">
           <h1><%= dd('contact.title') %></h1>
-          <h4><%= dd('contact.subtitle') %></h4>
+          <p class="lead"><%= dd('contact.subtitle') %></p>
 
           <div class="row">
             <form id="mailing_list" class="form-horizontal col-lg-6" action="" method="post" target="_blank">
@@ -189,20 +218,20 @@
                   <div class="radio radio-primary">
                     <label>
                       <input type="radio" name="langpref" id="langPrefCN" value="zh-CN">
-                      Chinese
+                      中文
                     </label>
                   </div>
                 </div>
               </div>
               <div class="form-group">
                 <div class="col-lg-10 col-lg-offset-2">
-                  <button type="submit" class="btn btn-primary">Subscribe</button>
+                  <button type="submit" class="btn btn-primary"><%= dd('subscribe.title') %></button>
                 </div>
               </div>
             </form>
 
             <div class="col-lg-6 text-center">
-              <p>You can always drop us a line at bitsuperlab[at]gmail.com.</p>
+              <p><%= dd('subscribe.mail') %></p>
             </div>
           </div>
         </section>
@@ -212,22 +241,22 @@
 
     <!-- footer start -->
     <footer class="footer navbar">
-      <h3>BitShares Play DAC</h3>
+      <h4>Copyright @ 2014 BitShares Play</h4>
       <p>Powered by <a href="http://bitshares.org" target="_blank">BitShares</a></p>
     </footer>
     <!-- footer ends -->
 
     <a id="scrollTopBtn" href="javascript:void(0);" class="btn btn-primary btn-fab btn-raised mdi-maps-local-airport"></a>
 
-    <% if lang == 'zh-CN' %>
+    <% if lang == 'cn' %>
       <script src="//lib.sinaapp.com/js/jquery/1.10.2/jquery-1.10.2.min.js"></script>
       <script src="//cdn.staticfile.org/twitter-bootstrap/3.2.0/js/bootstrap.min.js"></script>
     <% else %>
       <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
       <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
     <% end %>
-    <script src="js/vendor.min.js"></script>
-    <script src="js/app.min.js"></script>
+    <script src="../js/vendor.min.js"></script>
+    <script src="../js/app.js"></script>
 
     <!-- ga starts -->
     <%= render :partial => "ga" %>

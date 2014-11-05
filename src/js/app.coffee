@@ -42,6 +42,11 @@ subscribe_to_list = ->
   # navigation
   $('.page-nav a').each setup_page_nav_links
 
+  # feature item
+  $('.feature-item').mouseover ->
+    $('.feature-item').removeClass 'well'
+    $(this).toggleClass 'well'
+
   # waypoints
   $('.animated').css('opacity', '0');
   $('.triggerAnimation').waypoint setup_check_point, offset: '80%', triggerOnce: true
@@ -67,5 +72,8 @@ subscribe_to_list = ->
     scrollTrigger: '#scrollTopBtn',
     activeOverlay: false  # Set CSS color to display scrollUp active point, e.g '#00FFFF'
 
+  # bg image
+   # $.backstretch("../img/soldierf.jpg");
+   # $.backstretch("../img/soldierh.jpg");
 
 ).call this;

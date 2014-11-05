@@ -1,0 +1,129 @@
+head:
+  title: BitShares PLAY Foundation
+  keyword: 比特股, Bitcoin, BitShares, DAC, Game, 商城，二手交易，游戏币
+  description: BitShares PLAY 是一个去中心化的游戏资产平台，用户不但可以在上面的商店中购买游戏币和游戏资产，而且可以进行游戏资产二手交易。此外还提供多种的On-chain趣味性小游戏。
+
+nav:
+  home: 主页
+  about: 特点
+  faq: FAQ
+  team: 团队
+  snapshot: 快照
+  whitepaper: 白皮书
+  contact: 联系我们
+
+hero:
+  line1: 快照已于北京时间2014年11月6日上午8时提取<br />预售计划将于近期宣布
+  more: 了解分配细节
+
+about:
+  title: 描绘未来
+  subtitle: Decentralize All Things, No Middle Man!
+  content: BitShares PLAY（后面统称PLAY）作为一个实验产品，它将展示和验证如何实现建立一个去中心化和自治的游戏资产平台。此平台拥有多种可证公平的猜测或概率类游戏为产品特征，以及拥有整合各种第三方游戏和资产系统的能力。PLAY的数字股份（PLS），并结合了内置的、第三方游戏的资产，建立出一个自由的市场和兑换平台。这类系统也被称之为去中心化自治公司（DAC）.
+  feature:
+    - title: 去中心化的游戏币商城
+      icon: mdi-action-shopping-cart
+      intro: 传统的游戏公司将可以通过BitShares PLAY来销售他们的游戏币商品给玩家, 这样游戏世界通向数字货币世界以至整个世界的大门被打开。
+    - title: 基于区块链技术的游戏平台
+      intro: 游戏里面的随机数的可证公平性一直是一个问题，使用来自于DPOS共识算法的随机数产生过程，第一次使得我们可以在游戏中使用这种随机数产生服务.
+      icon: mdi-hardware-gamepad
+    - title: 点对点的游戏资产二手交易平台
+      intro: BitShares PLAY不仅仅是一个销售游戏币和游戏装备的网上商城，人们还可以使用我们提供的交易平台相互交易二手游戏币和游戏装备。
+      icon: mdi-social-group
+
+whitepaper:
+  title: BitShares PLAY 白皮书
+  read: 阅读内容 &raquo;
+  link: http://www.bitsuperlab.com/pdf/BitSharesPlayWhitePaper_CN.pdf
+
+team:
+  title: 团队
+  subtitle: This is team subtitle
+  members:
+    - name: BitSuperLab
+      role: 研究中心
+      image: BitSuperLab.png
+      bio: BitSuperLab 是一个研究开发团队，主要从事加密货币和去中心化自组织系统的研究，相信去除中介人角色是互联网未来发展的方向。BitSuperLab 通过参与开发研究和开发工具来支持BitShares PLAY.
+    - name: Denny Wang
+      role: 项目负责人
+      image: Denny.jpg
+      bio: 开源项目积极参与者和支持者。对比特币区块链技术及二代币的新发展产生浓厚兴趣并进行研究，并参与比特股社区建设，曾参与BitShares X项目的核心开发，BitShares PLAY白皮书的作者
+    - name: Clar
+      role: C++ 开发
+      image: BitSuperLab.png
+      bio:  资深C++工程师。虽然clar并不常在论坛露面，但他一直关注着社区的成长，并曾为BitShares开发工作贡献过力量
+    - name: Boombastic
+      role: Web开发工程师
+      image: Boombastic.jpg
+      bio: agsexplorer.com 作者
+    - name: Lora
+      role: 设计师
+      image: Lora.jpg
+      bio: 网名“大师姐”, 曾在500强公司担任设计总监, 游戏行业多年经验
+    - name: Cass
+      role: 设计师
+      image: BitSuperLab.png
+      bio: 比特股资深设计师
+    - name: Qijun
+      role: Evangelist
+      image: Qijun.jpg
+      bio: Evangelist
+    - name: HeyD
+      role: Evangelist
+      image: BitSuperLab.png
+      bio: Evangelist
+
+faq:
+  title: FAQ
+  subtitle:
+  qas:
+    - q: 什么是BitShares PLAY这个系统的主代币?
+      a: PLAY股份（PLS）是系统内的代币。PLS主要是用来作为PLAY系统的虚拟股份，同时也是作为分红的依据单位支付利息给PLS持有者，以及可以用来支付给运行系统的托管人(Delegate)。其次，PLS是作为用户购买游戏币去玩游戏所使用的代币。PLS提供了一种改进代币分配方式的新形式，并可能探索出一种用代币奖励游戏赢家的新模式
+    - q: BitShares PLAY中的游戏币和BTSX中的比特资产有什么区别?
+      a: 在系统中还有其他类型的代币，比如各种游戏币，包括了用户发布的资产和有PLS背书的游戏币资产等。PLS背书的资产（游戏币）在系统内比较特殊，游戏币被创建或销毁，是系统根据市场当前价格的增加或收回PLS保证金决定的，表现为玩家用PLS兑换成游戏币或者用游戏币兑换成PLS。详细一些来说，价格是由当前PLS保证金占总游戏币供应量的比率决定的。这意味着游戏币的供应量会根据用户对于游戏中的需求而有所变化。随着游戏变得能够获利和越来越流行时，那么就有让越多的PLS为游戏中增加的游戏币做抵押金背书。与此同时，游戏币不会凭空生成，因为每一个单位的游戏币都是有PLS背书的。当游戏币销毁时，这些PLS将会被返回给系统。初始抵押金和供应量是游戏开发者设定的，同样价格亦是。当价格被设定，游戏创建者就再也不能修改。游戏币的价格是根据当前所有的PLS抵押金总量和游戏币的总量计算出来的，同时基于区块链的透明的游戏规则可以对游戏所拥有的抵押金和游戏币进行分配
+    - q: BitShares PLAY的共识算法是什么?
+      a: BitShares PLAY使用的是DPOS算法. DPOS的优势在于更快的区块确认和可扩展到VISA级别的每秒10000次支付或转账频率。同时，系统依然是去中心化的，既不会被某个个体破坏也不会被某个个体控制。受托人们的工作很简单，就是签署区块，如果他们没有履行义务，那么可以被随时开除。这样，股份持有者们可以共同达成全面共识。而鉴于在传统POW体系下，只有挖矿者才能制定网络中的共识，所以不挖矿的股份持有者并不能参与共识的制定。
+    - q: 能否介绍一下BitShares PLAY中得随机数产生算法?
+      a: BitShares PLAY使用了来自于DPOS的一种分布式可证明的随机数产生算法. “分布式”意味着一个区块的随机数事由前一轮101位受讬人所提供的密钥产生, 只要至少其中一位是诚实的, 结果就会是真正的随机. “可证明”表示他们需要在下一个回合发布密钥的哈希值到区块链. 根据密钥所得出的哈希值必须和之前发布的哈希值相同. 由于两者必须一致, 因此受托人不可能通过公开不诚实的密钥来作弊.
+    - q: 去中心化的商城和二手交易市场是什么意思?
+      a: BitShares PLAY将游戏资产分为两种，一种是PLAY内部兑换资产(价格按照抵押PLS和游戏币总量比例，双向兑换)，另外一种是商家游戏币资产(兑换价格由商家确定，就跟淘宝小店一样，单向兑换)
+    - q: BitShares PLAY的预售什么时候开始?
+      a: BitShares PLAY的预售计划近期会宣布，请保持关注.
+    - q: BitShares PLAY 是否还会支持开发博彩类游戏?
+      a: 不会, BitShares PLAY已经不再支持开发类似乐透的博彩类游戏, 而是专注于打造游戏资产平台，即游戏币商城和二手交易市场.
+
+contact:
+  title: 想要了解这个快速发展的项目的最新更新吗?
+  subtitle: 订阅邮件列表以接受来自我们最新的讯息
+
+snapshot:
+  title: 快照及分配方案
+  subtitle: 快照已于北京时间2014年11月6日上午8时提取<br />预售计划将于近期宣布
+  description: Bitshares PLAY is positioned to be a self-marketable and self-profitable DAC that would be able to blend into existing network systems to be a sustainable platform that encourages game assets and value-adding services. PLS is the main token of the system, the inital total supply of PLS will be 2 billion, with 100% as maximum delegate pay.
+  allocation:
+    - holder: BTS 持有人
+      description: 由于BTS(合并后的BitShares)合并尚未完成，具体的BTS快照目标块暂无法确定。BTS合并上线后发布快照目标块。
+    - holder: AGS 持有人
+      description: 从北京时间2014年11月6日上午8时前的最后一个块进行快照，持有人只需保存好私钥，导入BitShares Play钱包中申领。
+    - holder: PTS 持有人
+      description: 从北京时间2014年11月6日上午8时前的最后一个块进行快照，持有人只需保存好私钥，导入BitShares Play钱包中申领。
+    - holder: 预售
+      description: 将采用AGS风格的预售方式，接受比特币。预售开始时间近期公布。
+    - holder: 研发及市场推广基金
+      description: 长期开发经费，包括预发布期间开发费用；市场推广预留经费
+    - holder: 储备金
+      description: 储备金用于具体的应用，包括：赠送计划（Faucet）、业务拓展、游戏扶植、长期生态环境建设等。储备金在发布时冻结，发布后1年内，每月线性解冻。
+
+button:
+  view_detail: 查看细节 &raquo;
+  learn_more: 了解更多
+
+subscribe:
+  title: 订阅
+  mail: 发送邮件至 contact[at]bitsuperlab.com
+
+countdown:
+  days: Days
+  hours: Hours
+  minutes: Minutes
+  seconds: Seconds
