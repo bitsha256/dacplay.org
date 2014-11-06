@@ -8,7 +8,7 @@ vendor_prop_set = (elem, prop, val) ->
     $(elem).css(prop, val)
 
 setup_page_nav_links = (idx, elem) ->
-  vendor_prop_set(this, 'animation-delay', 1+idx * 0.1 + 's')
+  vendor_prop_set(this, 'animation-delay', 0.5 + idx * 0.1 + 's')
   $(elem).addClass 'animated fadeInDown'
   .click (evt) ->
     href = $(this).attr 'href'
@@ -41,6 +41,9 @@ subscribe_to_list = ->
 (->
   # navigation
   $('.page-nav a').each setup_page_nav_links
+
+  # $('body').scrollspy target: "#page-nav-scrollnav", offset: 30
+  # $('body').scrollspy target: ".global-nav", offset: -0
 
   # feature item
   $('.feature-item').mouseover ->

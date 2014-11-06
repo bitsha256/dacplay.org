@@ -32,7 +32,7 @@
     <link href="../css/app.min.css" rel="stylesheet">
   </head>
 
-  <body id="home" data-spy="scroll" data-target="#page-nav-scrollnav">
+  <body id="home" data-spy="scroll" data-offset="0" data-target="#page-nav-scrollnav">
     <!-- global nav -->
     <header class="navbar navbar-fixed-top global-nav" role="banner">
       <div class="container">
@@ -53,7 +53,7 @@
               <li><a href="#about">About</a></li>
               <li><a href="#whitepaper">White Paper</a></li>
               <li><a href="#faq">FAQ</a></li>
-              <li><a href="#snapshot"></a></li>
+              <li><a href="#snapshot">Snapshot</a></li>
               <li><a href="#contact">Contact</a></li>
               <li><a href="//playshare.io" target="_blank">PlayShare.io</a></li>
             </ul>
@@ -64,11 +64,15 @@
     </header>
 
     <!-- hero starts -->
-    <section class="jumbotron container">
-        <h1 class="logo">BitShares Play</h1>
-        <p>Snapshot taken at mid-night Nov 5th, 2014 (UTC)<br />Pre-Sale will be announced shortly</p>
-        <p><a class="btn btn-primary btn-lg" role="button" href="#snapshot">LEARN ABOUT ALLOCATION DETAIL</a></p>
-    </section>
+    <div id="hero">
+      <div class="container">
+      <section class="row jumbotron">
+          <h1 class="logo">BitShares Play</h1>
+          <p>Snapshot taken at mid-night Nov 5th, 2014 (UTC)<br />Pre-Sale will be announced shortly</p>
+          <p class="btn-container"><a class="btn btn-primary btn-lg" role="button" href="#snapshot">LEARN ABOUT ALLOCATION DETAIL</a></p>
+      </section>
+      </div>
+    </div>
     <!--hero ends -->
 
 
@@ -216,7 +220,7 @@
               <div class="panel-heading">
                 <h4 class="panel-title">
                   <a data-toggle="collapse" data-parent="#accordion" href="#q_6">
-                    When will BitShares PLAY's pre-sale occur?
+                    When will BitShares PLAY's pre-sale start?
                   </a>
                 </h4>
               </div>
@@ -350,7 +354,7 @@
               <div class="form-group">
                 <label for="inputEmail" class="col-lg-2 control-label">Email</label>
                 <div class="col-lg-10">
-                  <input type="email" class="form-control" id="inputEmail" name="EMAIL" placeholder="subscribe to receive updates">
+                  <input type="email" class="form-control" id="inputEmail" name="EMAIL" placeholder="Subscribe to receive updates">
                 </div>
               </div>
               <div class="form-group">
@@ -388,7 +392,7 @@
 
     <!-- footer start -->
     <footer class="footer navbar">
-      <h4>Copyright @ 2014 BitShares Play</h4>
+      <h4>Copyright @ 2014 BitShares PLAY</h4>
       <p>Powered by <a href="http://bitshares.org" target="_blank">BitShares</a></p>
     </footer>
     <!-- footer ends -->

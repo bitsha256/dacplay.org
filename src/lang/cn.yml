@@ -95,6 +95,9 @@ faq:
 contact:
   title: 想要了解这个快速发展的项目的最新更新吗?
   subtitle: 订阅邮件列表以接受来自我们最新的讯息
+  email: 邮箱
+  email_tip: 输入邮箱加入邮件列表获取更新
+  language: 语言
 
 snapshot:
   title: 快照及分配方案

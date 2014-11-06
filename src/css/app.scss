@@ -8,32 +8,43 @@ body {
     color:#666;
     height:100%;
 
-    padding-top:70px;
+    padding-top:60px;
     position:relative;
 }
-body { padding-top:70px; position:relative; }
 h1 { text-align:center; }
 section.row { margin: 3em auto; }
 #about, #whitepaper, #team, #faq, #contact {
   padding-top:80px; padding-bottom:80px;
 }
 
-.navbar-brand {  }
+.page-nav { margin-bottom:0px; }
 .jumbotron {
+  text-align:center;
   h1.logo {
     text-indent:-9999px; width:447px; height:176px; margin-left:auto; margin-right:auto;
     background:url(../img/logo-vertical.png)
   }
-  text-align:center;
 }
 .lead {
   font-size:21px; margin-bottom: 20px; max-width:80%; margin-left:auto; margin-right:auto;
   font-weight: 300; line-height: 1.4; text-align:center;
 }
 
+#hero {
+  padding-top:2em; min-height:580px; background-color:white; text-align:center;
+  .jumbotron {
+    border:none; position:relative;
+    -webkit-box-shadow: none;
+       -moz-box-shadow: none;
+            box-shadow: none;
+  }
+  .btn-container { margin-top:2em; }
+}
 #about {
   .feature-item { text-align: center; padding:19px; }
   .feature-icon { font-size:120px; }
+  background-color:#222;
+  h1 { color:white; }
 }
 
 #whitepaper {

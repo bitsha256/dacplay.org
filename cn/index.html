@@ -32,7 +32,7 @@
     <link href="../css/app.min.css" rel="stylesheet">
   </head>
 
-  <body id="home" data-spy="scroll" data-target="#page-nav-scrollnav">
+  <body id="home" data-spy="scroll" data-offset="0" data-target="#page-nav-scrollnav">
     <!-- global nav -->
     <header class="navbar navbar-fixed-top global-nav" role="banner">
       <div class="container">
@@ -64,11 +64,15 @@
     </header>
 
     <!-- hero starts -->
-    <section class="jumbotron container">
-        <h1 class="logo">BitShares Play</h1>
-        <p>快照已于北京时间2014年11月6日上午8时提取<br />预售计划将于近期宣布</p>
-        <p><a class="btn btn-primary btn-lg" role="button" href="#snapshot">了解分配细节</a></p>
-    </section>
+    <div id="hero">
+      <div class="container">
+      <section class="row jumbotron">
+          <h1 class="logo">BitShares Play</h1>
+          <p>快照已于北京时间2014年11月6日上午8时提取<br />预售计划将于近期宣布</p>
+          <p class="btn-container"><a class="btn btn-primary btn-lg" role="button" href="#snapshot">了解分配细节</a></p>
+      </section>
+      </div>
+    </div>
     <!--hero ends -->
 
 
@@ -348,13 +352,13 @@
           <div class="row">
             <form id="mailing_list" class="form-horizontal col-lg-6" action="" method="post" target="_blank">
               <div class="form-group">
-                <label for="inputEmail" class="col-lg-2 control-label">Email</label>
+                <label for="inputEmail" class="col-lg-2 control-label">邮箱</label>
                 <div class="col-lg-10">
-                  <input type="email" class="form-control" id="inputEmail" name="EMAIL" placeholder="subscribe to receive updates">
+                  <input type="email" class="form-control" id="inputEmail" name="EMAIL" placeholder="输入邮箱加入邮件列表获取更新">
                 </div>
               </div>
               <div class="form-group">
-                <label class="col-lg-2 control-label">Language</label>
+                <label class="col-lg-2 control-label">语言</label>
                 <div class="col-lg-10">
                   <div class="radio radio-primary">
                     <label>
@@ -388,7 +392,7 @@
 
     <!-- footer start -->
     <footer class="footer navbar">
-      <h4>Copyright @ 2014 BitShares Play</h4>
+      <h4>Copyright @ 2014 BitShares PLAY</h4>
       <p>Powered by <a href="http://bitshares.org" target="_blank">BitShares</a></p>
     </footer>
     <!-- footer ends -->
