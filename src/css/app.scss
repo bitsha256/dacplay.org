@@ -4,42 +4,65 @@ $lyellow: #FFF000;
 $lgreen: #009940;
 $lpink: #E30883;
 
-html{
-    background: url("../img/soldierf.jpg") no-repeat center bottom #1d2031;
-}
-
 body {
-    background-attachment: fixed !important;
-    background-color: transparent;
-    background: url("../img/soldierh.jpg") no-repeat center top;
-    background-repeat: no-repeat;
-    background-position: center top;
-    background-clip: border-box;
-    background-origin: padding-box;
-    background-size: auto auto;
     color:#666;
-	height:100%;
-    
-    padding-top:70px; 
+    height:100%;
+
+    padding-top:70px;
     position:relative;
 }
-
+body { padding-top:70px; position:relative; }
 h1 { text-align:center; }
 section.row { margin: 3em auto; }
-.navbar-brand {  }
-.jumbotron { text-align:center; }
+#about, #whitepaper, #team, #faq, #contact {
+  padding-top:80px; padding-bottom:80px;
+}
 
-.feature {
-  .feature-item { text-align: center; }
+.navbar-brand {  }
+.jumbotron {
+  h1.logo {
+    text-indent:-9999px; width:447px; height:176px; margin-left:auto; margin-right:auto;
+    background:url(../img/logo-vertical.png)
+  }
+  text-align:center;
 }
-.team {
-  img.portrait { width: 100%; max-width: 200px; }
+.lead {
+  font-size:21px; margin-bottom: 20px; max-width:80%; margin-left:auto; margin-right:auto;
+  font-weight: 300; line-height: 1.4; text-align:center;
 }
-.whitepaper {
-  .whitepaper-item { text-align: center; }
+
+#about {
+  .feature-item { text-align: center; padding:19px; }
+  .feature-icon { font-size:120px; }
 }
+
+#whitepaper {
+  background-color: $lpink; color: white;
+  .whitepaper {
+    .whitepaper-item { text-align: center; }
+  }
+}
+
+#team {
+  background-color: #333; color: white;
+  img.portrait {
+    width: 100%; max-width: 200px;
+  }
+}
+
+#faq {
+  background-color: $lgreen;
+  h1, p.lead { color:white; }
+  .panel-title a { text-decoration:none; }
+}
+
 #contact {
+  background-color:white;
   h1, h4 { text-align: center; }
+}
+
+#snapshot {
+  background: $lyellow;
 }
 
 .footer {
@@ -53,7 +76,4 @@ section.row { margin: 3em auto; }
 #scrollTopBtn {
   bottom: 20px;
   right: 20px;
-//  height: 38px;  /* Height of image */
-//  width: 38px; /* Width of image */
-//  background: url(../img/top.png) no-repeat;
 }
