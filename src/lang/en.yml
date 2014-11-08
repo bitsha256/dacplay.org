@@ -105,20 +105,26 @@ contact:
 
 snapshot:
   title: Snapshot & Allocation
-  subtitle: Snapshot taken at mid-night Nov 5th, 2014 (UTC)<br />Pre-Sale will be announced shortly
+  subtitle: Snapshot on PTS taken at mid-night Nov 5th, 2014 (UTC)<br />Pre-Sale will be announced shortly
   description: Bitshares PLAY is positioned to be a self-marketable and self-profitable DAC that would be able to blend into existing network systems to be a sustainable platform that encourages game assets and value-adding services. PLS is the main token of the system, the inital total supply of PLS will be 2 billion, with 100% as maximum delegate pay.
   allocation:
     - holder: BTS 持有人
+      percentage: 35%
       description: The block to take the snapshot on BTS undecided, BTS being the SuperDAC after the merger. The number of the block will be published after BTS being launched.
     - holder: AGS 持有人
+      percentage: 10%
       description: From 5th November 2014 snapshot, no action required other than import of private keys.
     - holder: PTS 持有人
+      percentage: 10%
       description: The block to take the snapshot on PTS is on November 5, 2014. This is also the anniversary snapshot for both BTS and PLAY.
     - holder: Crowd Saling
+      percentage: 20%
       description: It will be an AGS-like pre-sale, raise through Bitcoin. The start time and details will be announced later, please stay tuned.
     - holder: Development and Marketing
+      percentage: 15%
       description: Long-term development, including a part to cover costs in pre-launch period.
     - holder: Reserved Funds
+      percentage: 10%
       description: Reserved fund is for specific purposes including Faucet, Business Development, Game Incubation, long-term ecosystem building. Reserved Fund will be locked on initial launch, and will be linear unlocked monthly after launch in 1 year.
 
 button:

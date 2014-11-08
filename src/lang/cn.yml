@@ -104,20 +104,26 @@ contact:
 
 snapshot:
   title: 快照及分配方案
-  subtitle: 快照已于北京时间2014年11月6日上午8时提取<br />预售计划将于近期宣布
+  subtitle: PTS的快照已于北京时间2014年11月6日上午8时提取<br />预售计划将于近期宣布
   description: Bitshares PLAY is positioned to be a self-marketable and self-profitable DAC that would be able to blend into existing network systems to be a sustainable platform that encourages game assets and value-adding services. PLS is the main token of the system, the inital total supply of PLS will be 2 billion, with 100% as maximum delegate pay.
   allocation:
     - holder: BTS 持有人
+      percentage: 35%
       description: 由于BTS(合并后的BitShares)合并尚未完成，具体的BTS快照目标块暂无法确定。BTS合并上线后发布快照目标块。
     - holder: AGS 持有人
+      percentage: 10%
       description: 从北京时间2014年11月6日上午8时前的最后一个块进行快照，持有人只需保存好私钥，导入BitShares Play钱包中申领。
     - holder: PTS 持有人
+      percentage: 10%
       description: 从北京时间2014年11月6日上午8时前的最后一个块进行快照，持有人只需保存好私钥，导入BitShares Play钱包中申领。
     - holder: 预售
+      percentage: 20%
       description: 将采用AGS风格的预售方式，接受比特币。预售开始时间近期公布。
     - holder: 研发及市场推广基金
+      percentage: 15%
       description: 长期开发经费，包括预发布期间开发费用；市场推广预留经费
     - holder: 储备金
+      percentage: 10%
       description: 储备金用于具体的应用，包括：赠送计划（Faucet）、业务拓展、游戏扶植、长期生态环境建设等。储备金在发布时冻结，发布后1年内，每月线性解冻。
 
 button:
