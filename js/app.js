@@ -37,7 +37,7 @@ setup_check_point = function() {
 
 subscribe_to_list = function() {
   var action_url, list_cn, list_en;
-  if ($('#inputEmail').val() === '' || !($('#inputEmail').val().match(/^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/))) {
+  if ($('#inputEmail').val() === '' || !($('#inputEmail').val().match(/^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/))) {
     $('#inputEmail').focus().parentsUntil('.form-group').parent().addClass('has-error');
     return false;
   } else {

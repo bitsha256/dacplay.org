@@ -25,7 +25,7 @@ setup_check_point = ->
     vendor_prop_set(this, 'animation-delay', $(this).data('delay')+'s')
 
 subscribe_to_list = ->
-  if $('#inputEmail').val() == '' || !($('#inputEmail').val().match /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/)
+  if $('#inputEmail').val() == '' || !($('#inputEmail').val().match /^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/)
     $('#inputEmail').focus().parentsUntil('.form-group').parent().addClass('has-error')
     return false
   else
