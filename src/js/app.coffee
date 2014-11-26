@@ -38,6 +38,49 @@ subscribe_to_list = ->
   $('#mailing_list').attr('action', if $('#langPrefCN').prop('checked') then list_cn else list_en )
   return true
 
+show_progress_bar = ( start_percentage, today_percentage, dates ) ->
+  today_selector = '.progress .bar'
+  ready_selector = '.progress .ready-point'
+  start_selector = '.progress .start-point'
+  end_selector = '.progress .end-point'
+
+
+  $( ready_selector )
+    .css('left', '-' + $( ready_selector).width() + 'px')
+    .show()
+    .animate left: 0, 1000, show_tip
+
+  $( start_selector )
+    .css('left', '-' + $( start_selector).width() + 'px')
+    .show()
+    .animate left: ($('.progress').width() * start_percentage / 100), 1000, show_tip
+
+  today = new Date()
+  $( today_selector  )
+    .data('percentage', today_percentage)
+    .data('tip', today.toLocaleDateString() + ' ' + today.toLocaleTimeString())
+    .animate width: today_percentage+'%', 1500, show_tip
+    .find('div').html(today_percentage+'%')
+
+  $( end_selector  )
+    .css('right', '-' + $( start_selector).width() + 'px')
+    .show()
+    .animate right: 0, 1000, show_tip
+
+show_tip = ->
+  if $(this).data('tip')
+    # if today marker, left calculation is bit different
+    if $(this).hasClass('bar')
+      left = $(this).width() - 47
+      top = 75
+    else
+      left = $(this).position().left
+      top = 55
+
+    $('<span class="tip">'+$(this).data('tip')+'</span>')
+      .appendTo( $(this).parent() ).
+      css(position: 'absolute', top: top, left: left )
+
 (->
   # navigation
   $('.page-nav a').each setup_page_nav_links
@@ -79,4 +122,32 @@ subscribe_to_list = ->
    # $.backstretch("../img/soldierf.jpg");
    # $.backstretch("../img/soldierh.jpg");
 
+   # Progress bar
+   $('.progress [data-toggle="tooltip"]').tooltip();
+
+   dates =
+     ann_of_cf: new Date(Date.UTC(2014,10,20)) # '2014-11-24 00:00:00'
+     st_of_cf: new Date(Date.UTC(2015,0,5)) #'2015-01-05 00:00:00'
+     ed_of_cf: new Date(Date.UTC(2015,1,5)) #'2015-02-05 00:00:00'
+     today: new Date()
+
+   # if today < ann_of_cf
+   #   #cf is not announced yet
+   #   percentage = -1
+   # else if today >= ann_of_cf && today < st_of_cf
+   #   # announced not started yet
+   #   percentage = Math.floor((today - ann_of_cf) / (st_of_cf - ann_of_cf) * 100)
+   #   points = start: dd.ready, end: dd.start
+   # else if today >= st_of_cf && today < ed_of_cf
+   #   # cf ongoing
+   #   percentage = Math.floor((today - st_of_cf) / (ed_of_cf - st_of_cf) * 100)
+   #   points = start: dd.start, end: dd.end
+   # else
+   #   # cf finishe
+   #   percentage = 100
+
+   st_percentage = Math.floor((dates.st_of_cf - dates.ann_of_cf) / (dates.ed_of_cf - dates.ann_of_cf) * 100)
+   today_percentage = Math.floor((dates.today - dates.ann_of_cf) / (dates.ed_of_cf - dates.ann_of_cf) * 100)
+
+   setTimeout (-> show_progress_bar(st_percentage , today_percentage, dates )), 1500
 ).call this;

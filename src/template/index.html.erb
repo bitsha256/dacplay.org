@@ -68,15 +68,25 @@
     <!-- hero starts -->
     <div id="hero">
       <div class="container">
-      <section class="row jumbotron">
+        <section class="row jumbotron">
           <h1 class="logo">BitShares Play</h1>
           <p><%= dd('hero.line1') %></p>
           <p class="btn-container">
             <a class="btn btn-primary btn-lg" role="button" href="#snapshot"><%= dd('hero.more') %></a>
-          <a class="btn btn-info btn-lg" role="button" href="#contact"><%= dd('contact.subscribe') %></a>
-        </p>
-      </section>
+            <a class="btn btn-info btn-lg" role="button" href="#contact"><%= dd('contact.subscribe') %></a>
+          </p>
+        </section>
       </div>
+      <!-- Progress bar -->
+      <div class="progress row-fluid">
+        <div class="ready-point hider" data-tip="<%= dd('countdown.ready_tip') %>"><div class="marker"><%= dd('countdown.ready') %></div></div>
+        <div class="start-point hider" data-tip="<%= dd('countdown.start_tip') %>"><div class="marker"><%= dd('countdown.start') %></div></div>
+        <div class="end-point hider"><div class="marker"><%= dd('countdown.end') %></div></div>
+        <div class="bar" style="width: 0%;" data-percentage="52">
+          <div class="marker">52%</div>
+        </div>
+      </div>
+      <!-- Progress bar ends -->
     </div>
     <!--hero ends -->
 

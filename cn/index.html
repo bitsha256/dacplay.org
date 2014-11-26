@@ -66,15 +66,25 @@
     <!-- hero starts -->
     <div id="hero">
       <div class="container">
-      <section class="row jumbotron">
+        <section class="row jumbotron">
           <h1 class="logo">BitShares Play</h1>
           <p><span class="label label-success">更新</span> BTS的快照将从BitShares区块链上北京时间2014年12月9日上午8时前最后一个10的整数倍区块上提取<br />PTS的快照已于北京时间2014年11月6日上午8时提取<br />产品众筹计划将于近期宣布</p>
           <p class="btn-container">
             <a class="btn btn-primary btn-lg" role="button" href="#snapshot">了解分配细节</a>
-          <a class="btn btn-info btn-lg" role="button" href="#contact">订阅邮件</a>
-        </p>
-      </section>
+            <a class="btn btn-info btn-lg" role="button" href="#contact">订阅邮件</a>
+          </p>
+        </section>
       </div>
+      <!-- Progress bar -->
+      <div class="progress row-fluid">
+        <div class="ready-point hider" data-tip="宣布众筹计划"><div class="marker">准备</div></div>
+        <div class="start-point hider" data-tip="众筹开始(开始前的转账记录将计入第一天)"><div class="marker">开始</div></div>
+        <div class="end-point hider"><div class="marker">耶!</div></div>
+        <div class="bar" style="width: 0%;" data-percentage="52">
+          <div class="marker">52%</div>
+        </div>
+      </div>
+      <!-- Progress bar ends -->
     </div>
     <!--hero ends -->
 

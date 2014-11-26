@@ -18,7 +18,7 @@ module.exports = function(grunt) {
         stripBanners: true
       },
       vendor: {
-        src: ['src/js/vendor/*.min.js'],
+        src: ['src/js/vendor/*.min.js', 'scr/js/vendor/jquery.countdown.js'],
         dest: 'js/vendor.min.js'
       },
       ie: {

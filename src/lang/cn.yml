@@ -140,3 +140,8 @@ countdown:
   hours: Hours
   minutes: Minutes
   seconds: Seconds
+  ready: 准备
+  ready_tip: 宣布众筹计划
+  start: 开始
+  start_tip: 众筹开始(开始前的转账记录将计入第一天)
+  end: 耶!

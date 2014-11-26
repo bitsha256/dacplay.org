@@ -1,4 +1,4 @@
-var setup_check_point, setup_page_nav_links, subscribe_to_list, vendor_prop_set;
+var setup_check_point, setup_page_nav_links, show_progress_bar, show_tip, subscribe_to_list, vendor_prop_set;
 
 vendor_prop_set = function(elem, prop, val) {
   var vendor, _i, _len, _ref, _results;
@@ -50,8 +50,47 @@ subscribe_to_list = function() {
   return true;
 };
 
+show_progress_bar = function(start_percentage, today_percentage, dates) {
+  var end_selector, ready_selector, start_selector, today, today_selector;
+  today_selector = '.progress .bar';
+  ready_selector = '.progress .ready-point';
+  start_selector = '.progress .start-point';
+  end_selector = '.progress .end-point';
+  $(ready_selector).css('left', '-' + $(ready_selector).width() + 'px').show().animate({
+    left: 0
+  }, 1000, show_tip);
+  $(start_selector).css('left', '-' + $(start_selector).width() + 'px').show().animate({
+    left: $('.progress').width() * start_percentage / 100
+  }, 1000, show_tip);
+  today = new Date();
+  $(today_selector).data('percentage', today_percentage).data('tip', today.toLocaleDateString() + ' ' + today.toLocaleTimeString()).animate({
+    width: today_percentage + '%'
+  }, 1500, show_tip).find('div').html(today_percentage + '%');
+  return $(end_selector).css('right', '-' + $(start_selector).width() + 'px').show().animate({
+    right: 0
+  }, 1000, show_tip);
+};
+
+show_tip = function() {
+  var left, top;
+  if ($(this).data('tip')) {
+    if ($(this).hasClass('bar')) {
+      left = $(this).width() - 47;
+      top = 75;
+    } else {
+      left = $(this).position().left;
+      top = 55;
+    }
+    return $('<span class="tip">' + $(this).data('tip') + '</span>').appendTo($(this).parent()).css({
+      position: 'absolute',
+      top: top,
+      left: left
+    });
+  }
+};
+
 (function() {
-  var lang_pref_selector;
+  var dates, lang_pref_selector, st_percentage, today_percentage;
   $('.page-nav a').each(setup_page_nav_links);
   $('.feature-item').mouseover(function() {
     $('.feature-item').removeClass('well');
@@ -68,7 +107,7 @@ subscribe_to_list = function() {
     $(lang_pref_selector).prop('checked', false);
     return $(this).prop('checked', true);
   });
-  return $.scrollUp({
+  $.scrollUp({
     scrollName: 'scrollUp',
     topDistance: '77',
     topSpeed: 300,
@@ -80,4 +119,16 @@ subscribe_to_list = function() {
     scrollTrigger: '#scrollTopBtn',
     activeOverlay: false
   });
+  $('.progress [data-toggle="tooltip"]').tooltip();
+  dates = {
+    ann_of_cf: new Date(Date.UTC(2014, 10, 20)),
+    st_of_cf: new Date(Date.UTC(2015, 0, 5)),
+    ed_of_cf: new Date(Date.UTC(2015, 1, 5)),
+    today: new Date()
+  };
+  st_percentage = Math.floor((dates.st_of_cf - dates.ann_of_cf) / (dates.ed_of_cf - dates.ann_of_cf) * 100);
+  today_percentage = Math.floor((dates.today - dates.ann_of_cf) / (dates.ed_of_cf - dates.ann_of_cf) * 100);
+  return setTimeout((function() {
+    return show_progress_bar(st_percentage, today_percentage, dates);
+  }), 1500);
 }).call(this);
