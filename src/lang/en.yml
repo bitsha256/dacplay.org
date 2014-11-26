@@ -14,7 +14,7 @@ nav:
   contact: Contact
 
 hero:
-  line1: Snapshot on PTS taken at mid-night Nov 5th, 2014 (UTC)<br />Pre-Sale will be announced shortly
+  line1: <span class="label label-success">Update</span> Snapshot on BTS will be taken from the last block whose height is integral multiple of 10 before mid-night Dec 8, 2014 <br />Snapshot on PTS taken at mid-night Nov 5th, 2014 (UTC)<br />Pre-Sale will be announced shortly
   more: LEARN ABOUT ALLOCATION DETAIL
 
 about:
@@ -94,6 +94,7 @@ faq:
       a: No, BitShares PLAY is no longer focus on gambling like Lotto, It is going to be built as a  game assets platform.
 
 contact:
+  subscribe: "Join Mailing List"
   title: Want to keep up with the fast-evolving project?
   subtitle: Subscribe to our mailing list to receive an update when new items arrive!
   email: Email
@@ -105,12 +106,12 @@ contact:
 
 snapshot:
   title: Snapshot & Allocation
-  subtitle: Snapshot on PTS taken at mid-night Nov 5th, 2014 (UTC)<br />Pre-Sale will be announced shortly
+  subtitle: Pre-Sale will be announced shortly
   description: Bitshares PLAY is positioned to be a self-marketable and self-profitable DAC that would be able to blend into existing network systems to be a sustainable platform that encourages game assets and value-adding services. PLS is the main token of the system, the inital total supply of PLS will be 2 billion, with 100% as maximum delegate pay.
   allocation:
     - holder: BTS 持有人
       percentage: 35%
-      description: The block to take the snapshot on BTS undecided, BTS being the SuperDAC after the merger. The number of the block will be published after BTS being launched.
+      description: <span class="label label-success">Update</span> Snapshot on BTS will be taken from the last block whose height is integral multiple of 10 before mid-night Dec 8, 2014
     - holder: AGS 持有人
       percentage: 10%
       description: From 5th November 2014 snapshot, no action required other than import of private keys.
