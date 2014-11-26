@@ -109,13 +109,13 @@ snapshot:
   subtitle: Pre-Sale will be announced shortly
   description: Bitshares PLAY is positioned to be a self-marketable and self-profitable DAC that would be able to blend into existing network systems to be a sustainable platform that encourages game assets and value-adding services. PLS is the main token of the system, the inital total supply of PLS will be 2 billion, with 100% as maximum delegate pay.
   allocation:
-    - holder: BTS 持有人
+    - holder: BTS
       percentage: 35%
       description: <span class="label label-success">Update</span> Snapshot on BTS will be taken from the last block whose height is integral multiple of 10 before mid-night Dec 8, 2014
-    - holder: AGS 持有人
+    - holder: AGS
       percentage: 10%
       description: From 5th November 2014 snapshot, no action required other than import of private keys.
-    - holder: PTS 持有人
+    - holder: PTS
       percentage: 10%
       description: The block to take the snapshot on PTS is on November 5, 2014. This is also the anniversary snapshot for both BTS and PLAY.
     - holder: Crowd Saling
