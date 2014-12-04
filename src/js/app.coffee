@@ -126,7 +126,7 @@ show_tip = ->
    $('.progress [data-toggle="tooltip"]').tooltip();
 
    dates =
-     ann_of_cf: new Date(Date.UTC(2014,10,20)) # '2014-11-24 00:00:00'
+     ann_of_cf: new Date(Date.UTC(2014,10,30)) # '2014-11-24 00:00:00'
      st_of_cf: new Date(Date.UTC(2015,0,5)) #'2015-01-05 00:00:00'
      ed_of_cf: new Date(Date.UTC(2015,1,5)) #'2015-02-05 00:00:00'
      today: new Date()

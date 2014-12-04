@@ -13,7 +13,7 @@ nav:
   contact: 联系我们
 
 hero:
-  line1: <span class="label label-success">更新</span> BTS的快照将从BitShares区块链上北京时间2014年12月9日上午8时前最后一个10的整数倍区块上提取<br />PTS的快照已于北京时间2014年11月6日上午8时提取<br />产品众筹计划将于近期宣布
+  line1: <span class="label label-success">更新</span> 产品众筹将于2015年1月5日开始通过<a href='http://dacx.com' target='_blank'>DacX.com</a>平台进行<br />BTS的快照将从BitShares区块链上北京时间2014年12月9日上午8时前最后一个10的整数倍区块上提取<br />PTS的快照已于北京时间2014年11月6日上午8时提取
   more: 了解分配细节
 
 about:
@@ -38,7 +38,7 @@ whitepaper:
 
 team:
   title: 团队
-  subtitle: This is team subtitle
+  subtitle:
   members:
     - name: BitSuperLab
       role: 研究中心
@@ -88,7 +88,7 @@ faq:
     - q: 去中心化的商城和二手交易市场是什么意思?
       a: BitShares PLAY将游戏资产分为两种，一种是PLAY内部兑换资产(价格按照抵押PLS和游戏币总量比例，双向兑换)，另外一种是商家游戏币资产(兑换价格由商家确定，就跟淘宝小店一样，单向兑换)
     - q: BitShares PLAY的产品众筹什么时候开始?
-      a: BitShares PLAY的产品众筹计划近期会宣布，请保持关注.
+      a: BitShares PLAY的产品众筹将于2015年1月5日开始通过<a href='http://dacx.com' target='_blank'>DacX.com</a>平台进行，请保持关注.
     - q: BitShares PLAY 是否还会支持开发博彩类游戏?
       a: 不会, BitShares PLAY已经不再支持开发类似乐透的博彩类游戏, 而是专注于打造游戏资产平台，即游戏币商城和二手交易市场.
 
@@ -105,12 +105,12 @@ contact:
 
 snapshot:
   title: 快照及分配方案
-  subtitle: 产品众筹计划将于近期宣布
+  subtitle: 请访问<a href='http://dacx.com'>DacX.com</a>了解众筹详情
   description: Bitshares PLAY is positioned to be a self-marketable and self-profitable DAC that would be able to blend into existing network systems to be a sustainable platform that encourages game assets and value-adding services. PLS is the main token of the system, the inital total supply of PLS will be 2 billion, with 100% as maximum delegate pay.
   allocation:
     - holder: BTS 持有人
       percentage: 35%
-      description: <span class="label label-success">更新</span> BTS的快照将从BitShares区块链上北京时间2014年12月9日上午8时前最后一个10的整数倍区块上提取
+      description: BTS的快照将从BitShares区块链上北京时间2014年12月9日上午8时前最后一个10的整数倍区块上提取
     - holder: AGS 持有人
       percentage: 10%
       description: 从北京时间2014年11月6日上午8时前的最后一个块进行快照，持有人只需保存好私钥，导入BitShares Play钱包中申领。
@@ -119,7 +119,7 @@ snapshot:
       description: 从北京时间2014年11月6日上午8时前的最后一个块进行快照，持有人只需保存好私钥，导入BitShares Play钱包中申领。
     - holder: 众筹
       percentage: 20%
-      description: 将采用AGS风格的众筹方式，接受比特币。众筹开始时间近期公布。
+      description: <span class="label label-success">更新</span> 产品众筹将于2015年1月5日开始通过<a href='http://dacx.com' target='_blank'>DacX.com</a>平台进行。
     - holder: 研发及市场推广基金
       percentage: 15%
       description: 长期开发经费，包括预发布期间开发费用；市场推广预留经费

@@ -121,7 +121,7 @@ show_tip = function() {
   });
   $('.progress [data-toggle="tooltip"]').tooltip();
   dates = {
-    ann_of_cf: new Date(Date.UTC(2014, 10, 20)),
+    ann_of_cf: new Date(Date.UTC(2014, 10, 30)),
     st_of_cf: new Date(Date.UTC(2015, 0, 5)),
     ed_of_cf: new Date(Date.UTC(2015, 1, 5)),
     today: new Date()
