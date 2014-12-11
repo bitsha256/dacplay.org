@@ -90,8 +90,6 @@ faq:
       a: Traditional online-game providers (take minecraft or game alliance as an example) can use BitShares PLAY to issue their game tokens and use BitShares PLAY as the public ledger to trade all in-game assets without any counterparty risk. After the coins are sold, they can be deposit to the various games and what is left over can be sold on the the BitShares PLAY exhchange.
     - q: When will BitShares PLAY's crowdfunding start?
       a: The crowdfunding of playshare (PLS) will start on Jan 5th, 2015 UTC through <a href="http://dacx.com" target="_blank">DacX.com</a>, please stay tuned!
-    - q: Is BitShares PLAY still focusing on gambling?
-      a: No, BitShares PLAY is no longer focus on gambling like Lotto, It is going to be built as a game assets platform.
 
 contact:
   subscribe: "Join Mailing List"
@@ -134,7 +132,7 @@ button:
 
 subscribe:
   title: Subscribe
-  mail: You can always drop us a line at contact[at]bitsuperlab.com
+  mail: You can always drop us a line at info[at]bitsharesplayfoundation.org
 
 countdown:
   days: Days

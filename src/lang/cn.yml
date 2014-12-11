@@ -89,8 +89,6 @@ faq:
       a: BitShares PLAY将游戏资产分为两种，一种是PLAY内部兑换资产(价格按照抵押PLS和游戏币总量比例，双向兑换)，另外一种是商家游戏币资产(兑换价格由商家确定，就跟淘宝小店一样，单向兑换)
     - q: BitShares PLAY的产品众筹什么时候开始?
       a: BitShares PLAY的产品众筹将于2015年1月5日开始通过<a href='http://dacx.com' target='_blank'>DacX.com</a>平台进行，请保持关注.
-    - q: BitShares PLAY 是否还会支持开发博彩类游戏?
-      a: 不会, BitShares PLAY已经不再支持开发类似乐透的博彩类游戏, 而是专注于打造游戏资产平台，即游戏币商城和二手交易市场.
 
 contact:
   subscribe: "订阅邮件"
@@ -133,7 +131,7 @@ button:
 
 subscribe:
   title: 订阅
-  mail: 发送邮件至 contact[at]bitsuperlab.com
+  mail: 发送邮件至 info[at]bitsharesplayfoundation.org
 
 countdown:
   days: Days
