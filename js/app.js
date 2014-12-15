@@ -91,7 +91,7 @@ show_tip = function() {
 
 (function() {
   var dates, lang_pref_selector, st_percentage, today_percentage;
-  $('.page-nav a').each(setup_page_nav_links);
+  $('.page-nav > li > a').each(setup_page_nav_links);
   $('.feature-item').mouseover(function() {
     $('.feature-item').removeClass('well');
     return $(this).toggleClass('well');

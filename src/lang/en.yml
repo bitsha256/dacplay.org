@@ -12,6 +12,7 @@ nav:
   snapshot: Snapshot
   whitepaper: White Paper
   contact: Contact
+  lang: Language
 
 hero:
   line1: '<span class="label label-success">Update</span> Crowdfunding will start on Jan 5th, 2015 UTC through <a href="http://dacx.com" target="_blank">DacX.com</a> <br >Snapshot on BTS will be taken from the last block whose height is integral multiple of 10 before mid-night Dec 8, 2014<br />Snapshot on PTS taken at mid-night Nov 5th, 2014 (UTC)'

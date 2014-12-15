@@ -83,7 +83,7 @@ show_tip = ->
 
 (->
   # navigation
-  $('.page-nav a').each setup_page_nav_links
+  $('.page-nav > li > a').each setup_page_nav_links
 
   # $('body').scrollspy target: "#page-nav-scrollnav", offset: 30
   # $('body').scrollspy target: ".global-nav", offset: -0
