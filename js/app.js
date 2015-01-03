@@ -51,7 +51,7 @@ subscribe_to_list = function() {
 };
 
 show_progress_bar = function(start_percentage, today_percentage, dates) {
-  var end_selector, ready_selector, start_selector, today, today_selector;
+  var display_percentage, end_selector, ready_selector, start_selector, today, today_selector;
   today_selector = '.progress .bar';
   ready_selector = '.progress .ready-point';
   start_selector = '.progress .start-point';
@@ -63,9 +63,14 @@ show_progress_bar = function(start_percentage, today_percentage, dates) {
     left: $('.progress').width() * start_percentage / 100
   }, 1000, show_tip);
   today = new Date();
+  if (today < this.dates.st_of_cf) {
+    display_percentage = Math.floor((today - this.dates.ann_of_cf) / (this.dates.st_of_cf - this.dates.ann_of_cf) * 100);
+  } else {
+    display_percentage = today_percentage;
+  }
   $(today_selector).data('percentage', today_percentage).data('tip', today.toLocaleDateString() + ' ' + today.toLocaleTimeString()).animate({
     width: today_percentage + '%'
-  }, 1500, show_tip).find('div').html(today_percentage + '%');
+  }, 1500, show_tip).find('div').html(display_percentage + '%');
   return $(end_selector).css('right', '-' + $(start_selector).width() + 'px').show().animate({
     right: 0
   }, 1000, show_tip);
@@ -90,7 +95,7 @@ show_tip = function() {
 };
 
 (function() {
-  var dates, lang_pref_selector, st_percentage, today_percentage;
+  var lang_pref_selector, st_percentage, today_percentage;
   $('.page-nav > li > a').each(setup_page_nav_links);
   $('.feature-item').mouseover(function() {
     $('.feature-item').removeClass('well');
@@ -120,7 +125,7 @@ show_tip = function() {
     activeOverlay: false
   });
   $('.progress [data-toggle="tooltip"]').tooltip();
-  dates = {
+  this.dates = {
     ann_of_cf: new Date(Date.UTC(2014, 10, 30)),
     st_of_cf: new Date(Date.UTC(2015, 0, 5)),
     ed_of_cf: new Date(Date.UTC(2015, 1, 5)),

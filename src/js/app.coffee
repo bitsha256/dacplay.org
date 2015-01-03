@@ -56,11 +56,16 @@ show_progress_bar = ( start_percentage, today_percentage, dates ) ->
     .animate left: ($('.progress').width() * start_percentage / 100), 1000, show_tip
 
   today = new Date()
+  if today < @dates.st_of_cf
+    display_percentage = Math.floor((today - @dates.ann_of_cf) / (@dates.st_of_cf - @dates.ann_of_cf) * 100)
+  else
+    display_percentage = today_percentage
+
   $( today_selector  )
     .data('percentage', today_percentage)
     .data('tip', today.toLocaleDateString() + ' ' + today.toLocaleTimeString())
     .animate width: today_percentage+'%', 1500, show_tip
-    .find('div').html(today_percentage+'%')
+    .find('div').html(display_percentage+'%')
 
   $( end_selector  )
     .css('right', '-' + $( start_selector).width() + 'px')
@@ -119,35 +124,35 @@ show_tip = ->
     activeOverlay: false  # Set CSS color to display scrollUp active point, e.g '#00FFFF'
 
   # bg image
-   # $.backstretch("../img/soldierf.jpg");
-   # $.backstretch("../img/soldierh.jpg");
+  # $.backstretch("../img/soldierf.jpg");
+  # $.backstretch("../img/soldierh.jpg");
 
-   # Progress bar
-   $('.progress [data-toggle="tooltip"]').tooltip();
+  # Progress bar
+  $('.progress [data-toggle="tooltip"]').tooltip();
 
-   dates =
-     ann_of_cf: new Date(Date.UTC(2014,10,30)) # '2014-11-24 00:00:00'
-     st_of_cf: new Date(Date.UTC(2015,0,5)) #'2015-01-05 00:00:00'
-     ed_of_cf: new Date(Date.UTC(2015,1,5)) #'2015-02-05 00:00:00'
-     today: new Date()
+  @dates =
+    ann_of_cf: new Date(Date.UTC(2014,10,30)) # '2014-11-24 00:00:00'
+    st_of_cf: new Date(Date.UTC(2015,0,5)) #'2015-01-05 00:00:00'
+    ed_of_cf: new Date(Date.UTC(2015,1,5)) #'2015-02-05 00:00:00'
+    today: new Date()
 
-   # if today < ann_of_cf
-   #   #cf is not announced yet
-   #   percentage = -1
-   # else if today >= ann_of_cf && today < st_of_cf
-   #   # announced not started yet
-   #   percentage = Math.floor((today - ann_of_cf) / (st_of_cf - ann_of_cf) * 100)
-   #   points = start: dd.ready, end: dd.start
-   # else if today >= st_of_cf && today < ed_of_cf
-   #   # cf ongoing
-   #   percentage = Math.floor((today - st_of_cf) / (ed_of_cf - st_of_cf) * 100)
-   #   points = start: dd.start, end: dd.end
-   # else
-   #   # cf finishe
-   #   percentage = 100
+  # if today < ann_of_cf
+  #   #cf is not announced yet
+  #   percentage = -1
+  # else if today >= ann_of_cf && today < st_of_cf
+  #   # announced not started yet
+  #   percentage = Math.floor((today - ann_of_cf) / (st_of_cf - ann_of_cf) * 100)
+  #   points = start: dd.ready, end: dd.start
+  # else if today >= st_of_cf && today < ed_of_cf
+  #   # cf ongoing
+  #   percentage = Math.floor((today - st_of_cf) / (ed_of_cf - st_of_cf) * 100)
+  #   points = start: dd.start, end: dd.end
+  # else
+  #   # cf finishe
+  #   percentage = 100
 
-   st_percentage = Math.floor((dates.st_of_cf - dates.ann_of_cf) / (dates.ed_of_cf - dates.ann_of_cf) * 100)
-   today_percentage = Math.floor((dates.today - dates.ann_of_cf) / (dates.ed_of_cf - dates.ann_of_cf) * 100)
+  st_percentage = Math.floor((dates.st_of_cf - dates.ann_of_cf) / (dates.ed_of_cf - dates.ann_of_cf) * 100)
+  today_percentage = Math.floor((dates.today - dates.ann_of_cf) / (dates.ed_of_cf - dates.ann_of_cf) * 100)
 
-   setTimeout (-> show_progress_bar(st_percentage , today_percentage, dates )), 1500
+  setTimeout (-> show_progress_bar(st_percentage , today_percentage, dates )), 1500
 ).call this;

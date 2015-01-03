@@ -55,6 +55,7 @@
               <li><a href="#about"><%= dd('nav.about') %></a></li>
               <li><a href="#whitepaper"><%= dd('nav.whitepaper') %></a></li>
               <li><a href="#faq"><%= dd('nav.faq') %></a></li>
+              <li><a href="#crowdfund"><%= dd('nav.crowdfund') %></a></li>
               <li><a href="#snapshot"><%= dd('nav.snapshot') %></a></li>
               <li><a href="#contact"><%= dd('nav.contact') %></a></li>
 <!--
@@ -82,7 +83,7 @@
           <h1 class="logo">BitShares Play</h1>
           <p><%= dd('hero.line1') %></p>
           <p class="btn-container">
-            <a class="btn btn-primary btn-lg" role="button" href="#snapshot"><%= dd('hero.more') %></a>
+            <a class="btn btn-primary btn-lg" role="button" href="#crowdfund"><%= dd('hero.more') %></a>
             <a class="btn btn-info btn-lg" role="button" href="#contact"><%= dd('contact.subscribe') %></a>
           </p>
         </section>
@@ -127,12 +128,30 @@
       <div class="container">
         <section class="row whitepaper">
           <h1 class="triggerAnimation animated" data-animate="fadeInUp"><%= dd('whitepaper.title') %></h1>
-          <p class="whitepaper-item"><a class="btn btn-primary" href="<%= dd('whitepaper.link') %>" role="button" target="_blank"><%= dd('whitepaper.read') %></a></p>
+          <p class="whitepaper-item">
+            <a class="btn btn-primary" href="<%= dd('whitepaper.link_tech') %>" role="button" target="_blank"><%= dd('whitepaper.tech') %></a>
+            <a class="btn btn-primary" href="<%= dd('whitepaper.link_nonetech') %>" role="button" target="_blank"><%= dd('whitepaper.nonetech') %></a>
+          </p>
         </section>
       </div>
     </div>
     <!--whitepaper ends -->
 
+
+    <!-- crowdfund starts -->
+    <div id="crowdfund">
+      <div class="container">
+        <section class="row crowdfund">
+          <h1 class="triggerAnimation animated" data-animate="fadeInUp"><%= dd('crowdfund.title') %></h1>
+          <%= dd('crowdfund.content') %>
+          <p class="crowdfund-item">
+            <a class="btn btn-primary btn-lg" role="button" href="<%= dd('crowdfund.link_prospectus') %>" target="_blank"><%= dd('crowdfund.prospectus') %></a>
+            <a class="btn btn-primary btn-lg" role="button" href="http://dacx.com/play" target="_blank"><%= dd('hero.visit_dacx') %></a>
+          </p>
+        </section>
+      </div>
+    </div>
+    <!--crowdfund ends -->
 
 
     <!-- faq starts -->

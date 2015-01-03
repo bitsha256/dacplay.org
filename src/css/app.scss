@@ -15,7 +15,7 @@ h1 { text-align:center; }
 .hider { display:none; }
 .block { display:block; }
 section.row { margin: 3em auto; }
-#about, #whitepaper, #team, #faq, #contact {
+#about, #whitepaper, #team, #faq, #contact, #crowdfund {
   padding-top:80px; padding-bottom:80px;
 }
 
@@ -54,6 +54,13 @@ section.row { margin: 3em auto; }
   background-color: $lpink; color: white;
   .whitepaper {
     .whitepaper-item { text-align: center; }
+  }
+}
+
+#crowdfund {
+  background-color: white; color:#666;
+  .crowdfund {
+    .crowdfund-item { text-align: center; margin-top:3em;}
   }
 }
 

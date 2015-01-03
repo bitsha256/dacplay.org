@@ -11,12 +11,14 @@ nav:
   team: Team
   snapshot: Snapshot
   whitepaper: White Paper
+  crowdfund: Crowdfunding
   contact: Contact
   lang: Language
 
 hero:
-  line1: '<span class="label label-success">Update</span> Crowdfunding will start on Jan 5th, 2015 UTC through <a href="http://dacx.com" target="_blank">DacX.com</a> <br >Snapshot on BTS will be taken from the last block whose height is integral multiple of 10 before mid-night Dec 8, 2014<br />Snapshot on PTS taken at mid-night Nov 5th, 2014 (UTC)'
-  more: LEARN ABOUT ALLOCATION DETAIL
+  line1: 'Crowdfunding will start on <br /><strong>Jan 5th, 2015 (UTC time)</strong> <br />through <a href="http://dacx.com/play" target="_blank">DacX.com</a> '
+  more: LEARN ABOUT DETAIL
+  visit_dacx: Visit dacx.com
 
 about:
   title: Draw The Future
@@ -36,7 +38,30 @@ about:
 whitepaper:
   title: BitShares PLAY White Paper
   read: Read Content  &raquo;
-  link: http://www.bitsuperlab.com/pdf/BitSharesPlayWhitePaper.pdf
+  tech: Tehnical White Paper
+  nonetech: None-Technical White Paper
+  link_tech: /pdf/BitSharesPlayWhitePaper_EN.pdf
+  link_nonetech: /pdf/BitSharesPLAYNoneTechnical_EN.pdf
+
+crowdfund:
+  title: BitShares PLAY Crowdfunding
+  content: |
+    <p>Bitshares PLAY's crowdfunding is set to start at 00:00 (UTC) 2015.01.05 till 00:00 (UTC) 2015.02.02 on <a href="http://dacx.com/play" target="_blank">DACX.com</a> for a 28-day period. Investors can simply send Bitcoin to the specified address.</p>
+    <p>PLS(playshares) has a fixed amount of 2 billion, 20% (400 million) of which will be distributed for crowdfunding. For 1 btc, 100,000 PLS will be offered with a progressively decreasing bonus. For the first week, there will be a 30% of bonus;the second, 20%;the third, 10%;the fourth, none. The rest of the PLS that is not given out will be evenly distributed to investors of the previous four weeks (according to the proportion of the PLS they hold).</p>
+    <p>
+      <strong>Simply put:</strong>：
+        <ul>
+          <li>1st week: 1BTC=130,000PLS</li>
+          <li>2nd week: 1BTC=120,000PLS</li>
+          <li>3rd week: 1BTC=110,000PLS</li>
+          <li>4th week: 1BTC=100,000PLS</li>
+        </ul>
+    </p>
+    <p>When 3000BTC is gathered before 2015.02.02, the crowdfunding will be ended in advance. The BTC that is sent to the crowdfunding address will be given back to the sent address.</p>
+    <p>For example, if during the first week, 3000BTC is received, the crowdfunding will be ended with 390 million PLS distributed. Then the remaining 10 million PLS will be given to all that have participated in the crowdfunding, making 1 BTC with 133,333PLS of return. If in the end, the fund that is collected at the end of the 28-day raising period is less than 3000BTC, there will be more PLS left to give to the investors who have participated.</p>
+    <p>Due to the fact that the private key of Bitcoin is the only proof for the later distributed PLS's ownership,investors must send from where they control their own private keys (like wallets).</p>
+  prospectus: Prospectus
+  link_prospectus: /pdf/BitSharesPlayProspectus_EN.pdf
 
 team:
   title: Team
@@ -90,7 +115,7 @@ faq:
     - q: What's the meaning of decentralized market place and platform?
       a: Traditional online-game providers (take minecraft or game alliance as an example) can use BitShares PLAY to issue their game tokens and use BitShares PLAY as the public ledger to trade all in-game assets without any counterparty risk. After the coins are sold, they can be deposit to the various games and what is left over can be sold on the the BitShares PLAY exhchange.
     - q: When will BitShares PLAY's crowdfunding start?
-      a: The crowdfunding of playshare (PLS) will start on Jan 5th, 2015 UTC through <a href="http://dacx.com" target="_blank">DacX.com</a>, please stay tuned!
+      a: The crowdfunding of playshare (PLS) will start on Jan 5th, 2015 UTC through <a href="http://dacx.com/play" target="_blank">DacX.com</a>, please stay tuned!
 
 contact:
   subscribe: "Join Mailing List"
@@ -105,7 +130,7 @@ contact:
 
 snapshot:
   title: Snapshot & Allocation
-  subtitle: Please visit <a href='http://dacx.com' target='_blank'>DacX.com</a> for crowdfunding detail
+  subtitle: Please visit <a href='http://dacx.com/play' target='_blank'>DacX.com</a> for crowdfunding detail
   description: Bitshares PLAY is positioned to be a self-marketable and self-profitable DAC that would be able to blend into existing network systems to be a sustainable platform that encourages game assets and value-adding services. PLS is the main token of the system, the inital total supply of PLS will be 2 billion, with 100% as maximum delegate pay.
   allocation:
     - holder: BTS
@@ -119,7 +144,7 @@ snapshot:
       description: The block to take the snapshot on PTS is on November 5, 2014. This is also the anniversary snapshot for both BTS and PLAY.
     - holder: Crowdfunding
       percentage: 20%
-      description: <span class="label label-success">Update</span> Crowdfunding will start on Jan. 5th, 2015 UTC through <a href='http://dacx.com' target='_blank'>DacX.com</a>.
+      description: <span class="label label-success">Update</span> Crowdfunding will start on Jan. 5th, 2015 UTC through <a href='http://dacx.com/play' target='_blank'>DacX.com</a>.
     - holder: Development and Marketing
       percentage: 15%
       description: Long-term development, including a part to cover costs in pre-launch period.

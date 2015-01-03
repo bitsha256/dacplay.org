@@ -10,12 +10,15 @@ nav:
   team: 团队
   snapshot: 快照
   whitepaper: 白皮书
+  crowdfund: 众筹
   contact: 联系我们
   lang: 语言
 
 hero:
-  line1: <span class="label label-success">更新</span> 产品众筹将于2015年1月5日开始通过<a href='http://dacx.com' target='_blank'>DacX.com</a>平台进行<br />BTS的快照将从BitShares区块链上北京时间2014年12月9日上午8时前最后一个10的整数倍区块上提取<br />PTS的快照已于北京时间2014年11月6日上午8时提取
-  more: 了解分配细节
+  line1: 产品众筹将于<br /><strong>北京时间2015年1月5日上午8时</strong><br />通过<a href='http://dacx.com/play' target='_blank'>DacX.com</a>平台进行
+  more: 了解细节
+  visit_dacx: 访问 DacX.com
+  
 
 about:
   title: 描绘未来
@@ -35,7 +38,32 @@ about:
 whitepaper:
   title: BitShares PLAY 白皮书
   read: 阅读内容 &raquo;
-  link: http://www.bitsuperlab.com/pdf/BitSharesPlayWhitePaper_CN.pdf
+  tech: 技术白皮书
+  nonetech: 非技术白皮书
+  link_tech: /pdf/BitSharesPlayWhitePaper_CN.pdf
+  link_nonetech: /pdf/BitSharesPLAYNoneTechnical_CN.pdf
+
+crowdfund:
+  title: BitShares PLAY 众筹计划
+  content: |
+    <p>众筹将于北京时间2015年1月5日上午8时至2015年2月2日上午8时通过<a href="http://dacx.com/play" target="_blank">DacX.com</a>平台进行，为期28天。投资者在此期间将Bitcoin发送至指定地址即可。</p>
+    <p>PLS总量20亿，将拿出20%，即4亿PLS来做众筹。基准对应关系为</p>
+    <p>1BTC=100,000PLS。第一周有30%的奖励，第二周为20%，第三周为10%，第四周无奖励。</p>
+    <p>
+      <strong>BTC与PLS的对应关系</strong>：
+        <ul>
+          <li>第一周: 1BTC=130,000PLS</li>
+          <li>第二周: 1BTC=120,000PLS</li>
+          <li>第三周: 1BTC=110,000PLS</li>
+          <li>第四周: 1BTC=100,000PLS</li>
+        </ul>
+    </p>
+    <p>结束后，4亿PLS中未分配部分，会按参与众筹投资者手中持有PLS的比例分配完。</p>
+    <p>提前结束条件：募资总额若超过3000BTC则众筹提前结束，之后发送到众筹地址的BTC将会发回原地址。</p>
+    <p>例如，如果在第1周就筹集到了3000BTC，那么众筹立即结束。剩下的PLS为0.1亿，这些PLS会分配给参与众筹的投资者们，即实际上1BTC=133,333PLS。如果最终筹款数额低于3000BTC，那么剩下的PLS会更多，那么参与众筹的投资者会获得更多额外的PLS。</p>
+    <p>由于最终将以发出的比特币的地址作为唯一确认方式，所以请投资者务必使用自己可以控制地址私钥的的方式（例如使用自己的钱包）进行发送。</p>
+  prospectus: 众筹说明书
+  link_prospectus: /pdf/BitSharesPlayProspectus_EN.pdf
 
 team:
   title: 团队
@@ -89,7 +117,7 @@ faq:
     - q: 去中心化的商城和二手交易市场是什么意思?
       a: BitShares PLAY将游戏资产分为两种，一种是PLAY内部兑换资产(价格按照抵押PLS和游戏币总量比例，双向兑换)，另外一种是商家游戏币资产(兑换价格由商家确定，就跟淘宝小店一样，单向兑换)
     - q: BitShares PLAY的产品众筹什么时候开始?
-      a: BitShares PLAY的产品众筹将于2015年1月5日开始通过<a href='http://dacx.com' target='_blank'>DacX.com</a>平台进行，请保持关注.
+      a: BitShares PLAY的产品众筹将于2015年1月5日开始通过<a href='http://dacx.com/play' target='_blank'>DacX.com</a>平台进行，请保持关注.
 
 contact:
   subscribe: "订阅邮件"
@@ -104,7 +132,7 @@ contact:
 
 snapshot:
   title: 快照及分配方案
-  subtitle: 请访问<a href='http://dacx.com'>DacX.com</a>了解众筹详情
+  subtitle: 请访问<a href='http://dacx.com/play'>DacX.com</a>了解众筹详情
   description: Bitshares PLAY is positioned to be a self-marketable and self-profitable DAC that would be able to blend into existing network systems to be a sustainable platform that encourages game assets and value-adding services. PLS is the main token of the system, the inital total supply of PLS will be 2 billion, with 100% as maximum delegate pay.
   allocation:
     - holder: BTS 持有人
@@ -118,7 +146,7 @@ snapshot:
       description: 从北京时间2014年11月6日上午8时前的最后一个块进行快照，持有人只需保存好私钥，导入BitShares Play钱包中申领。
     - holder: 众筹
       percentage: 20%
-      description: <span class="label label-success">更新</span> 产品众筹将于2015年1月5日开始通过<a href='http://dacx.com' target='_blank'>DacX.com</a>平台进行。
+      description: <span class="label label-success">更新</span> 产品众筹将于2015年1月5日开始通过<a href='http://dacx.com/play' target='_blank'>DacX.com</a>平台进行。
     - holder: 研发及市场推广基金
       percentage: 15%
       description: 长期开发经费，包括预发布期间开发费用；市场推广预留经费
