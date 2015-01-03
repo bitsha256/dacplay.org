@@ -40,8 +40,8 @@ whitepaper:
   read: 阅读内容 &raquo;
   tech: 技术白皮书
   nonetech: 非技术白皮书
-  link_tech: /pdf/BitSharesPlayWhitePaper_CN.pdf
-  link_nonetech: /pdf/BitSharesPLAYNoneTechnical_CN.pdf
+  link_tech: ../pdf/BitSharesPlayWhitePaper_CN.pdf
+  link_nonetech: ../pdf/BitSharesPLAYNoneTechnical_CN.pdf
 
 crowdfund:
   title: BitShares PLAY 众筹计划
@@ -63,7 +63,7 @@ crowdfund:
     <p>例如，如果在第1周就筹集到了3000BTC，那么众筹立即结束。剩下的PLS为0.1亿，这些PLS会分配给参与众筹的投资者们，即实际上1BTC=133,333PLS。如果最终筹款数额低于3000BTC，那么剩下的PLS会更多，那么参与众筹的投资者会获得更多额外的PLS。</p>
     <p>由于最终将以发出的比特币的地址作为唯一确认方式，所以请投资者务必使用自己可以控制地址私钥的的方式（例如使用自己的钱包）进行发送。</p>
   prospectus: 众筹说明书
-  link_prospectus: /pdf/BitSharesPlayProspectus_EN.pdf
+  link_prospectus: ../pdf/BitSharesPlayProspectus_EN.pdf
 
 team:
   title: 团队
