@@ -137,7 +137,9 @@ show_tip = function() {
   setTimeout((function() {
     return show_progress_bar(st_percentage, today_percentage, dates);
   }), 1500);
-  $('.risk-notify-container').show();
+  if (this.dates.today > this.dates.st_of_cf) {
+    $('.risk-notify-container').show();
+  }
   return $('.risk_confirm_btn').on('click', function() {
     $('.risk-notify').hide();
     return $('.btc-address-holder').show();

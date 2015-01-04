@@ -159,8 +159,8 @@ show_tip = ->
   setTimeout (-> show_progress_bar(st_percentage , today_percentage, dates )), 1500
 
   # display donating btc address
-  # if @dates.today > @dates.st_of_cf
-  $('.risk-notify-container').show()
+  if @dates.today > @dates.st_of_cf
+    $('.risk-notify-container').show()
 
   $('.risk_confirm_btn').on 'click', ->
     $('.risk-notify').hide()
