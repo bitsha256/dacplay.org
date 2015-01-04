@@ -82,10 +82,18 @@
           <h1 class="logo">BitShares Play</h1>
           <p>产品众筹将于<br /><strong>北京时间2015年1月5日上午8时</strong><br />通过<a href='http://dacx.com/play' target='_blank'>DacX.com</a>平台进行</p>
 
-          <div class="btc-address-holder alert alert-info" role="alert">
-            <a href="javascript:void(0)" class="btn btn-default btn-sm btn-fab btn-raised mdi-image-camera-alt mdi-material-teal pull-right" data-container="body" data-toggle="popover" data-content="<img src='../img/qr_3DPD7z66T7DXULvFZUsc4xNcVS2q68TM3u.png' style='width:100%;' />" data-placement="left" data-trigger="click hover" data-html="true"></a>
-            众筹BTC发送地址: <span class="address">3DPD7z66T7DXULvFZUsc4xNcVS2q68TM3u</span>
+          <div class="crowdfund-item risk-notify-container">
+            <div class="risk-notify">
+              <a class="btn btn-success btn-lg" href="javascript:void(0);" data-toggle="modal" data-target="#risk-dialog">查看众筹BTC发送地址</a>
+            </div>
+            <div class="btc-address-holder alert alert-info" role="alert">
+              <div class="address-content">
+                <a href="javascript:void(0)" class="btn btn-default btn-sm btn-fab btn-raised mdi-image-camera-alt mdi-material-teal pull-right" data-container="body" data-toggle="popover" data-content="<img src='../img/qr_3DPD7z66T7DXULvFZUsc4xNcVS2q68TM3u.png' style='width:100%;' />" data-placement="left" data-trigger="click hover" data-html="true"></a>
+                众筹BTC发送地址: <span class="address">3DPD7z66T7DXULvFZUsc4xNcVS2q68TM3u</span>
+              </div>
+            </div>
           </div>
+
 
           <p class="btn-container">
             <a class="btn btn-primary btn-lg" role="button" href="#crowdfund">了解细节</a>
@@ -182,9 +190,39 @@
 <p>由于最终将以发出的比特币的地址作为唯一确认方式，所以请投资者务必使用自己可以控制地址私钥的的方式（例如使用自己的钱包）进行发送。</p>
 
 
-          <div class="btc-address-holder alert alert-info" role="alert">
-            <a href="javascript:void(0)" class="btn btn-default btn-sm btn-fab btn-raised mdi-image-camera-alt mdi-material-teal pull-right" data-container="body" data-toggle="popover" data-content="<img src='../img/qr_3DPD7z66T7DXULvFZUsc4xNcVS2q68TM3u.png' style='width:100%;' />" data-placement="left" data-trigger="click hover" data-html="true"></a>
-            众筹BTC发送地址: <span class="address">3DPD7z66T7DXULvFZUsc4xNcVS2q68TM3u</span>
+
+          <div class="crowdfund-item risk-notify-container">
+            <div class="risk-notify">
+              <a class="btn btn-success btn-lg" href="javascript:void(0);" data-toggle="modal" data-target="#risk-dialog">查看众筹BTC发送地址</a>
+            </div>
+            <div class="btc-address-holder alert alert-info" role="alert">
+              <div class="address-content">
+                <a href="javascript:void(0)" class="btn btn-default btn-sm btn-fab btn-raised mdi-image-camera-alt mdi-material-teal pull-right" data-container="body" data-toggle="popover" data-content="<img src='../img/qr_3DPD7z66T7DXULvFZUsc4xNcVS2q68TM3u.png' style='width:100%;' />" data-placement="left" data-trigger="click hover" data-html="true"></a>
+                众筹BTC发送地址: <span class="address">3DPD7z66T7DXULvFZUsc4xNcVS2q68TM3u</span>
+              </div>
+            </div>
+          </div>
+          <div id="risk-dialog" class="modal fade" tabindex="-1">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                  <h4 class="modal-title">风险确认</h4>
+                </div>
+                <div class="modal-body">
+                  <ol>
+<li>请确认您已经阅读，理解和认同本页面的全部内容，白皮书以及众筹说明书。</li>
+<li>请确认参与本项众筹是您真实的意愿表达，您对本项众筹的风险有充分的认识并有能力承担可能的最坏结果。</li>
+<li>请确认您发出比特币的地址的私钥是由您本人掌握的（特别注意比特币不能是从交易所直接发出的）。</li>
+</ol>
+
+                </div>
+                <div class="modal-footer">
+                  <button class="btn btn-default" data-dismiss="modal">取消</button>
+                  <button class="risk_confirm_btn btn btn-primary" data-dismiss="modal">我已理解相关风险</button>
+                </div>
+              </div>
+            </div>
           </div>
 
           <p class="crowdfund-item">

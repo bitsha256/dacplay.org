@@ -63,6 +63,17 @@ crowdfund:
   prospectus: Prospectus
   link_prospectus: ../pdf/BitSharesPlayProspectus_EN.pdf
   address_label: "BTC Address:"
+  reveal_btc_address: Reveal BTC Address
+  risk_title: RISK DISCLOSURE
+  risk_content: |
+    <ol>
+    <li>Please confirm your perusal, understanding and acceptance of all the content on this webpage, the Whitepaper and the Crowdfunding Prospectus</li>
+    <li>Please confirm your willingness and voluntariness to participate in this crowdfunding, your full awareness of the risks associated therewith and your ability to withstand the worst case scenario</li>
+    <li>Please confirm the private key of your bitcoin sending address is under your control (please specifically note that no bitcoin shall be sent directly out of any exchange)</li>
+    </ol>
+  cancel: Cancel
+  ok: I understand the risk associated
+  
 
 team:
   title: Team

@@ -111,6 +111,13 @@ section.row { margin: 3em auto; }
   .address { font-weight:bold; font-size:18px; }
 }
 
+.risk-notify-container {
+  display:none;
+}
+.risk-notify {
+  text-align:center;
+}
+
 /* Image style */
 #scrollTopBtn {
   bottom: 20px;

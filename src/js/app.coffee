@@ -160,6 +160,10 @@ show_tip = ->
 
   # display donating btc address
   if @dates.today > @dates.st_of_cf
+    $('.risk-notify-container').show()
+
+  $('.risk_confirm_btn').on 'click', ->
+    $('.risk-notify').hide()
     $('.btc-address-holder').show()
 
 ).call this;
