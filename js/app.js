@@ -97,6 +97,7 @@ show_tip = function() {
 (function() {
   var lang_pref_selector, st_percentage, today_percentage;
   $('.page-nav > li > a').each(setup_page_nav_links);
+  $('[data-toggle="popover"]').popover();
   $('.feature-item').mouseover(function() {
     $('.feature-item').removeClass('well');
     return $(this).toggleClass('well');
@@ -133,7 +134,10 @@ show_tip = function() {
   };
   st_percentage = Math.floor((dates.st_of_cf - dates.ann_of_cf) / (dates.ed_of_cf - dates.ann_of_cf) * 100);
   today_percentage = Math.floor((dates.today - dates.ann_of_cf) / (dates.ed_of_cf - dates.ann_of_cf) * 100);
-  return setTimeout((function() {
+  setTimeout((function() {
     return show_progress_bar(st_percentage, today_percentage, dates);
   }), 1500);
+  if (this.dates.today > this.dates.st_of_cf) {
+    return $('.btc-address-holder').show();
+  }
 }).call(this);

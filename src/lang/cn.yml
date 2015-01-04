@@ -64,6 +64,7 @@ crowdfund:
     <p>由于最终将以发出的比特币的地址作为唯一确认方式，所以请投资者务必使用自己可以控制地址私钥的的方式（例如使用自己的钱包）进行发送。</p>
   prospectus: 众筹说明书
   link_prospectus: ../pdf/BitSharesPlayProspectus_EN.pdf
+  address_label: "众筹BTC发送地址:"
 
 team:
   title: 团队

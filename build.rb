@@ -46,7 +46,7 @@ class Wrapper
   def dd(sig)
     keys = sig.split('.').to_a
     cur = @dict
-    
+
     while key = keys.shift
       cur = cur[key]
     end

@@ -62,6 +62,7 @@ crowdfund:
     <p>Due to the fact that the private key of Bitcoin is the only proof for the later distributed PLS's ownership,investors must send from where they control their own private keys (like wallets).</p>
   prospectus: Prospectus
   link_prospectus: ../pdf/BitSharesPlayProspectus_EN.pdf
+  address_label: "BTC Address:"
 
 team:
   title: Team

@@ -93,6 +93,8 @@ show_tip = ->
   # $('body').scrollspy target: "#page-nav-scrollnav", offset: 30
   # $('body').scrollspy target: ".global-nav", offset: -0
 
+  $('[data-toggle="popover"]').popover()
+
   # feature item
   $('.feature-item').mouseover ->
     $('.feature-item').removeClass 'well'
@@ -155,4 +157,10 @@ show_tip = ->
   today_percentage = Math.floor((dates.today - dates.ann_of_cf) / (dates.ed_of_cf - dates.ann_of_cf) * 100)
 
   setTimeout (-> show_progress_bar(st_percentage , today_percentage, dates )), 1500
+
+  # display donating btc address
+  if @dates.today > @dates.st_of_cf
+    $('.btc-address-holder').show()
+
 ).call this;
+
