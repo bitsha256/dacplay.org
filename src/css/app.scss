@@ -22,8 +22,9 @@ section.row { margin: 3em auto; }
 
 .page-nav { margin-bottom:0px; }
 .jumbotron {
-  text-align:center;
+  text-align:center; margin-top:1em;
   h1.logo {
+    margin-top:0px;
     text-indent:-9999px; width:447px; height:176px; margin-left:auto; margin-right:auto;
     background:url(../img/logo-vertical.png) no-repeat;
     margin-bottom:0.6em;
@@ -194,4 +195,9 @@ section.row { margin: 3em auto; }
   .btc-address-holder .address {
     font-size:100%;
   }
+}
+
+.cf_stat {
+  display:none;
+  small.num { color:grey; font-weight:normal; }
 }

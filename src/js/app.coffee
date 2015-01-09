@@ -59,7 +59,7 @@ show_progress_bar = ( start_percentage, today_percentage, dates ) ->
   if today < @dates.st_of_cf
     display_percentage = Math.floor((today - @dates.ann_of_cf) / (@dates.st_of_cf - @dates.ann_of_cf) * 100)
   else
-    display_percentage = today_percentage
+    display_percentage = Math.floor((today - @dates.st_of_cf) / (@dates.ed_of_cf - @dates.st_of_cf) * 100)
 
   $( today_selector  )
     .data('percentage', today_percentage)
@@ -85,6 +85,47 @@ show_tip = ->
     $('<span class="tip">'+$(this).data('tip')+'</span>')
       .appendTo( $(this).parent() ).
       css(position: 'absolute', top: top, left: left )
+
+
+`
+comify_re = /(\d{1,3})(?=(\d{3})+(?:$|\.))/g;
+function display_currency(val,new_cur,precision){
+  parts = val.toString().split('.');
+  if (parts.length < 2) parts.push("0")
+  return parts[0].replace(comify_re, "$1,") + '<small class="num">.'+max_digit(parts[1],precision)+' '+String(new_cur).split('_').join(' / ').toUpperCase()+'</small>'
+}
+
+function max_digit(d, precision){
+  var p = precision || 8;
+  return String(d).substring(0,p);
+}`
+
+get_play_total_donated = ->
+  @dates =
+    ann_of_cf: new Date(Date.UTC(2014,10,30)) # '2014-11-24 00:00:00'
+    st_of_cf: new Date(Date.UTC(2015,0,5)) #'2015-01-05 00:00:00'
+    ed_of_cf: new Date(Date.UTC(2015,1,2)) #'2015-02-02 00:00:00'
+    today: new Date()
+
+
+  st_percentage = Math.floor((dates.st_of_cf - dates.ann_of_cf) / (dates.ed_of_cf - dates.ann_of_cf) * 100)
+  today_percentage = Math.floor((dates.today - dates.ann_of_cf) / (dates.ed_of_cf - dates.ann_of_cf) * 100)
+
+  $.ajax
+    url: 'http://www1.agsexplorer.com/total/play.json',
+    dataType: 'jsonp'
+  .done (data) ->
+    total = data.total / 100000000
+    fund_percent = total / 3000 * 100
+
+    $('.cf_stat').show()
+    $('#cf_raised').html display_currency(total,'BTC')
+    $('#cf_target').html display_currency(3000, 'BTC')
+    $('#cf_percent').text Math.round(fund_percent * 100) / 100
+
+    setTimeout (-> show_progress_bar(st_percentage , today_percentage, dates )), 1500
+  .fail ->
+    setTimeout (-> show_progress_bar(st_percentage , today_percentage, dates )), 1500
 
 (->
   # navigation
@@ -132,31 +173,7 @@ show_tip = ->
   # Progress bar
   $('.progress [data-toggle="tooltip"]').tooltip();
 
-  @dates =
-    ann_of_cf: new Date(Date.UTC(2014,10,30)) # '2014-11-24 00:00:00'
-    st_of_cf: new Date(Date.UTC(2015,0,5)) #'2015-01-05 00:00:00'
-    ed_of_cf: new Date(Date.UTC(2015,1,5)) #'2015-02-05 00:00:00'
-    today: new Date()
-
-  # if today < ann_of_cf
-  #   #cf is not announced yet
-  #   percentage = -1
-  # else if today >= ann_of_cf && today < st_of_cf
-  #   # announced not started yet
-  #   percentage = Math.floor((today - ann_of_cf) / (st_of_cf - ann_of_cf) * 100)
-  #   points = start: dd.ready, end: dd.start
-  # else if today >= st_of_cf && today < ed_of_cf
-  #   # cf ongoing
-  #   percentage = Math.floor((today - st_of_cf) / (ed_of_cf - st_of_cf) * 100)
-  #   points = start: dd.start, end: dd.end
-  # else
-  #   # cf finishe
-  #   percentage = 100
-
-  st_percentage = Math.floor((dates.st_of_cf - dates.ann_of_cf) / (dates.ed_of_cf - dates.ann_of_cf) * 100)
-  today_percentage = Math.floor((dates.today - dates.ann_of_cf) / (dates.ed_of_cf - dates.ann_of_cf) * 100)
-
-  setTimeout (-> show_progress_bar(st_percentage , today_percentage, dates )), 1500
+  get_play_total_donated()
 
   # display donating btc address
   if @dates.today > @dates.st_of_cf

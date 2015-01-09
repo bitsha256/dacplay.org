@@ -75,6 +75,10 @@ crowdfund:
     </ol>
   cancel: 取消
   ok: 我已理解相关风险
+  stat:
+    raised: 已筹款
+    target: 目标
+    completion: 完成度
 
 team:
   title: 团队

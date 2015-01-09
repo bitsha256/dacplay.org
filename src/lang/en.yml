@@ -73,6 +73,10 @@ crowdfund:
     </ol>
   cancel: Cancel
   ok: I understand the risk associated
+  stat:
+    raised: Raised
+    target: Target
+    completion: Completion
   
 
 team:

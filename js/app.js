@@ -1,4 +1,4 @@
-var setup_check_point, setup_page_nav_links, show_progress_bar, show_tip, subscribe_to_list, vendor_prop_set;
+var get_play_total_donated, setup_check_point, setup_page_nav_links, show_progress_bar, show_tip, subscribe_to_list, vendor_prop_set;
 
 vendor_prop_set = function(elem, prop, val) {
   var vendor, _i, _len, _ref, _results;
@@ -66,7 +66,7 @@ show_progress_bar = function(start_percentage, today_percentage, dates) {
   if (today < this.dates.st_of_cf) {
     display_percentage = Math.floor((today - this.dates.ann_of_cf) / (this.dates.st_of_cf - this.dates.ann_of_cf) * 100);
   } else {
-    display_percentage = today_percentage;
+    display_percentage = Math.floor((today - this.dates.st_of_cf) / (this.dates.ed_of_cf - this.dates.st_of_cf) * 100);
   }
   $(today_selector).data('percentage', today_percentage).data('tip', today.toLocaleDateString() + ' ' + today.toLocaleTimeString()).animate({
     width: today_percentage + '%'
@@ -94,8 +94,52 @@ show_tip = function() {
   }
 };
 
+
+comify_re = /(\d{1,3})(?=(\d{3})+(?:$|\.))/g;
+function display_currency(val,new_cur,precision){
+  parts = val.toString().split('.');
+  if (parts.length < 2) parts.push("0")
+  return parts[0].replace(comify_re, "$1,") + '<small class="num">.'+max_digit(parts[1],precision)+' '+String(new_cur).split('_').join(' / ').toUpperCase()+'</small>'
+}
+
+function max_digit(d, precision){
+  var p = precision || 8;
+  return String(d).substring(0,p);
+};
+
+get_play_total_donated = function() {
+  var st_percentage, today_percentage;
+  this.dates = {
+    ann_of_cf: new Date(Date.UTC(2014, 10, 30)),
+    st_of_cf: new Date(Date.UTC(2015, 0, 5)),
+    ed_of_cf: new Date(Date.UTC(2015, 1, 2)),
+    today: new Date()
+  };
+  st_percentage = Math.floor((dates.st_of_cf - dates.ann_of_cf) / (dates.ed_of_cf - dates.ann_of_cf) * 100);
+  today_percentage = Math.floor((dates.today - dates.ann_of_cf) / (dates.ed_of_cf - dates.ann_of_cf) * 100);
+  return $.ajax({
+    url: 'http://www1.agsexplorer.com/total/play.json',
+    dataType: 'jsonp'
+  }).done(function(data) {
+    var fund_percent, total;
+    total = data.total / 100000000;
+    fund_percent = total / 3000 * 100;
+    $('.cf_stat').show();
+    $('#cf_raised').html(display_currency(total, 'BTC'));
+    $('#cf_target').html(display_currency(3000, 'BTC'));
+    $('#cf_percent').text(Math.round(fund_percent * 100) / 100);
+    return setTimeout((function() {
+      return show_progress_bar(st_percentage, today_percentage, dates);
+    }), 1500);
+  }).fail(function() {
+    return setTimeout((function() {
+      return show_progress_bar(st_percentage, today_percentage, dates);
+    }), 1500);
+  });
+};
+
 (function() {
-  var lang_pref_selector, st_percentage, today_percentage;
+  var lang_pref_selector;
   $('.page-nav > li > a').each(setup_page_nav_links);
   $('[data-toggle="popover"]').popover();
   $('.feature-item').mouseover(function() {
@@ -126,17 +170,7 @@ show_tip = function() {
     activeOverlay: false
   });
   $('.progress [data-toggle="tooltip"]').tooltip();
-  this.dates = {
-    ann_of_cf: new Date(Date.UTC(2014, 10, 30)),
-    st_of_cf: new Date(Date.UTC(2015, 0, 5)),
-    ed_of_cf: new Date(Date.UTC(2015, 1, 5)),
-    today: new Date()
-  };
-  st_percentage = Math.floor((dates.st_of_cf - dates.ann_of_cf) / (dates.ed_of_cf - dates.ann_of_cf) * 100);
-  today_percentage = Math.floor((dates.today - dates.ann_of_cf) / (dates.ed_of_cf - dates.ann_of_cf) * 100);
-  setTimeout((function() {
-    return show_progress_bar(st_percentage, today_percentage, dates);
-  }), 1500);
+  get_play_total_donated();
   if (this.dates.today > this.dates.st_of_cf) {
     $('.risk-notify-container').show();
   }
