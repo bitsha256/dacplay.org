@@ -59,7 +59,7 @@ crowdfund:
     </p>
     <p>When 3000BTC is gathered before 2015.02.02, the crowdfunding will be ended in advance. The BTC that is sent to the crowdfunding address will be given back to the sent address.</p>
     <p>For example, if during the first week, 3000BTC is received, the crowdfunding will be ended with 390 million PLS distributed. Then the remaining 10 million PLS will be given to all that have participated in the crowdfunding, making 1 BTC with 133,333PLS of return. If in the end, the fund that is collected at the end of the 28-day raising period is less than 3000BTC, there will be more PLS left to give to the investors who have participated.</p>
-    <p>Due to the fact that the private key of Bitcoin is the only proof for the later distributed PLS's ownership, investors must send from where they control their own private keys (like wallets).  For example, sent from 极付/coinbase is not working; sent from blockchain.info is working. </p>
+    <p>Due to the fact that the private key of Bitcoin is the only proof for the later distributed PLS's ownership, investors must send from where they control their own private keys (like wallets).</p>
   prospectus: Prospectus
   link_prospectus: ../pdf/BitSharesPlayProspectus_EN.pdf
   address_label: "BTC Address:"
@@ -69,8 +69,9 @@ crowdfund:
     <ol>
     <li>Please confirm your perusal, understanding and acceptance of all the content on this webpage, the Whitepaper and the Crowdfunding Prospectus</li>
     <li>Please confirm your willingness and voluntariness to participate in this crowdfunding, your full awareness of the risks associated therewith and your ability to withstand the worst case scenario</li>
-    <li>Please confirm the private key of your bitcoin sending address is under your control (please specifically note that no bitcoin shall be sent directly out of any exchange.  For example, sent from 极付/coinbase is not working; sent from blockchain.info is working. )</li>
+    <li>Please confirm the private key of your bitcoin sending address is under your control (please specifically note that no bitcoin shall be sent directly out of any exchange; for instance, Coinbase and Justpay.  Wallets like blockchain.info are acceptable.)</li>
     </ol>
+    <p>Solutions to those who sent from questionable addresses are currently under discussion.  Please note that PLAY is not obliged to deal with the consequence of such negligence; however, for the protection of investors, PLAY will try to resolve within its capacity.</p>
   cancel: Cancel
   ok: I understand the risk associated
   stat:
