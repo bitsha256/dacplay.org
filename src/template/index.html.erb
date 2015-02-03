@@ -82,12 +82,13 @@
       <div class="container">
         <section class="row jumbotron">
           <h1 class="logo">BitShares Play</h1>
-          <p><%= dd('hero.line1') %></p>
+          <!-- <p><%= dd('hero.line1') %></p> -->
 
           <div class="crowdfund-item risk-notify-container">
-            <div class="risk-notify">
+            <!-- <div class="risk-notify">
               <a class="btn btn-success btn-lg" href="javascript:void(0);" data-toggle="modal" data-target="#risk-dialog"><%= dd("crowdfund.reveal_btc_address") %></a>
-            </div>
+            </div> -->
+            <p><%= dd('crowdfund.completed') %></p>
             <div class="btc-address-holder alert alert-info" role="alert">
               <div class="address-content">
                 <a href="javascript:void(0)" class="btn btn-default btn-sm btn-fab btn-raised mdi-image-camera-alt mdi-material-teal pull-right" data-container="body" data-toggle="popover" data-content="<img src='../img/qr_3DPD7z66T7DXULvFZUsc4xNcVS2q68TM3u.png' style='width:100%;' />" data-placement="left" data-trigger="click hover" data-html="true"></a>
@@ -95,9 +96,12 @@
               </div>
             </div>
 
-           <div class="cf_stat" style="display:none;">
+           <!-- <div class="cf_stat" style="display:none;">
              <%= dd('crowdfund.stat.raised') %>: <strong id="cf_raised"></strong>, <%= dd('crowdfund.stat.target') %>: <strong id="cf_target"></strong>, <%= dd('crowdfund.stat.completion') %>: <strong id="cf_percent"></strong>%
-           </div>
+           </div> -->
+             <div class="cf_stat" style="display:none;">
+               <%= dd('crowdfund.stat.raised') %>: <strong id="cf_raised"></strong>
+             </div>
           </div>
 
 
@@ -108,14 +112,14 @@
         </section>
       </div>
       <!-- Progress bar -->
-      <div class="progress row-fluid">
+      <!-- <div class="progress row-fluid">
         <div class="ready-point hider" data-tip="<%= dd('countdown.ready_tip') %>"><div class="marker"><%= dd('countdown.ready') %></div></div>
         <div class="start-point hider" data-tip="<%= dd('countdown.start_tip') %>"><div class="marker"><%= dd('countdown.start') %></div></div>
         <div class="end-point hider"><div class="marker"><%= dd('countdown.end') %></div></div>
         <div class="bar" style="width: 0%;" data-percentage="52">
           <div class="marker">52%</div>
         </div>
-      </div>
+      </div> -->
       <!-- Progress bar ends -->
     </div>
     <!--hero ends -->

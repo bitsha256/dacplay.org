@@ -68,6 +68,8 @@ show_progress_bar = function(start_percentage, today_percentage, dates) {
   } else {
     display_percentage = Math.floor((today - this.dates.st_of_cf) / (this.dates.ed_of_cf - this.dates.st_of_cf) * 100);
   }
+  display_percentage = 100;
+  today_percentage = 100;
   $(today_selector).data('percentage', today_percentage).data('tip', today.toLocaleDateString() + ' ' + today.toLocaleTimeString()).animate({
     width: today_percentage + '%'
   }, 1500, show_tip).find('div').html(display_percentage + '%');
@@ -125,16 +127,7 @@ get_play_total_donated = function() {
     total = data.total / 100000000;
     fund_percent = total / 3000 * 100;
     $('.cf_stat').show();
-    $('#cf_raised').html(display_currency(total, 'BTC'));
-    $('#cf_target').html(display_currency(3000, 'BTC'));
-    $('#cf_percent').text(Math.round(fund_percent * 100) / 100);
-    return setTimeout((function() {
-      return show_progress_bar(st_percentage, today_percentage, dates);
-    }), 1500);
-  }).fail(function() {
-    return setTimeout((function() {
-      return show_progress_bar(st_percentage, today_percentage, dates);
-    }), 1500);
+    return $('#cf_raised').html(display_currency(total, 'BTC'));
   });
 };
 

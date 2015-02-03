@@ -61,6 +61,10 @@ show_progress_bar = ( start_percentage, today_percentage, dates ) ->
   else
     display_percentage = Math.floor((today - @dates.st_of_cf) / (@dates.ed_of_cf - @dates.st_of_cf) * 100)
 
+  # funding completed
+  display_percentage = 100
+  today_percentage = 100
+
   $( today_selector  )
     .data('percentage', today_percentage)
     .data('tip', today.toLocaleDateString() + ' ' + today.toLocaleTimeString())
@@ -120,12 +124,12 @@ get_play_total_donated = ->
 
     $('.cf_stat').show()
     $('#cf_raised').html display_currency(total,'BTC')
-    $('#cf_target').html display_currency(3000, 'BTC')
-    $('#cf_percent').text Math.round(fund_percent * 100) / 100
+    # $('#cf_target').html display_currency(3000, 'BTC')
+    # $('#cf_percent').text Math.round(fund_percent * 100) / 100
 
-    setTimeout (-> show_progress_bar(st_percentage , today_percentage, dates )), 1500
-  .fail ->
-    setTimeout (-> show_progress_bar(st_percentage , today_percentage, dates )), 1500
+    # setTimeout (-> show_progress_bar(st_percentage , today_percentage, dates )), 1500
+  # .fail ->
+    # setTimeout (-> show_progress_bar(st_percentage , today_percentage, dates )), 1500
 
 (->
   # navigation
