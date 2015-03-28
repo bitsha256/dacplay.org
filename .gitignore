@@ -21,3 +21,5 @@ tags
 
 # node_modules
 /node_modules/
+
+updates/*.pak
