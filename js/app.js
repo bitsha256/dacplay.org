@@ -133,7 +133,7 @@ get_play_total_donated = function() {
 
 get_latest_downloads = function() {
   return $.ajax({
-    url: '/downloads/latest.json',
+    url: 'http://download.dacplay.org/downloads/latest.json',
     dataType: 'json'
   }).done(function(data) {
     var colCls, d, dlDiv, i, platform, platformCount, _i;
