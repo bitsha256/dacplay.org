@@ -142,7 +142,7 @@ get_latest_downloads = ->
     for i in [0...platformCount]
       d = data.downloads[i]
       platform = d.platform.split(' ')[0].toLowerCase()
-      dlDiv = $("<div class='col-md-#{colCls} animated fadeInUp'><img class='platform-icon' src='/img/icon-#{platform}.svg' /><h3>#{d.platform}</h3><p style='font-size:10px;'>sha1hash: #{d.sha1hash}<br />Size: #{d.fileSize}</p><a class='btn btn#{i} withripple' href='#{d.url}' role='button' data-platform='#{d.platform}' data-version='#{data.version}'><img src='/img/ic_cloud_download_48px.svg' /><div class='ripple-wrapper'></div></a></div>")
+      dlDiv = $("<div class='col-md-#{colCls} animated fadeInUp'><img class='platform-icon' src='../img/icon-#{platform}.svg' /><h3>#{d.platform}</h3><p style='font-size:10px;'>sha1hash: #{d.sha1hash}<br />Size: #{d.fileSize}</p><a class='btn btn#{i} withripple' href='#{d.url}' role='button' data-platform='#{d.platform}' data-version='#{data.version}'><img src='../img/ic_cloud_download_48px.svg' /><div class='ripple-wrapper'></div></a></div>")
 
       vendor_prop_set(dlDiv, 'animation-delay', 0.5 + i * 0.1 + 's')
 
