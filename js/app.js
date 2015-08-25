@@ -146,8 +146,6 @@ get_latest_downloads = function() {
       vendor_prop_set(dlDiv, 'animation-delay', 0.5 + i * 0.1 + 's');
       $('#download .downloads-container').append(dlDiv);
       $("#download .downloads-container .btn" + i).on('click', function() {
-        console.log('onClick');
-        debugger;
         return ga("send", "event", "client", "download", $(this).data('platform'), $(this).data('version'));
       });
     }

@@ -149,8 +149,6 @@ get_latest_downloads = ->
       $('#download .downloads-container').append dlDiv
 
       $("#download .downloads-container .btn#{i}").on 'click', ->
-        console.log 'onClick'
-        debugger
         ga("send", "event", "client", "download", $(this).data('platform'), $(this).data('version'))
 
     $('#download').removeClass('hide')
