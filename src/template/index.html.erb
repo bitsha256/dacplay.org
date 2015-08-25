@@ -84,31 +84,12 @@
           <h1 class="logo">DAC PLAY</h1>
           <!-- <p><%= dd('hero.line1') %></p> -->
 
-          <div class="crowdfund-item risk-notify-container">
-            <!-- <div class="risk-notify">
-              <a class="btn btn-success btn-lg" href="javascript:void(0);" data-toggle="modal" data-target="#risk-dialog"><%= dd("crowdfund.reveal_btc_address") %></a>
-            </div> -->
-            <p><%= dd('crowdfund.completed') %></p>
-            <div class="btc-address-holder alert alert-info" role="alert">
-              <div class="address-content">
-                <a href="javascript:void(0)" class="btn btn-default btn-sm btn-fab btn-raised mdi-image-camera-alt mdi-material-teal pull-right" data-container="body" data-toggle="popover" data-content="<img src='../img/qr_3DPD7z66T7DXULvFZUsc4xNcVS2q68TM3u.png' style='width:100%;' />" data-placement="left" data-trigger="click hover" data-html="true"></a>
-                <%= dd('crowdfund.address_label') %> <span class="address">3DPD7z66T7DXULvFZUsc4xNcVS2q68TM3u</span>
-              </div>
-            </div>
-
-           <!-- <div class="cf_stat" style="display:none;">
-             <%= dd('crowdfund.stat.raised') %>: <strong id="cf_raised"></strong>, <%= dd('crowdfund.stat.target') %>: <strong id="cf_target"></strong>, <%= dd('crowdfund.stat.completion') %>: <strong id="cf_percent"></strong>%
-           </div> -->
-             <div class="cf_stat" style="display:none;">
-               <%= dd('crowdfund.stat.raised') %>: <strong id="cf_raised"></strong>
-             </div>
+          <div id="download" class="hide">
+            <h2><%= dd('hero.download_client') %></h2>
+            <p class="release-intro"></p>
+            <div class="row downloads-container"></div>
           </div>
 
-
-          <p class="btn-container">
-            <a class="btn btn-primary btn-lg" role="button" href="#crowdfund"><%= dd('hero.more') %></a>
-            <a class="btn btn-info btn-lg" role="button" href="#contact"><%= dd('contact.subscribe') %></a>
-          </p>
         </section>
       </div>
       <!-- Progress bar -->
@@ -166,6 +147,17 @@
       <div class="container">
         <section class="row crowdfund">
           <h1 class="triggerAnimation animated" data-animate="fadeInUp"><%= dd('crowdfund.title') %></h1>
+
+          <div class="crowdfund-item risk-notify-container" style="margin-bottom:3em;">
+            <p>
+              <%= dd('crowdfund.completed') %>
+              <span class="cf_stat" style="display:none;">
+                <%= dd('crowdfund.stat.raised') %>: <strong id="cf_raised"></strong>
+              </span>
+            </p>
+          </div>
+
+
           <%= dd('crowdfund.content') %>
 
 
@@ -344,7 +336,7 @@
 
     <!-- footer start -->
     <footer class="footer navbar">
-      <h4>Copyright @ 2014 DAC PLAY</h4>
+      <h4>Copyright @ 2015 DAC PLAY</h4>
       <p>Powered by <a href="http://bitshares.org" target="_blank">BitShares</a></p>
     </footer>
     <!-- footer ends -->

@@ -19,6 +19,7 @@ hero:
   line1: 'Crowdfunding will start on <br /><strong>Jan 5th, 2015 (UTC time)</strong> <br />through <a href="http://dacx.com/play" target="_blank">DacX.com</a> '
   more: LEARN ABOUT DETAIL
   visit_dacx: Visit dacx.com
+  download_client: Download Latest Client
 
 about:
   title: Draw The Future

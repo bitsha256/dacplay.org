@@ -82,31 +82,12 @@
           <h1 class="logo">DAC PLAY</h1>
           <!-- <p>产品众筹将于<br /><strong>北京时间2015年1月5日上午8时</strong><br />通过<a href='http://dacx.com/play' target='_blank'>DacX.com</a>平台进行</p> -->
 
-          <div class="crowdfund-item risk-notify-container">
-            <!-- <div class="risk-notify">
-              <a class="btn btn-success btn-lg" href="javascript:void(0);" data-toggle="modal" data-target="#risk-dialog">查看众筹BTC发送地址</a>
-            </div> -->
-            <p>众筹已结束</p>
-            <div class="btc-address-holder alert alert-info" role="alert">
-              <div class="address-content">
-                <a href="javascript:void(0)" class="btn btn-default btn-sm btn-fab btn-raised mdi-image-camera-alt mdi-material-teal pull-right" data-container="body" data-toggle="popover" data-content="<img src='../img/qr_3DPD7z66T7DXULvFZUsc4xNcVS2q68TM3u.png' style='width:100%;' />" data-placement="left" data-trigger="click hover" data-html="true"></a>
-                众筹BTC发送地址: <span class="address">3DPD7z66T7DXULvFZUsc4xNcVS2q68TM3u</span>
-              </div>
-            </div>
-
-           <!-- <div class="cf_stat" style="display:none;">
-             已筹款: <strong id="cf_raised"></strong>, 目标: <strong id="cf_target"></strong>, 完成度: <strong id="cf_percent"></strong>%
-           </div> -->
-             <div class="cf_stat" style="display:none;">
-               已筹款: <strong id="cf_raised"></strong>
-             </div>
+          <div id="download" class="hide">
+            <h2>下载最新客户端</h2>
+            <p class="release-intro"></p>
+            <div class="row downloads-container"></div>
           </div>
 
-
-          <p class="btn-container">
-            <a class="btn btn-primary btn-lg" role="button" href="#crowdfund">了解细节</a>
-            <a class="btn btn-info btn-lg" role="button" href="#contact">订阅邮件</a>
-          </p>
         </section>
       </div>
       <!-- Progress bar -->
@@ -180,6 +161,17 @@
       <div class="container">
         <section class="row crowdfund">
           <h1 class="triggerAnimation animated" data-animate="fadeInUp">DAC PLAY 众筹计划</h1>
+
+          <div class="crowdfund-item risk-notify-container" style="margin-bottom:3em;">
+            <p>
+              众筹已结束
+              <span class="cf_stat" style="display:none;">
+                已筹款: <strong id="cf_raised"></strong>
+              </span>
+            </p>
+          </div>
+
+
           <p>众筹将于北京时间2015年1月5日上午8时至2015年2月2日上午8时通过<a href="http://dacx.com/play" target="_blank">DacX.com</a>平台进行，为期28天。投资者在此期间将Bitcoin发送至指定地址即可。</p>
 <p>PLS总量20亿，将拿出20%，即4亿PLS来做众筹。基准对应关系为</p>
 <p>1BTC=100,000PLS。第一周有30%的奖励，第二周为20%，第三周为10%，第四周无奖励。</p>
@@ -496,7 +488,7 @@
 
     <!-- footer start -->
     <footer class="footer navbar">
-      <h4>Copyright @ 2014 DAC PLAY</h4>
+      <h4>Copyright @ 2015 DAC PLAY</h4>
       <p>Powered by <a href="http://bitshares.org" target="_blank">BitShares</a></p>
     </footer>
     <!-- footer ends -->

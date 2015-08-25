@@ -82,31 +82,12 @@
           <h1 class="logo">DAC PLAY</h1>
           <!-- <p>Crowdfunding will start on <br /><strong>Jan 5th, 2015 (UTC time)</strong> <br />through <a href="http://dacx.com/play" target="_blank">DacX.com</a> </p> -->
 
-          <div class="crowdfund-item risk-notify-container">
-            <!-- <div class="risk-notify">
-              <a class="btn btn-success btn-lg" href="javascript:void(0);" data-toggle="modal" data-target="#risk-dialog">Reveal BTC Address</a>
-            </div> -->
-            <p>Crowdfunding has completed</p>
-            <div class="btc-address-holder alert alert-info" role="alert">
-              <div class="address-content">
-                <a href="javascript:void(0)" class="btn btn-default btn-sm btn-fab btn-raised mdi-image-camera-alt mdi-material-teal pull-right" data-container="body" data-toggle="popover" data-content="<img src='../img/qr_3DPD7z66T7DXULvFZUsc4xNcVS2q68TM3u.png' style='width:100%;' />" data-placement="left" data-trigger="click hover" data-html="true"></a>
-                BTC Address: <span class="address">3DPD7z66T7DXULvFZUsc4xNcVS2q68TM3u</span>
-              </div>
-            </div>
-
-           <!-- <div class="cf_stat" style="display:none;">
-             Raised: <strong id="cf_raised"></strong>, Target: <strong id="cf_target"></strong>, Completion: <strong id="cf_percent"></strong>%
-           </div> -->
-             <div class="cf_stat" style="display:none;">
-               Raised: <strong id="cf_raised"></strong>
-             </div>
+          <div id="download" class="hide">
+            <h2>Download Latest Client</h2>
+            <p class="release-intro"></p>
+            <div class="row downloads-container"></div>
           </div>
 
-
-          <p class="btn-container">
-            <a class="btn btn-primary btn-lg" role="button" href="#crowdfund">LEARN ABOUT DETAIL</a>
-            <a class="btn btn-info btn-lg" role="button" href="#contact">Join Mailing List</a>
-          </p>
         </section>
       </div>
       <!-- Progress bar -->
@@ -180,6 +161,17 @@
       <div class="container">
         <section class="row crowdfund">
           <h1 class="triggerAnimation animated" data-animate="fadeInUp">DAC PLAY Crowdfunding</h1>
+
+          <div class="crowdfund-item risk-notify-container" style="margin-bottom:3em;">
+            <p>
+              Crowdfunding has completed
+              <span class="cf_stat" style="display:none;">
+                Raised: <strong id="cf_raised"></strong>
+              </span>
+            </p>
+          </div>
+
+
           <p>Bitshares PLAY's crowdfunding is set to start at 00:00 (UTC) 2015.01.05 till 00:00 (UTC) 2015.02.02 on <a href="http://dacx.com/play" target="_blank">DACX.com</a> for a 28-day period. Investors can simply send Bitcoin to the specified address.</p>
 <p>PLS(playshares) has a fixed amount of 2 billion, 20% (400 million) of which will be distributed for crowdfunding. For 1 btc, 100,000 PLS will be offered with a progressively decreasing bonus. For the first week, there will be a 30% of bonus;the second, 20%;the third, 10%;the fourth, none. The rest of the PLS that is not given out will be evenly distributed to investors of the previous four weeks (according to the proportion of the PLS they hold).</p>
 <p>
@@ -494,7 +486,7 @@
 
     <!-- footer start -->
     <footer class="footer navbar">
-      <h4>Copyright @ 2014 DAC PLAY</h4>
+      <h4>Copyright @ 2015 DAC PLAY</h4>
       <p>Powered by <a href="http://bitshares.org" target="_blank">BitShares</a></p>
     </footer>
     <!-- footer ends -->
