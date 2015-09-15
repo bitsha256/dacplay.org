@@ -31,7 +31,7 @@ subscribe_to_list = ->
   else
     $('#inputEmail').parentsUntil('.form-group').removeClass('has-error')
 
-  action_url = 'http://bitshares-play.us9.list-manage.com/subscribe/post?u=c483312cc24bc3fbae29fadcf&amp;id='
+  action_url = 'https://bitshares-play.us9.list-manage.com/subscribe/post?u=c483312cc24bc3fbae29fadcf&amp;id='
   list_en = action_url + '3ea6699589'
   list_cn = action_url + 'ebfabcbaec'
 
