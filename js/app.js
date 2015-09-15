@@ -119,16 +119,8 @@ get_play_total_donated = function() {
   };
   st_percentage = Math.floor((dates.st_of_cf - dates.ann_of_cf) / (dates.ed_of_cf - dates.ann_of_cf) * 100);
   today_percentage = Math.floor((dates.today - dates.ann_of_cf) / (dates.ed_of_cf - dates.ann_of_cf) * 100);
-  return $.ajax({
-    url: 'http://www1.agsexplorer.com/total/play.json',
-    dataType: 'jsonp'
-  }).done(function(data) {
-    var fund_percent, total;
-    total = data.total / 100000000;
-    fund_percent = total / 3000 * 100;
-    $('.cf_stat').show();
-    return $('#cf_raised').html(display_currency(total, 'BTC'));
-  });
+  $('.cf_stat').show();
+  return $('#cf_raised').html(display_currency('2396.11', 'BTC'));
 };
 
 get_latest_downloads = function() {
@@ -186,9 +178,7 @@ get_latest_downloads = function() {
     scrollTrigger: '#scrollTopBtn',
     activeOverlay: false
   });
-  if (this.dates.today > this.dates.st_of_cf) {
-    $('.risk-notify-container').show();
-  }
+  get_play_total_donated();
   return $('.risk_confirm_btn').on('click', function() {
     $('.risk-notify').hide();
     return $('.btc-address-holder').show();

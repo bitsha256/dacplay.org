@@ -115,21 +115,18 @@ get_play_total_donated = ->
   st_percentage = Math.floor((dates.st_of_cf - dates.ann_of_cf) / (dates.ed_of_cf - dates.ann_of_cf) * 100)
   today_percentage = Math.floor((dates.today - dates.ann_of_cf) / (dates.ed_of_cf - dates.ann_of_cf) * 100)
 
-  $.ajax
-    url: 'http://www1.agsexplorer.com/total/play.json',
-    dataType: 'jsonp'
-  .done (data) ->
-    total = data.total / 100000000
-    fund_percent = total / 3000 * 100
+  $('.cf_stat').show()
+  $('#cf_raised').html display_currency('2396.11','BTC')
 
-    $('.cf_stat').show()
-    $('#cf_raised').html display_currency(total,'BTC')
-    # $('#cf_target').html display_currency(3000, 'BTC')
-    # $('#cf_percent').text Math.round(fund_percent * 100) / 100
-
-    # setTimeout (-> show_progress_bar(st_percentage , today_percentage, dates )), 1500
-  # .fail ->
-    # setTimeout (-> show_progress_bar(st_percentage , today_percentage, dates )), 1500
+  # $.ajax
+  #   url: 'http://www1.agsexplorer.com/total/play.json',
+  #   dataType: 'jsonp'
+  # .done (data) ->
+  #   total = data.total / 100000000
+  #   fund_percent = total / 3000 * 100
+  #
+  #   $('.cf_stat').show()
+  #   $('#cf_raised').html display_currency(total,'BTC')
 
 get_latest_downloads = ->
   $.ajax
@@ -203,11 +200,11 @@ get_latest_downloads = ->
   # Progress bar
   # $('.progress [data-toggle="tooltip"]').tooltip();
 
-  # get_play_total_donated()
+  get_play_total_donated()
 
   # display donating btc address
-  if @dates.today > @dates.st_of_cf
-    $('.risk-notify-container').show()
+  # if @dates.today > @dates.st_of_cf
+  #   $('.risk-notify-container').show()
 
   $('.risk_confirm_btn').on 'click', ->
     $('.risk-notify').hide()
