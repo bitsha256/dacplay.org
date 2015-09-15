@@ -133,7 +133,7 @@ get_play_total_donated = function() {
 
 get_latest_downloads = function() {
   return $.ajax({
-    url: 'http://download.dacplay.org/downloads/latest.json',
+    url: 'https://download.dacplay.org/downloads/latest.json',
     dataType: 'json'
   }).done(function(data) {
     var colCls, d, dlDiv, i, platform, platformCount, _i;
@@ -186,8 +186,6 @@ get_latest_downloads = function() {
     scrollTrigger: '#scrollTopBtn',
     activeOverlay: false
   });
-  $('.progress [data-toggle="tooltip"]').tooltip();
-  get_play_total_donated();
   if (this.dates.today > this.dates.st_of_cf) {
     $('.risk-notify-container').show();
   }

@@ -133,7 +133,7 @@ get_play_total_donated = ->
 
 get_latest_downloads = ->
   $.ajax
-    url: 'http://download.dacplay.org/downloads/latest.json',
+    url: 'https://download.dacplay.org/downloads/latest.json',
     dataType: 'json'
   .done (data) ->
     platformCount = data.downloads.length
@@ -201,9 +201,9 @@ get_latest_downloads = ->
   # $.backstretch("../img/soldierh.jpg");
 
   # Progress bar
-  $('.progress [data-toggle="tooltip"]').tooltip();
+  # $('.progress [data-toggle="tooltip"]').tooltip();
 
-  get_play_total_donated()
+  # get_play_total_donated()
 
   # display donating btc address
   if @dates.today > @dates.st_of_cf
