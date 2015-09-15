@@ -203,8 +203,8 @@ get_latest_downloads = ->
   get_play_total_donated()
 
   # display donating btc address
-  # if @dates.today > @dates.st_of_cf
-  #   $('.risk-notify-container').show()
+  if @dates.today > @dates.st_of_cf
+    $('.risk-notify-container').show()
 
   $('.risk_confirm_btn').on 'click', ->
     $('.risk-notify').hide()

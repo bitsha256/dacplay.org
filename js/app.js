@@ -179,6 +179,9 @@ get_latest_downloads = function() {
     activeOverlay: false
   });
   get_play_total_donated();
+  if (this.dates.today > this.dates.st_of_cf) {
+    $('.risk-notify-container').show();
+  }
   return $('.risk_confirm_btn').on('click', function() {
     $('.risk-notify').hide();
     return $('.btc-address-holder').show();
