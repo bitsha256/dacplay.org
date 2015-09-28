@@ -17,6 +17,10 @@ nav:
   resources: More Resources
   wiki: WIKI
   forum: PLAYTALK Forum
+  blocks: 
+    title: Blockchain
+    asia: Asia Pacific Region
+    america: North America Region
 
 hero:
   line1: 'Crowdfunding will start on <br /><strong>Jan 5th, 2015 (UTC time)</strong> <br />through <a href="http://dacx.com/play" target="_blank">DacX.com</a> '

@@ -16,6 +16,10 @@ nav:
   resources: 更多信息
   wiki: WIKI
   forum: PLAYTALK 论坛
+  blocks: 
+    title: 区块链
+    asia: 亚太区域
+    america: 北美区域
 
 hero:
   line1: 产品众筹将于<br /><strong>北京时间2015年1月5日上午8时</strong><br />通过<a href='http://dacx.com/play' target='_blank'>DacX.com</a>平台进行
