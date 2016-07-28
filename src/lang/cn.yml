@@ -198,3 +198,6 @@ countdown:
   start: 开始
   start_tip: 众筹开始(开始前的转账记录将计入第一天)
   end: 耶!
+
+news:
+  title: 项目动态

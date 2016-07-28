@@ -197,3 +197,6 @@ countdown:
   start: START
   start_tip: Crowdfunding Starts @ Jan. 5th, 2015
   end: YEAH!
+
+news:
+  title: Project Updates

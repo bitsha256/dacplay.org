@@ -152,6 +152,22 @@ get_latest_downloads = ->
     $('#download .release-intro').html "#{data.name}<br />version: #{data.version}"
 
 
+get_news = (lang) ->
+  url = "../news/news-#{lang}.json"
+  $.ajax
+    url: url,
+    dataType: 'json'
+  .done (data) ->
+    return if !data or data.length == 0
+
+    $('#news').show()
+
+    for news in data
+      template = "<div class='news-item'><div class='container'><div class='col-md-3'><div class='news-date text-right'>#{news['date']}</div></div><div class='col-md-9'><h3 class='news-title'>#{news['title']}</h3><div class='news-body'><p>#{news['body']}</p></div></div></div></div>"
+      $('#news section .news-container').append(template)
+
+
+
 (->
   # navigation
   $('.page-nav > li > a').each setup_page_nav_links
@@ -192,6 +208,9 @@ get_latest_downloads = ->
     scrollText: '', # Text for element
     scrollTrigger: '#scrollTopBtn',
     activeOverlay: false  # Set CSS color to display scrollUp active point, e.g '#00FFFF'
+
+  # load news
+  get_news(lang);
 
   # bg image
   # $.backstretch("../img/soldierf.jpg");

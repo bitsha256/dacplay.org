@@ -205,3 +205,10 @@ section.row { margin: 3em auto; }
   display:none;
   small.num { color:grey; font-weight:normal; }
 }
+
+#news {
+  display:none;
+
+  .news-item { margin-bottom:2em; }
+  .news-title { margin-top:0; }
+}
