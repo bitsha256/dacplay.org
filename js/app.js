@@ -142,7 +142,7 @@ get_latest_downloads = function() {
       });
     }
     $('#download').removeClass('hide');
-    return $('#download .release-intro').html("" + data.name + "<br />version: " + data.version);
+    return $('#download .release-intro').html("" + data.name + "<br />version: " + data.version + "<br /><br />" + data.releaseNote);
   });
 };
 

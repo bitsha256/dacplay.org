@@ -149,7 +149,7 @@ get_latest_downloads = ->
         ga("send", "event", "client", "download", $(this).data('platform'), $(this).data('version'))
 
     $('#download').removeClass('hide')
-    $('#download .release-intro').html "#{data.name}<br />version: #{data.version}"
+    $('#download .release-intro').html "#{data.name}<br />version: #{data.version}<br /><br />#{data.releaseNote}"
 
 
 get_news = (lang) ->
