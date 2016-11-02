@@ -130,7 +130,7 @@ get_play_total_donated = ->
 
 get_latest_downloads = ->
   $.ajax
-    url: 'https://download.dacplay.org/downloads/latest.json',
+    url: 'https://download.dacplay.org/downloads/latest.json?v=1478101274',
     dataType: 'json'
   .done (data) ->
     platformCount = data.downloads.length
