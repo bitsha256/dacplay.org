@@ -15,7 +15,7 @@ h1 { text-align:center; }
 .hider { display:none; }
 .block { display:block; }
 section.row { margin: 3em auto; }
-#about, #whitepaper, #team, #faq, #contact, #crowdfund {
+#about, #whitepaper, #team, #faq, #contact, #crowdfund, #download {
   padding-top:80px; padding-bottom:80px;
 }
 
@@ -50,6 +50,11 @@ section.row { margin: 3em auto; }
   }
   .btn-container { margin-top:2em; }
 }
+
+#download {
+  background-color: #eee;
+}
+
 #about {
   .feature-item { text-align: center; padding:19px; }
   .feature-icon { font-size:120px; }

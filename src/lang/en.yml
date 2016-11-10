@@ -26,7 +26,11 @@ hero:
   line1: 'Crowdfunding will start on <br /><strong>Jan 5th, 2015 (UTC time)</strong> <br />through <a href="http://dacx.com/play" target="_blank">DacX.com</a> '
   more: LEARN ABOUT DETAIL
   visit_dacx: Visit dacx.com
-  download_client: Download Latest Client
+  download_client: Download 0.5.0 Client
+  upgrade_notice: DACPLAY is upgrading to 2.0.  Old network is stopped at block 4674453.  Please download 0.5.0 client to export your wallet key and import them in 2.0 web wallet to use.
+  download_5: Download 0.5.0 client
+  start_use_web_wallet: Start using 2.0 web wallet
+  
 
 about:
   title: Draw The Future

@@ -60,13 +60,13 @@
               <li><a href="#faq"><%= dd('nav.faq') %></a></li>
               <li><a href="#contact"><%= dd('nav.contact') %></a></li>
 
-              <li class="dropdown">
+              <!-- <li class="dropdown">
                 <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown"><%= dd('nav.blocks.title') %> <b class="caret"></b></a>
                 <ul class="dropdown-menu">
                   <li><a href="https://blocks.dacplay.org" target="_blank"><%= dd('nav.blocks.asia') %></a></li>
                   <li><a href="http://play.bitsharesblocks.com" target="_blank"><%= dd('nav.blocks.america') %></a></li>
                 </ul>
-              </li>
+              </li> -->
 <!--
               <li><a href="//playshare.io" target="_blank">PlayShare.io</a></li>
  -->
@@ -74,7 +74,7 @@
                 <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown"><%= dd('nav.resources') %> <b class="caret"></b></a>
                 <ul class="dropdown-menu">
                   <li><a href="https://wiki.dacplay.org" target="_blank"><%= dd('nav.wiki') %></a></li>
-                  <li><a href="https://talk.dacplay.org" target="_blank"><%= dd('nav.forum') %></a></li>
+                  <!-- <li><a href="https://talk.dacplay.org" target="_blank"><%= dd('nav.forum') %></a></li> -->
                   <li><a href="https://github.com/bitsuperlab" target="_blank">Github</a></li>
                   <li><a href="#crowdfund"><%= dd('nav.crowdfund') %></a></li>
                   <li><a href="#snapshot"><%= dd('nav.snapshot') %></a></li>
@@ -102,11 +102,15 @@
           <h1 class="logo">DAC PLAY</h1>
           <!-- <p><%= dd('hero.line1') %></p> -->
 
-          <div id="download" class="hide">
-            <h2><%= dd('hero.download_client') %></h2>
-            <p class="release-intro"></p>
-            <div class="row downloads-container"></div>
+          <div class="row">
+            <p><%= dd('hero.upgrade_notice') %></p>
+            <div>
+              <a class="btn btn-success btn-lg withripple" href="#download"><%= dd('hero.download_5') %><div class="ripple-wrapper"></div></a>
+              <a class="btn btn-success btn-lg withripple" href="https://wallet.dacplay.org" target="_blank"><%= dd('hero.start_use_web_wallet') %><div class="ripple-wrapper"></div></a>
+            </div>
           </div>
+
+
 
         </section>
       </div>
@@ -122,6 +126,16 @@
       <!-- Progress bar ends -->
     </div>
     <!--hero ends -->
+
+    <div id="download" class="hide">
+      <div class="container">
+        <section class="row">
+          <h1><%= dd('hero.download_client') %></h1>
+          <p class="release-intro text-center"></p>
+          <div class="row downloads-container text-center"></div>
+        </section>
+      </div>
+    </div>
 
 
     <!-- feature starts -->
@@ -369,7 +383,9 @@
     <!-- footer start -->
     <footer class="footer navbar">
       <h4>Copyright @ 2015 DAC PLAY</h4>
-      <p>Powered by <a href="http://bitshares.org" target="_blank">BitShares</a></p>
+      <p>Powered by <a href="http://bitshares.org" target="_blank">Graphene</a></p>
+
+      <div style="margin-top:4em;" class="row text-center"><a href="http://www.miitbeian.gov.cn/" target="_blank">沪ICP备15054055号-1</a></div>
     </footer>
     <!-- footer ends -->
 

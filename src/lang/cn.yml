@@ -11,7 +11,7 @@ nav:
   snapshot: 快照
   whitepaper: 白皮书
   crowdfund: 众筹
-  contact: 联系我们
+  contact: 邮件订阅
   lang: 语言
   resources: 更多信息
   wiki: WIKI
@@ -25,7 +25,10 @@ hero:
   line1: 产品众筹将于<br /><strong>北京时间2015年1月5日上午8时</strong><br />通过<a href='http://dacx.com/play' target='_blank'>DacX.com</a>平台进行
   more: 了解细节
   visit_dacx: 访问 DacX.com
-  download_client: 下载最新客户端
+  download_client: 下载0.5.0客户端
+  upgrade_notice: DACPLAY升级到2.0版本网络。旧链在区块#4674453停止。请使用0.5.0版本客户端导出钱包文件，并导入新版网页轻钱包使用。
+  download_5: 下载0.5.0客户端
+  start_use_web_wallet: 开始使用新版网页钱包
   
 
 about:
