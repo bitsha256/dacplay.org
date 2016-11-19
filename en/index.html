@@ -102,9 +102,12 @@
 
           <div class="row">
             <p>DACPLAY is upgrading to 2.0.  Old network is stopped at block 4674453.  Please download 0.5.0 client to export your wallet key and import them in 2.0 web wallet to use.</p>
-            <div>
-              <a class="btn btn-success btn-lg withripple" href="#download">Download 0.5.0 client<div class="ripple-wrapper"></div></a>
+            <div class="row">
               <a class="btn btn-success btn-lg withripple" href="https://wallet.dacplay.org" target="_blank">Start using 2.0 web wallet<div class="ripple-wrapper"></div></a>
+              <a class="btn btn-success btn-lg withripple" href="#download2">Download Newest Client<div class="ripple-wrapper"></div></a>
+            </div>
+            <div class="row">
+              <a class="btn btn-default btn-lg withripple" href="javascript:void(0);" data-toggle="modal" data-target="#download">Download PLS1 Network 0.5.0 client<div class="ripple-wrapper"></div></a>
             </div>
           </div>
 
@@ -125,13 +128,38 @@
     </div>
     <!--hero ends -->
 
-    <div id="download" class="hide">
+    <div id="download2" class="hide">
       <div class="container">
         <section class="row">
-          <h1>Download 0.5.0 Client</h1>
+          <h1>Download DACPLAY2 Newest Client</h1>
           <p class="release-intro text-center"></p>
           <div class="row downloads-container text-center"></div>
         </section>
+      </div>
+    </div>
+
+    <!-- <div id="download" class="hide">
+      <div class="container">
+        <section class="row">
+          <h1>Download PLS1 Network 0.5.0 Client</h1>
+          <p class="release-intro text-center"></p>
+          <div class="row downloads-container text-center"></div>
+        </section>
+      </div>
+    </div> -->
+
+    <div id="download" class="modal fade" tabindex="-1">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <h4 class="modal-title">Download PLS1 Network 0.5.0 Client</h4>
+          </div>
+          <div class="modal-body">
+            <p class="release-intro text-center"></p>
+            <div class="row downloads-container text-center"></div>
+          </div>
+        </div>
       </div>
     </div>
 

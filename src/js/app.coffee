@@ -139,7 +139,7 @@ get_latest_downloads = ->
     for i in [0...platformCount]
       d = data.downloads[i]
       platform = d.platform.split(' ')[0].toLowerCase()
-      dlDiv = $("<div class='col-md-#{colCls} animated fadeInUp'><img class='platform-icon' src='../img/icon-#{platform}.svg' /><h3>#{d.platform}</h3><p style='font-size:10px;'>sha1hash: #{d.sha1hash}<br />Size: #{d.fileSize}</p><a class='btn btn#{i} withripple' href='#{d.url}' role='button' data-platform='#{d.platform}' data-version='#{data.version}'><img src='../img/ic_cloud_download_48px.svg' /><div class='ripple-wrapper'></div></a></div>")
+      dlDiv = $("<div class='col-md-#{colCls}'><img class='platform-icon' src='../img/icon-#{platform}.svg' /><h3>#{d.platform}</h3><p style='font-size:10px;'>sha1hash: #{d.sha1hash}<br />Size: #{d.fileSize}</p><a class='btn btn#{i} withripple' href='#{d.url}' role='button' data-platform='#{d.platform}' data-version='#{data.version}'><img src='../img/ic_cloud_download_48px.svg' /><div class='ripple-wrapper'></div></a></div>")
 
       vendor_prop_set(dlDiv, 'animation-delay', 0.5 + i * 0.1 + 's')
 
@@ -150,6 +150,30 @@ get_latest_downloads = ->
 
     $('#download').removeClass('hide')
     $('#download .release-intro').html "#{data.name}<br />version: #{data.version}<br /><br />#{data.releaseNote}"
+
+
+get_latest_downloads2 = ->
+  $.ajax
+    url: 'https://download.dacplay.org/downloads/latest2.json?v=1478101274',
+    dataType: 'json'
+  .done (data) ->
+    platformCount = data.downloads.length
+    colCls = parseInt(12 / platformCount)
+
+    for i in [0...platformCount]
+      d = data.downloads[i]
+      platform = d.platform.split(' ')[0].toLowerCase()
+      dlDiv = $("<div class='col-md-#{colCls} animated fadeInUp'><img class='platform-icon' src='../img/icon-#{platform}.svg' /><h3>#{d.platform}</h3><p style='font-size:10px;'>sha1hash: #{d.sha1hash}<br />Size: #{d.fileSize}</p><a class='btn btn#{i} withripple' href='#{d.url}' role='button' data-platform='#{d.platform}' data-version='#{data.version}'><img src='../img/ic_cloud_download_48px.svg' /><div class='ripple-wrapper'></div></a></div>")
+
+      vendor_prop_set(dlDiv, 'animation-delay', 0.5 + i * 0.1 + 's')
+
+      $('#download2 .downloads-container').append dlDiv
+
+      $("#download2 .downloads-container .btn#{i}").on 'click', ->
+        ga("send", "event", "client", "download", $(this).data('platform'), $(this).data('version'))
+
+    $('#download2').removeClass('hide')
+    $('#download2 .release-intro').html "#{data.name}<br />version: #{data.version}<br /><br />#{data.releaseNote}"
 
 
 get_news = (lang) ->
@@ -176,6 +200,7 @@ get_news = (lang) ->
   # $('body').scrollspy target: ".global-nav", offset: -0
 
   get_latest_downloads()
+  get_latest_downloads2()
 
   $('[data-toggle="popover"]').popover()
 

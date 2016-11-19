@@ -15,7 +15,7 @@ h1 { text-align:center; }
 .hider { display:none; }
 .block { display:block; }
 section.row { margin: 3em auto; }
-#about, #whitepaper, #team, #faq, #contact, #crowdfund, #download {
+#about, #whitepaper, #team, #faq, #contact, #crowdfund, #download, #download2 {
   padding-top:80px; padding-bottom:80px;
 }
 
@@ -53,6 +53,19 @@ section.row { margin: 3em auto; }
 
 #download {
   background-color: #eee;
+
+  .downloads-container {
+    h3 { height:2.1em; }
+    p {
+      overflow:hidden;
+      text-overflow:ellipsis;
+    }
+  }
+}
+
+#download2 {
+  background-color: #a7076c;
+  color:white;
 }
 
 #about {

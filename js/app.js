@@ -1,4 +1,4 @@
-var get_latest_downloads, get_news, get_play_total_donated, setup_check_point, setup_page_nav_links, show_progress_bar, show_tip, subscribe_to_list, vendor_prop_set;
+var get_latest_downloads, get_latest_downloads2, get_news, get_play_total_donated, setup_check_point, setup_page_nav_links, show_progress_bar, show_tip, subscribe_to_list, vendor_prop_set;
 
 vendor_prop_set = function(elem, prop, val) {
   var vendor, _i, _len, _ref, _results;
@@ -134,7 +134,7 @@ get_latest_downloads = function() {
     for (i = _i = 0; 0 <= platformCount ? _i < platformCount : _i > platformCount; i = 0 <= platformCount ? ++_i : --_i) {
       d = data.downloads[i];
       platform = d.platform.split(' ')[0].toLowerCase();
-      dlDiv = $("<div class='col-md-" + colCls + " animated fadeInUp'><img class='platform-icon' src='../img/icon-" + platform + ".svg' /><h3>" + d.platform + "</h3><p style='font-size:10px;'>sha1hash: " + d.sha1hash + "<br />Size: " + d.fileSize + "</p><a class='btn btn" + i + " withripple' href='" + d.url + "' role='button' data-platform='" + d.platform + "' data-version='" + data.version + "'><img src='../img/ic_cloud_download_48px.svg' /><div class='ripple-wrapper'></div></a></div>");
+      dlDiv = $("<div class='col-md-" + colCls + "'><img class='platform-icon' src='../img/icon-" + platform + ".svg' /><h3>" + d.platform + "</h3><p style='font-size:10px;'>sha1hash: " + d.sha1hash + "<br />Size: " + d.fileSize + "</p><a class='btn btn" + i + " withripple' href='" + d.url + "' role='button' data-platform='" + d.platform + "' data-version='" + data.version + "'><img src='../img/ic_cloud_download_48px.svg' /><div class='ripple-wrapper'></div></a></div>");
       vendor_prop_set(dlDiv, 'animation-delay', 0.5 + i * 0.1 + 's');
       $('#download .downloads-container').append(dlDiv);
       $("#download .downloads-container .btn" + i).on('click', function() {
@@ -143,6 +143,29 @@ get_latest_downloads = function() {
     }
     $('#download').removeClass('hide');
     return $('#download .release-intro').html("" + data.name + "<br />version: " + data.version + "<br /><br />" + data.releaseNote);
+  });
+};
+
+get_latest_downloads2 = function() {
+  return $.ajax({
+    url: 'https://download.dacplay.org/downloads/latest2.json?v=1478101274',
+    dataType: 'json'
+  }).done(function(data) {
+    var colCls, d, dlDiv, i, platform, platformCount, _i;
+    platformCount = data.downloads.length;
+    colCls = parseInt(12 / platformCount);
+    for (i = _i = 0; 0 <= platformCount ? _i < platformCount : _i > platformCount; i = 0 <= platformCount ? ++_i : --_i) {
+      d = data.downloads[i];
+      platform = d.platform.split(' ')[0].toLowerCase();
+      dlDiv = $("<div class='col-md-" + colCls + " animated fadeInUp'><img class='platform-icon' src='../img/icon-" + platform + ".svg' /><h3>" + d.platform + "</h3><p style='font-size:10px;'>sha1hash: " + d.sha1hash + "<br />Size: " + d.fileSize + "</p><a class='btn btn" + i + " withripple' href='" + d.url + "' role='button' data-platform='" + d.platform + "' data-version='" + data.version + "'><img src='../img/ic_cloud_download_48px.svg' /><div class='ripple-wrapper'></div></a></div>");
+      vendor_prop_set(dlDiv, 'animation-delay', 0.5 + i * 0.1 + 's');
+      $('#download2 .downloads-container').append(dlDiv);
+      $("#download2 .downloads-container .btn" + i).on('click', function() {
+        return ga("send", "event", "client", "download", $(this).data('platform'), $(this).data('version'));
+      });
+    }
+    $('#download2').removeClass('hide');
+    return $('#download2 .release-intro').html("" + data.name + "<br />version: " + data.version + "<br /><br />" + data.releaseNote);
   });
 };
 
@@ -172,6 +195,7 @@ get_news = function(lang) {
   var lang_pref_selector;
   $('.page-nav > li > a').each(setup_page_nav_links);
   get_latest_downloads();
+  get_latest_downloads2();
   $('[data-toggle="popover"]').popover();
   $('.feature-item').mouseover(function() {
     $('.feature-item').removeClass('well');

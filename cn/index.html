@@ -102,9 +102,12 @@
 
           <div class="row">
             <p>DACPLAY升级到2.0版本网络。旧链在区块#4674453停止。请使用0.5.0版本客户端导出钱包文件，并导入新版网页轻钱包使用。</p>
-            <div>
-              <a class="btn btn-success btn-lg withripple" href="#download">下载0.5.0客户端<div class="ripple-wrapper"></div></a>
+            <div class="row">
               <a class="btn btn-success btn-lg withripple" href="https://wallet.dacplay.org" target="_blank">开始使用新版网页钱包<div class="ripple-wrapper"></div></a>
+              <a class="btn btn-success btn-lg withripple" href="#download2">下载新版客户端<div class="ripple-wrapper"></div></a>
+            </div>
+            <div class="row">
+              <a class="btn btn-default btn-lg withripple" href="javascript:void(0);" data-toggle="modal" data-target="#download">下载PLS1网络 0.5.0客户端<div class="ripple-wrapper"></div></a>
             </div>
           </div>
 
@@ -125,13 +128,38 @@
     </div>
     <!--hero ends -->
 
-    <div id="download" class="hide">
+    <div id="download2" class="hide">
       <div class="container">
         <section class="row">
-          <h1>下载0.5.0客户端</h1>
+          <h1>下载DACPLAY2 新版客户端</h1>
           <p class="release-intro text-center"></p>
           <div class="row downloads-container text-center"></div>
         </section>
+      </div>
+    </div>
+
+    <!-- <div id="download" class="hide">
+      <div class="container">
+        <section class="row">
+          <h1>下载PLS1网络 0.5.0客户端</h1>
+          <p class="release-intro text-center"></p>
+          <div class="row downloads-container text-center"></div>
+        </section>
+      </div>
+    </div> -->
+
+    <div id="download" class="modal fade" tabindex="-1">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <h4 class="modal-title">下载PLS1网络 0.5.0客户端</h4>
+          </div>
+          <div class="modal-body">
+            <p class="release-intro text-center"></p>
+            <div class="row downloads-container text-center"></div>
+          </div>
+        </div>
       </div>
     </div>
 
